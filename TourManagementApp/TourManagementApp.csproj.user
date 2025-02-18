@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Utils\Validator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Account\AccountLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Customers\AddNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Customers\CustomerLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Layout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Report\ReportLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Report\statistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Schedule\ScheduleLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Tour\AddNewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Tour\AddNewTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Tour\EditTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Tour\Tourlayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Tour\TourOrder1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
