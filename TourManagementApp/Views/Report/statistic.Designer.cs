@@ -73,7 +73,7 @@
             // dateTimeTo
             // 
             dateTimeTo.CalendarFont = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimeTo.Location = new Point(195, 50);
+            dateTimeTo.Location = new Point(327, 50);
             dateTimeTo.Name = "dateTimeTo";
             dateTimeTo.Size = new Size(325, 27);
             dateTimeTo.TabIndex = 23;
@@ -144,7 +144,7 @@
             // dateTimeFrom
             // 
             dateTimeFrom.CalendarFont = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimeFrom.Location = new Point(195, 120);
+            dateTimeFrom.Location = new Point(327, 131);
             dateTimeFrom.Name = "dateTimeFrom";
             dateTimeFrom.Size = new Size(325, 27);
             dateTimeFrom.TabIndex = 17;
@@ -154,7 +154,7 @@
             lb_tke.AutoSize = true;
             lb_tke.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lb_tke.ForeColor = Color.FromArgb(0, 0, 192);
-            lb_tke.Location = new Point(312, 6);
+            lb_tke.Location = new Point(395, 6);
             lb_tke.Name = "lb_tke";
             lb_tke.Size = new Size(257, 41);
             lb_tke.TabIndex = 16;

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "RJywmi7hBsE=",
+  "dgSpecHash": "auHoDwdYnOU=",
   "success": true,
-  "projectFilePath": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\TourManagementApp.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\TourManagementApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pc\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512"
+  ],
   "logs": []
 }

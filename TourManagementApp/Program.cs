@@ -1,6 +1,7 @@
 using System;
 using System.Windows.Forms;
 using TourManagementApp.Views;
+using TourManagementApp.Views.Customers;
 namespace TourManagementApp
 {
     internal static class Program
@@ -14,7 +15,7 @@ namespace TourManagementApp
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new About());
+            Application.Run(new AddNewCustomer());
         }
     }
 }

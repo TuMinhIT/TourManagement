@@ -40,7 +40,7 @@
             // 
             // listView1
             // 
-            listView1.Location = new Point(80, 38);
+            listView1.Location = new Point(80, 62);
             listView1.Name = "listView1";
             listView1.Size = new Size(540, 259);
             listView1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(3, 15);
+            label1.Location = new Point(218, 18);
             label1.Name = "label1";
             label1.Size = new Size(173, 20);
             label1.TabIndex = 1;
@@ -97,7 +97,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(182, 15);
+            label2.Location = new Point(397, 18);
             label2.Name = "label2";
             label2.Size = new Size(41, 20);
             label2.TabIndex = 2;

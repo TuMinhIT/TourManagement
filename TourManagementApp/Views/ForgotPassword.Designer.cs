@@ -40,15 +40,18 @@
             btn_confirm = new Button();
             tb_rpwd = new TextBox();
             btn_back = new Button();
+            button3 = new Button();
             panel_mkm.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(310, 55);
+            label1.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold);
+            label1.ForeColor = Color.FromArgb(41, 128, 185);
+            label1.Location = new Point(274, 30);
             label1.Name = "label1";
-            label1.Size = new Size(109, 20);
+            label1.Size = new Size(225, 34);
             label1.TabIndex = 0;
             label1.Text = "Quên mật khẩu";
             // 
@@ -63,7 +66,9 @@
             // button1
             // 
             button1.BackColor = SystemColors.ActiveCaptionText;
-            button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
             button1.ForeColor = SystemColors.ButtonHighlight;
             button1.Location = new Point(117, 145);
             button1.Name = "button1";
@@ -74,7 +79,11 @@
             // 
             // button2
             // 
-            button2.BackColor = SystemColors.HotTrack;
+            button2.BackColor = Color.FromArgb(41, 128, 185);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
+            button2.ForeColor = SystemColors.ButtonFace;
             button2.Location = new Point(526, 200);
             button2.Name = "button2";
             button2.Size = new Size(111, 32);
@@ -92,7 +101,7 @@
             // 
             // panel_mkm
             // 
-            panel_mkm.BackColor = Color.FromArgb(236, 57, 57);
+            panel_mkm.BackColor = Color.FromArgb(41, 128, 185);
             panel_mkm.Controls.Add(label2);
             panel_mkm.Controls.Add(cbx_showpwd);
             panel_mkm.Controls.Add(tb_pwd);
@@ -107,23 +116,23 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Bold);
+            label2.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold);
             label2.ForeColor = Color.Transparent;
             label2.Location = new Point(143, 11);
             label2.Name = "label2";
-            label2.Size = new Size(185, 31);
+            label2.Size = new Size(194, 34);
             label2.TabIndex = 15;
             label2.Text = "Đổi mật khẩu";
             // 
             // cbx_showpwd
             // 
             cbx_showpwd.AutoSize = true;
-            cbx_showpwd.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold);
-            cbx_showpwd.ForeColor = Color.Black;
-            cbx_showpwd.Location = new Point(32, 178);
+            cbx_showpwd.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            cbx_showpwd.ForeColor = Color.White;
+            cbx_showpwd.Location = new Point(32, 196);
             cbx_showpwd.Margin = new Padding(3, 4, 3, 4);
             cbx_showpwd.Name = "cbx_showpwd";
-            cbx_showpwd.Size = new Size(150, 21);
+            cbx_showpwd.Size = new Size(152, 24);
             cbx_showpwd.TabIndex = 10;
             cbx_showpwd.Text = "HIỆN MẬT KHẨU";
             cbx_showpwd.UseVisualStyleBackColor = true;
@@ -144,9 +153,11 @@
             // btn_confirm
             // 
             btn_confirm.BackColor = Color.Black;
-            btn_confirm.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold);
+            btn_confirm.FlatAppearance.BorderSize = 0;
+            btn_confirm.FlatStyle = FlatStyle.Flat;
+            btn_confirm.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
             btn_confirm.ForeColor = Color.White;
-            btn_confirm.Location = new Point(123, 225);
+            btn_confirm.Location = new Point(123, 236);
             btn_confirm.Margin = new Padding(3, 4, 3, 4);
             btn_confirm.Name = "btn_confirm";
             btn_confirm.Size = new Size(221, 41);
@@ -170,7 +181,9 @@
             // btn_back
             // 
             btn_back.BackColor = Color.Black;
-            btn_back.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold);
+            btn_back.FlatAppearance.BorderSize = 0;
+            btn_back.FlatStyle = FlatStyle.Flat;
+            btn_back.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
             btn_back.ForeColor = Color.White;
             btn_back.Location = new Point(601, 565);
             btn_back.Margin = new Padding(3, 4, 3, 4);
@@ -181,11 +194,28 @@
             btn_back.UseVisualStyleBackColor = false;
             btn_back.Click += btn_back_Click;
             // 
+            // button3
+            // 
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.FromArgb(41, 128, 185);
+            button3.Location = new Point(781, 0);
+            button3.Name = "button3";
+            button3.Size = new Size(40, 40);
+            button3.TabIndex = 15;
+            button3.Text = "X";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
             // ForgotPassword
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(821, 622);
+            ControlBox = false;
+            Controls.Add(button3);
             Controls.Add(btn_back);
             Controls.Add(panel_mkm);
             Controls.Add(textBox2);
@@ -193,6 +223,7 @@
             Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "ForgotPassword";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ForgotPassword";
@@ -216,5 +247,6 @@
         private Button btn_confirm;
         private TextBox tb_rpwd;
         private Button btn_back;
+        private Button button3;
     }
 }
