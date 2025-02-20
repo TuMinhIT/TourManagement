@@ -43,6 +43,7 @@
             label8 = new Label();
             label2 = new Label();
             label9 = new Label();
+            button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
@@ -53,6 +54,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(30, 31, 68);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(btnLogin);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(panel2);
@@ -259,6 +261,20 @@
             label9.Size = new Size(0, 31);
             label9.TabIndex = 3;
             // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Verdana", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(1115, 0);
+            button1.Name = "button1";
+            button1.Size = new Size(40, 40);
+            button1.TabIndex = 12;
+            button1.Text = "X";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // About
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -303,5 +319,6 @@
         private PictureBox pictureBox3;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton4;
+        private Button button1;
     }
 }

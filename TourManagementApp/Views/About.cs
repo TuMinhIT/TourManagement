@@ -54,5 +54,10 @@ namespace TourManagementApp.Views
             Login login = new Login();
             login.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); 
+        }
     }
 }

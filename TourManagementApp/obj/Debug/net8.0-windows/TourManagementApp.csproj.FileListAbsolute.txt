@@ -71,3 +71,6 @@ E:\HK2-2025\.net\Gk\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\re
 E:\HK2-2025\.net\Gk\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\TourManagementApp.pdb
 E:\HK2-2025\.net\Gk\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\TourManagementApp.genruntimeconfig.cache
 E:\HK2-2025\.net\Gk\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\ref\TourManagementApp.dll
+E:\HK2-2025\.net\Gk\TourManagement\TourManagementApp\bin\Debug\net8.0-windows\aa-ER\TourManagementApp.resources.dll
+E:\HK2-2025\.net\Gk\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\TourManagementApp.Views.Tour.EditTour.aa-ER.resources
+E:\HK2-2025\.net\Gk\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\aa-ER\TourManagementApp.resources.dll

@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|e:\\hk2-2025\\.net\\gk\\tourmanagement\\tourmanagementapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|e:\\hk2-2025\\.net\\gk\\tourmanagement\\tourmanagementapp\\views\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\views\\customers\\addnewcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\customers\\addnewcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\views\\customers\\customerlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\customers\\customerlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|e:\\hk2-2025\\.net\\gk\\tourmanagement\\tourmanagementapp\\views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|e:\\hk2-2025\\.net\\gk\\tourmanagement\\tourmanagementapp\\views\\customers\\addnewcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\customers\\addnewcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,39 +27,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\Program.cs*",
-              "RelativeToolTip": "Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAuAAAAAAAAAA==",
+              "Title": "About.cs [Design]",
+              "DocumentMoniker": "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\Views\\About.cs",
+              "RelativeDocumentMoniker": "Views\\About.cs",
+              "ToolTip": "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\Views\\About.cs [Design]",
+              "RelativeToolTip": "Views\\About.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T12:08:40.851Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AddNewCustomer.cs",
-              "DocumentMoniker": "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\Views\\Customers\\AddNewCustomer.cs",
-              "RelativeDocumentMoniker": "Views\\Customers\\AddNewCustomer.cs",
-              "ToolTip": "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\Views\\Customers\\AddNewCustomer.cs",
-              "RelativeToolTip": "Views\\Customers\\AddNewCustomer.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBUAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T12:04:29.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-20T14:57:39.646Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AddNewCustomer.cs [Design]",
-              "DocumentMoniker": "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\Views\\Customers\\AddNewCustomer.cs",
-              "RelativeDocumentMoniker": "Views\\Customers\\AddNewCustomer.cs",
-              "ToolTip": "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\Views\\Customers\\AddNewCustomer.cs [Design]",
-              "RelativeToolTip": "Views\\Customers\\AddNewCustomer.cs [Design]",
+              "Title": "CustomerLayout.cs [Design]",
+              "DocumentMoniker": "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\Views\\Customers\\CustomerLayout.cs",
+              "RelativeDocumentMoniker": "Views\\Customers\\CustomerLayout.cs",
+              "ToolTip": "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\Views\\Customers\\CustomerLayout.cs [Design]",
+              "RelativeToolTip": "Views\\Customers\\CustomerLayout.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T11:56:04.927Z",
+              "WhenOpened": "2025-02-20T12:10:31.168Z",
               "EditorCaption": " [Design]"
             },
             {
@@ -75,8 +57,7 @@
               "ToolTip": "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\Views\\Login.cs [Design]",
               "RelativeToolTip": "Views\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T12:33:12.303Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-19T12:33:12.303Z"
             }
           ]
         }
