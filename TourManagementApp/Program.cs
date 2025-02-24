@@ -1,6 +1,8 @@
 using System;
 using System.Windows.Forms;
 using TourManagementApp.Views;
+using TourManagementApp.Views.Account;
+using TourManagementApp.Views.Admin;
 using TourManagementApp.Views.Customers;
 namespace TourManagementApp
 {
@@ -15,7 +17,7 @@ namespace TourManagementApp
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new AddNewCustomer());
+            Application.Run(new Login());
         }
     }
 }

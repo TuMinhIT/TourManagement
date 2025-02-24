@@ -108,7 +108,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(949, 535);
+            ClientSize = new Size(962, 599);
             Controls.Add(panel1);
             Name = "ReportLayout";
             Text = "ReportLayout";

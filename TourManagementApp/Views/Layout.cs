@@ -13,6 +13,9 @@ using TourManagementApp.Views.Report;
 using TourManagementApp.Views.Schedule;
 using FontAwesome.Sharp;
 using System.Runtime.InteropServices;
+using TourManagementApp.Views.Admin;
+using TourManagementApp.Models;
+using TourManagementApp.Views.Account;
 
 namespace TourManagementApp.Views
 {
@@ -24,6 +27,7 @@ namespace TourManagementApp.Views
         private Panel leftBorderBtn;
         private Form currentChildForm;
 
+        private Users _user;
         private void OpenChildForm(Form childForm)
         {
             if (panel_main.Controls.Count > 0)
@@ -40,43 +44,20 @@ namespace TourManagementApp.Views
             childForm.Show();
         }
 
-        public Layout()
+        public Layout(Users user)
         {
+            this._user = user;
             InitializeComponent();
+            initForm();
+
+        }
+        private void initForm()
+        {
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panel_left.Controls.Add(leftBorderBtn);
-            //Form
-            //this.Text = string.Empty;
-            //this.ControlBox = false;
-            //this.DoubleBuffered = true;
-            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            label_userName.Text = _user.FullName;
         }
-
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        //private void btn_home_Click(object sender, EventArgs e)
-        //{
-        //    if (panel_main.Controls.Count > 0)
-        //    {
-        //        var currentChildForm = panel_main.Controls[0] as Form;
-        //        currentChildForm?.Close();
-        //    }
-        //}
-
-        private void btn_tour_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Tourlayout());
-            ActivateButton(sender, RGBColors.color5);
-        }
-
-        //private void btn_customer_Click(object sender, EventArgs e)
-        //{
-        //    OpenChildForm(new CustomerLayout());
-        //}
 
         //Structs
         private struct RGBColors
@@ -88,7 +69,6 @@ namespace TourManagementApp.Views
             public static Color color5 = Color.FromArgb(249, 88, 155);
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
-
 
         //Methods
         private void ActivateButton(object senderBtn, Color color)
@@ -139,83 +119,8 @@ namespace TourManagementApp.Views
             iconCurrentChildForm.IconColor = Color.MediumPurple;
         }
 
+        private void label_userName_Click(object sender, EventArgs e){}
 
-        private void btn_report_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ReportLayout());
-        }
-
-
-
-        private void btn_schedule_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ScheduleLayout());
-        }
-
-        private void btn_home_Click_1(object sender, EventArgs e)
-        {
-            if (panel_main.Controls.Count > 0)
-            {
-                var currentChildForm = panel_main.Controls[0] as Form;
-                currentChildForm?.Close();
-            }
-
-            ActivateButton(sender, RGBColors.color1);
-        }
-
-        private void btn_customer_Click_1(object sender, EventArgs e)
-        {
-            OpenChildForm(new CustomerLayout());
-            ActivateButton(sender, RGBColors.color2);
-        }
-
-        private void btn_schedule_Click_1(object sender, EventArgs e)
-        {
-            OpenChildForm(new ScheduleLayout());
-            ActivateButton(sender, RGBColors.color3);
-        }
-
-        private void btn_report_Click_1(object sender, EventArgs e)
-        {
-            OpenChildForm(new ReportLayout());
-            ActivateButton(sender, RGBColors.color4);
-        }
-
-        private void btn_exit_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void bnt_notifications_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bnt_notifications_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void label_userName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            Reset();
-        }
-
-        private void pictureBoxLogo_Click(object sender, EventArgs e)
-        {
-
-        }
-        // bắt đầu ở đây là giữ lại 
         private void btn_home_Click(object sender, EventArgs e)
         {
             if (panel_main.Controls.Count > 0)
@@ -227,7 +132,7 @@ namespace TourManagementApp.Views
             ActivateButton(sender, RGBColors.color1);
         }
 
-        private void btn_tour_Click_1(object sender, EventArgs e)
+        private void btn_tour_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Tourlayout());
             ActivateButton(sender, RGBColors.color5);
@@ -239,26 +144,31 @@ namespace TourManagementApp.Views
             ActivateButton(sender, RGBColors.color2);
         }
 
-        private void btn_schedule_Click_2(object sender, EventArgs e)
+        private void btn_schedule_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ScheduleLayout());
             ActivateButton(sender, RGBColors.color3);
         }
 
-        private void btn_report_Click_2(object sender, EventArgs e)
+        private void btn_report_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ReportLayout());
             ActivateButton(sender, RGBColors.color4);
         }
 
-        private void btn_exit_Click_2(object sender, EventArgs e)
+        private void btn_employees_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new EmployeesLayout());
+            ActivateButton(sender, RGBColors.color2);
+        }
+        private void btn_account_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new AccountLayout(_user));
+            ActivateButton(sender, RGBColors.color1);
+        }
+        private void btn_X_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

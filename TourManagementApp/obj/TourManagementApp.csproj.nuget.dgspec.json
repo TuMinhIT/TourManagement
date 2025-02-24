@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\TourManagementApp.csproj": {}
+    "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\TourManagementApp.csproj": {}
   },
   "projects": {
-    "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\TourManagementApp.csproj": {
+    "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\TourManagementApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\TourManagementApp.csproj",
+        "projectUniqueName": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\TourManagementApp.csproj",
         "projectName": "TourManagementApp",
-        "projectPath": "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\TourManagementApp.csproj",
-        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "E:\\HK2-2025\\.net\\Gk\\TourManagement\\TourManagementApp\\obj\\",
+        "projectPath": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\TourManagementApp.csproj",
+        "packagesPath": "C:\\Users\\Minh Tu\\.nuget\\packages\\",
+        "outputPath": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Minh Tu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -50,9 +51,17 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "FontAwesome.Sharp": {
               "target": "Package",
               "version": "[6.6.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.0.1, )"
             }
           },
           "imports": [
@@ -74,7 +83,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

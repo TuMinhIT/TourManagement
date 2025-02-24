@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            button1 = new Button();
             btnLogin = new FontAwesome.Sharp.IconButton();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
@@ -37,13 +38,13 @@
             iconButton3 = new FontAwesome.Sharp.IconButton();
             pictureBox3 = new PictureBox();
             panel4 = new Panel();
+            label1 = new Label();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             iconButton6 = new FontAwesome.Sharp.IconButton();
             label8 = new Label();
             label2 = new Label();
             label9 = new Label();
-            button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
@@ -61,8 +62,23 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1155, 92);
+            panel1.Size = new Size(1171, 97);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
+            // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Verdana", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(1119, 0);
+            button1.Name = "button1";
+            button1.Size = new Size(40, 40);
+            button1.TabIndex = 12;
+            button1.Text = "X";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // btnLogin
             // 
@@ -75,7 +91,7 @@
             btnLogin.IconColor = Color.FromArgb(255, 128, 0);
             btnLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnLogin.IconSize = 32;
-            btnLogin.Location = new Point(928, 21);
+            btnLogin.Location = new Point(907, 27);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(206, 42);
             btnLogin.TabIndex = 16;
@@ -104,14 +120,15 @@
             // 
             // panel3
             // 
-            panel3.BackColor = SystemColors.ActiveCaption;
+            panel3.BackColor = Color.SteelBlue;
             panel3.Controls.Add(iconButton4);
             panel3.Controls.Add(iconButton3);
             panel3.Controls.Add(pictureBox3);
-            panel3.Location = new Point(6, 98);
+            panel3.Location = new Point(27, 97);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1143, 438);
+            panel3.Size = new Size(1144, 603);
             panel3.TabIndex = 1;
+            panel3.Paint += panel3_Paint;
             // 
             // iconButton4
             // 
@@ -122,7 +139,7 @@
             iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
             iconButton4.IconColor = SystemColors.ActiveCaption;
             iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.Location = new Point(839, 44);
+            iconButton4.Location = new Point(841, 0);
             iconButton4.Name = "iconButton4";
             iconButton4.Size = new Size(289, 54);
             iconButton4.TabIndex = 4;
@@ -138,20 +155,19 @@
             iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             iconButton3.IconColor = SystemColors.ActiveCaption;
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton3.Location = new Point(839, 101);
+            iconButton3.Location = new Point(836, 44);
             iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(289, 334);
+            iconButton3.Size = new Size(294, 334);
             iconButton3.TabIndex = 3;
             iconButton3.Text = "Chúng tôi đem đến những giá trị giải pháp ứng dụng Du lịch, Khách sạn, Sự kiện quốc tế. Trải nghiệm tính tương tác, nghiệp vụ, trong ứng dụng công nghệ cho doanh nghiệp của bạn";
             iconButton3.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
             // 
-            pictureBox3.Dock = DockStyle.Fill;
             pictureBox3.Image = Properties.Resources.ccc1;
             pictureBox3.Location = new Point(0, 0);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(1143, 438);
+            pictureBox3.Size = new Size(830, 518);
             pictureBox3.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
@@ -159,16 +175,29 @@
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(30, 31, 68);
+            panel4.Controls.Add(label1);
             panel4.Controls.Add(iconButton2);
             panel4.Controls.Add(iconButton1);
             panel4.Controls.Add(iconButton6);
             panel4.Controls.Add(label8);
             panel4.Controls.Add(label2);
             panel4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            panel4.Location = new Point(6, 542);
+            panel4.Location = new Point(0, 536);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1146, 134);
+            panel4.Size = new Size(1171, 162);
             panel4.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(30, 31, 68);
+            label1.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(33, 105);
+            label1.Name = "label1";
+            label1.Size = new Size(225, 19);
+            label1.TabIndex = 19;
+            label1.Text = "Phát triển bởi .netcore TDTU";
             // 
             // iconButton2
             // 
@@ -261,34 +290,20 @@
             label9.Size = new Size(0, 31);
             label9.TabIndex = 3;
             // 
-            // button1
-            // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Verdana", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(1115, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(40, 40);
-            button1.TabIndex = 12;
-            button1.Text = "X";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
             // About
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1155, 678);
+            ClientSize = new Size(1173, 673);
             ControlBox = false;
             Controls.Add(label9);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            MaximumSize = new Size(1200, 780);
+            MaximumSize = new Size(1200, 700);
             Name = "About";
             StartPosition = FormStartPosition.CenterScreen;
             panel1.ResumeLayout(false);
@@ -320,5 +335,6 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton4;
         private Button button1;
+        private Label label1;
     }
 }
