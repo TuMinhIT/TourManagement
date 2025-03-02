@@ -18,7 +18,7 @@ namespace TourManagementApp.Views.Admin
     public partial class EmployeesLayout : Form
     {
         private UserService userService;
-        private List<Users> listUser = new List<Users>();
+        private List<Users> listUser;
 
         public EmployeesLayout()
         {
@@ -56,6 +56,8 @@ namespace TourManagementApp.Views.Admin
                     if (Id!="null")
                     {
                         Users users = userService.GetById(Id);
+                        EmployeeDetail employeeDetail = new EmployeeDetail(users);
+                        employeeDetail.ShowDialog();
                     }
                                     
                 }
@@ -76,6 +78,7 @@ namespace TourManagementApp.Views.Admin
                 }
             }
         }
+        #region custom gitview
         private void custom_dataGitView()
         {
             //căn chỉnh tiêu đề
@@ -87,6 +90,7 @@ namespace TourManagementApp.Views.Admin
             dataGridView.Columns["Password"].Visible = false;
             dataGridView.Columns["Role"].Visible = false;
             dataGridView.Columns["link"].Visible = false;
+            //dataGridView.Columns["note"].Visible = false;
 
             // Đổi tên cột
             dataGridView.Columns["UserID"].HeaderText = "Mã";
@@ -136,8 +140,10 @@ namespace TourManagementApp.Views.Admin
                 dataGridView.Columns["Delete"].Width = 80;
                 dataGridView.Columns["Delete"].DisplayIndex = 1;
             }
+            dataGridView.CellClick -= dataGridView_CellClick;
             dataGridView.CellClick += dataGridView_CellClick;
         }
+        #endregion
         private void btn_add_Click(object sender, EventArgs e)
         {
             AddNewEmployee addNewEmployee = new AddNewEmployee();
@@ -150,7 +156,6 @@ namespace TourManagementApp.Views.Admin
         {
 
         }
-
         private void btn_search_Click(object sender, EventArgs e)
         {
             //ko tìm kiếm nếu null

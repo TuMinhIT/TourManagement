@@ -346,7 +346,7 @@
             btn_tour.Padding = new Padding(10, 0, 20, 0);
             btn_tour.Size = new Size(220, 60);
             btn_tour.TabIndex = 18;
-            btn_tour.Text = "Tour";
+            btn_tour.Text = "Tours";
             btn_tour.TextAlign = ContentAlignment.MiddleLeft;
             btn_tour.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_tour.UseVisualStyleBackColor = true;

@@ -28,155 +28,180 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            btn_exportToPDF = new Button();
-            timer1 = new System.Windows.Forms.Timer(components);
-            btn_exportToExcel = new Button();
-            dateTimeTo = new DateTimePicker();
+            label1 = new Label();
+            dateTimePicker2 = new DateTimePicker();
+            label6 = new Label();
             label5 = new Label();
+            dateTimePicker1 = new DateTimePicker();
+            comboBox3 = new ComboBox();
+            comboBox2 = new ComboBox();
             label4 = new Label();
-            btn_xem = new Button();
-            lb_detail = new Label();
-            dataGridView = new DataGridView();
-            btn_thongke = new Button();
-            dateTimeFrom = new DateTimePicker();
-            lb_tke = new Label();
-            panel1 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
-            panel1.SuspendLayout();
+            label3 = new Label();
+            label2 = new Label();
+            comboBox1 = new ComboBox();
+            label7 = new Label();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
+            iconButton2 = new FontAwesome.Sharp.IconButton();
+            radioButton1 = new RadioButton();
+            label8 = new Label();
+            radioButton2 = new RadioButton();
             SuspendLayout();
             // 
-            // btn_exportToPDF
+            // label1
             // 
-            btn_exportToPDF.BackColor = Color.Purple;
-            btn_exportToPDF.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_exportToPDF.ForeColor = SystemColors.Control;
-            btn_exportToPDF.Location = new Point(613, 546);
-            btn_exportToPDF.Name = "btn_exportToPDF";
-            btn_exportToPDF.Size = new Size(151, 45);
-            btn_exportToPDF.TabIndex = 27;
-            btn_exportToPDF.Text = "Xuất PDF";
-            btn_exportToPDF.UseVisualStyleBackColor = false;
+            label1.AutoSize = true;
+            label1.Location = new Point(447, 32);
+            label1.Name = "label1";
+            label1.Size = new Size(122, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Biểu đồ thống kê";
             // 
-            // btn_exportToExcel
+            // dateTimePicker2
             // 
-            btn_exportToExcel.BackColor = Color.Green;
-            btn_exportToExcel.Font = new Font("Segoe UI Semibold", 11.8F, FontStyle.Bold);
-            btn_exportToExcel.ForeColor = Color.White;
-            btn_exportToExcel.Location = new Point(815, 546);
-            btn_exportToExcel.Name = "btn_exportToExcel";
-            btn_exportToExcel.Size = new Size(151, 45);
-            btn_exportToExcel.TabIndex = 24;
-            btn_exportToExcel.Text = "Xuất excel";
-            btn_exportToExcel.UseVisualStyleBackColor = false;
+            dateTimePicker2.Location = new Point(648, 153);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(250, 27);
+            dateTimePicker2.TabIndex = 26;
             // 
-            // dateTimeTo
+            // label6
             // 
-            dateTimeTo.CalendarFont = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimeTo.Location = new Point(327, 50);
-            dateTimeTo.Name = "dateTimeTo";
-            dateTimeTo.Size = new Size(325, 27);
-            dateTimeTo.TabIndex = 23;
+            label6.AutoSize = true;
+            label6.Location = new Point(523, 155);
+            label6.Name = "label6";
+            label6.Size = new Size(72, 20);
+            label6.TabIndex = 25;
+            label6.Text = "Đến ngày";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 11.8F, FontStyle.Bold);
-            label5.Location = new Point(3, 48);
+            label5.Location = new Point(105, 160);
             label5.Name = "label5";
-            label5.Size = new Size(172, 28);
-            label5.TabIndex = 22;
-            label5.Text = "Thời gian bắt đầu";
+            label5.Size = new Size(62, 20);
+            label5.TabIndex = 24;
+            label5.Text = "Từ ngày";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(227, 155);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(250, 27);
+            dateTimePicker1.TabIndex = 23;
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(773, 82);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(151, 28);
+            comboBox3.TabIndex = 22;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(512, 82);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(151, 28);
+            comboBox2.TabIndex = 21;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 11.8F, FontStyle.Bold);
-            label4.Location = new Point(3, 120);
+            label4.Location = new Point(680, 85);
             label4.Name = "label4";
-            label4.Size = new Size(141, 28);
-            label4.TabIndex = 21;
-            label4.Text = "Thời gian cuối";
+            label4.Size = new Size(76, 20);
+            label4.TabIndex = 20;
+            label4.Text = "Chọn năm";
             // 
-            // btn_xem
+            // label3
             // 
-            btn_xem.BackColor = SystemColors.Highlight;
-            btn_xem.Font = new Font("Segoe UI Semibold", 11.8F, FontStyle.Bold);
-            btn_xem.ForeColor = SystemColors.ButtonFace;
-            btn_xem.Location = new Point(10, 542);
-            btn_xem.Name = "btn_xem";
-            btn_xem.Size = new Size(141, 47);
-            btn_xem.TabIndex = 25;
-            btn_xem.Text = "Xem biểu đồ";
-            btn_xem.UseVisualStyleBackColor = false;
+            label3.AutoSize = true;
+            label3.Location = new Point(404, 85);
+            label3.Name = "label3";
+            label3.Size = new Size(85, 20);
+            label3.TabIndex = 19;
+            label3.Text = "Chọn tháng";
             // 
-            // lb_detail
+            // label2
             // 
-            lb_detail.AutoSize = true;
-            lb_detail.Font = new Font("Segoe UI Semibold", 11.8F, FontStyle.Bold);
-            lb_detail.Location = new Point(3, 195);
-            lb_detail.Name = "lb_detail";
-            lb_detail.Size = new Size(83, 28);
-            lb_detail.TabIndex = 20;
-            lb_detail.Text = "Chi tiết ";
+            label2.AutoSize = true;
+            label2.Location = new Point(105, 85);
+            label2.Name = "label2";
+            label2.Size = new Size(103, 20);
+            label2.TabIndex = 18;
+            label2.Text = "Chọn loại tour";
             // 
-            // dataGridView
+            // comboBox1
             // 
-            dataGridView.BackgroundColor = SystemColors.ButtonFace;
-            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView.Location = new Point(10, 226);
-            dataGridView.Name = "dataGridView";
-            dataGridView.RowHeadersWidth = 51;
-            dataGridView.Size = new Size(1024, 310);
-            dataGridView.TabIndex = 19;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(227, 82);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(151, 28);
+            comboBox1.TabIndex = 17;
             // 
-            // btn_thongke
+            // label7
             // 
-            btn_thongke.BackColor = Color.Yellow;
-            btn_thongke.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
-            btn_thongke.Location = new Point(395, 164);
-            btn_thongke.Name = "btn_thongke";
-            btn_thongke.Size = new Size(125, 37);
-            btn_thongke.TabIndex = 18;
-            btn_thongke.Text = "Thống kê";
-            btn_thongke.UseVisualStyleBackColor = false;
+            label7.AutoSize = true;
+            label7.Location = new Point(447, 262);
+            label7.Name = "label7";
+            label7.Size = new Size(144, 20);
+            label7.TabIndex = 27;
+            label7.Text = "Vẽ biểu đồ dưới đây";
             // 
-            // dateTimeFrom
+            // iconButton1
             // 
-            dateTimeFrom.CalendarFont = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimeFrom.Location = new Point(327, 131);
-            dateTimeFrom.Name = "dateTimeFrom";
-            dateTimeFrom.Size = new Size(325, 27);
-            dateTimeFrom.TabIndex = 17;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            iconButton1.IconColor = Color.Black;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.Location = new Point(186, 498);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Size = new Size(163, 29);
+            iconButton1.TabIndex = 28;
+            iconButton1.Text = "Lưu biểu đồ";
+            iconButton1.UseVisualStyleBackColor = true;
             // 
-            // lb_tke
+            // iconButton2
             // 
-            lb_tke.AutoSize = true;
-            lb_tke.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lb_tke.ForeColor = Color.FromArgb(0, 0, 192);
-            lb_tke.Location = new Point(395, 6);
-            lb_tke.Name = "lb_tke";
-            lb_tke.Size = new Size(257, 41);
-            lb_tke.TabIndex = 16;
-            lb_tke.Text = "Thống kê số tour";
+            iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            iconButton2.IconColor = Color.Black;
+            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton2.Location = new Point(657, 498);
+            iconButton2.Name = "iconButton2";
+            iconButton2.Size = new Size(99, 29);
+            iconButton2.TabIndex = 29;
+            iconButton2.Text = "Thoát";
+            iconButton2.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // radioButton1
             // 
-            panel1.Controls.Add(btn_exportToExcel);
-            panel1.Controls.Add(lb_detail);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(dateTimeTo);
-            panel1.Controls.Add(btn_exportToPDF);
-            panel1.Controls.Add(btn_thongke);
-            panel1.Controls.Add(lb_tke);
-            panel1.Controls.Add(dateTimeFrom);
-            panel1.Controls.Add(dataGridView);
-            panel1.Controls.Add(btn_xem);
-            panel1.Location = new Point(2, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1055, 680);
-            panel1.TabIndex = 28;
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(429, 212);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(53, 24);
+            radioButton1.TabIndex = 30;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Cột";
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(240, 216);
+            label8.Name = "label8";
+            label8.Size = new Size(129, 20);
+            label8.TabIndex = 31;
+            label8.Text = "Chọn kiểu biểu đồ";
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(583, 212);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(59, 24);
+            radioButton2.TabIndex = 32;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Tròn";
+            radioButton2.UseVisualStyleBackColor = true;
             // 
             // statistic
             // 
@@ -184,30 +209,48 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             ClientSize = new Size(1062, 581);
-            Controls.Add(panel1);
+            Controls.Add(radioButton2);
+            Controls.Add(label8);
+            Controls.Add(radioButton1);
+            Controls.Add(iconButton2);
+            Controls.Add(iconButton1);
+            Controls.Add(label7);
+            Controls.Add(dateTimePicker2);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(comboBox3);
+            Controls.Add(comboBox2);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(comboBox1);
+            Controls.Add(label1);
             Name = "statistic";
             Text = "statistic";
             Load += statistic_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button btn_exportToPDF;
-        private System.Windows.Forms.Timer timer1;
-        private Button btn_exportToExcel;
-        private DateTimePicker dateTimeTo;
+        private Label label1;
+        private DateTimePicker dateTimePicker2;
+        private Label label6;
         private Label label5;
+        private DateTimePicker dateTimePicker1;
+        private ComboBox comboBox3;
+        private ComboBox comboBox2;
         private Label label4;
-        private Button btn_xem;
-        private Label lb_detail;
-        private DataGridView dataGridView;
-        private Button btn_thongke;
-        private DateTimePicker dateTimeFrom;
-        private Label lb_tke;
-        private Panel panel1;
+        private Label label3;
+        private Label label2;
+        private ComboBox comboBox1;
+        private Label label7;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private RadioButton radioButton1;
+        private Label label8;
+        private RadioButton radioButton2;
     }
 }

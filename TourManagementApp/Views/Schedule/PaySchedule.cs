@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TourManagementApp.Views.Schedule
 {
-    public partial class ScheduleLayout : Form
+    public partial class PaySchedule : Form
     {
-        public ScheduleLayout()
+        public PaySchedule()
         {
             InitializeComponent();
         }

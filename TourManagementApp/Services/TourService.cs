@@ -1,12 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using TourManagementApp.Models;
 
 namespace TourManagementApp.Services
 {
-    internal class TourService
+    public interface TourService
     {
+        bool AddNew(Tours tour);
+        List<Tours> getAll();
+        bool Update(Tours tour);   
+        List<Tours> GetByPrice(int price_min, int price_max);
+        bool DeleteById(int Id);
+        public List<Tours> GetByAttribute(string attribute, string value);
     }
 }

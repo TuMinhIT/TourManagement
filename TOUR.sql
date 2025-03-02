@@ -14,31 +14,25 @@ CREATE TABLE Users (
     Phone NVARCHAR(20) NULL,
     Email NVARCHAR(100) UNIQUE NOT NULL,
 	link NVARCHAR(250) NULL,
+	note NVARCHAR(250) NUlL,
 );
 
-
+go
 -- Bảng Khách Hàng (Customer)
 CREATE TABLE Customers (
-    CustomerID INT IDENTITY(1,1) PRIMARY KEY,
+    CustomerID NVARCHAR(10) PRIMARY KEY,
     FullName NVARCHAR(100) NOT NULL,
-    PhoneNumber NVARCHAR(20) UNIQUE NOT NULL,
+    Gender NVARCHAR(10)  NOT NULL, 
+    PhoneNumber NVARCHAR(20)  NULL,
     Email NVARCHAR(100) NULL,
-    Address NVARCHAR(255) NULL
+    Address NVARCHAR(255) NULL,
+    Nationality NVARCHAR(50) NULL,
+    Notes NVARCHAR(500) NULL 
 );
 
--- Bảng Tour
-CREATE TABLE Tours (
-    TourID INT IDENTITY(1,1) PRIMARY KEY,
-    TourName NVARCHAR(255) NOT NULL,
-    TourType NVARCHAR(50) CHECK (TourType IN ('Luxury', 'Standard', 'Budget')) NOT NULL,
-    Transport NVARCHAR(50) CHECK (Transport IN ('Car', 'Airplane')) NOT NULL,
-    Price DECIMAL(18,2) NOT NULL,
-    Description NVARCHAR(MAX) NULL
-);
-
-
--- Bảng Đơn Đặt Tour (Booking)
-CREATE TABLE Bookings (
+go
+-- Bảng lưu danh sách tour của khách hàng
+CREATE TABLE CustomerTours (
     BookingID INT IDENTITY(1,1) PRIMARY KEY,
     CustomerID INT NOT NULL,
     TourID INT NOT NULL,
@@ -48,6 +42,20 @@ CREATE TABLE Bookings (
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID) ON DELETE CASCADE,
     FOREIGN KEY (TourID) REFERENCES Tours(TourID) ON DELETE CASCADE
 );
+go
+-- Bảng Tour
+CREATE TABLE Tours (
+    TourID INT IDENTITY(1,1) PRIMARY KEY,
+    TourName NVARCHAR(255) NOT NULL,
+    TourType NVARCHAR(50) NOT NULL, 
+    Transport NVARCHAR(50) NOT NULL, 
+    Price  NVARCHAR(50) NOT NULL,
+	LinkImage NVARCHAR(255) NULL,
+	Description NVARCHAR(1000) NULL
+);
+
+
+go
 
 -- Bảng Lịch Trình (Itinerary)
 CREATE TABLE Schedule (
@@ -57,6 +65,7 @@ CREATE TABLE Schedule (
     Description NVARCHAR(MAX) NOT NULL,
     FOREIGN KEY (TourID) REFERENCES Tours(TourID) ON DELETE CASCADE
 );
+go
 
 -- Bảng Báo Cáo Doanh Thu
 CREATE TABLE RevenueReports (
@@ -65,7 +74,7 @@ CREATE TABLE RevenueReports (
     TourType NVARCHAR(50),
     TotalRevenue DECIMAL(18,2) NOT NULL
 );
-
+go
 -- Bảng Nhật Ký Hệ Thống
 CREATE TABLE SystemLogs (
     LogID INT IDENTITY(1,1) PRIMARY KEY,
@@ -75,38 +84,53 @@ CREATE TABLE SystemLogs (
     FOREIGN KEY (UserID) REFERENCES Users(UserID) ON DELETE SET NULL
 );
 
-
---triger
-
+go
+--triger generate User id
 CREATE TRIGGER trg_AutoGenerate_UserID ON Users
 INSTEAD OF INSERT
 AS
 BEGIN
     DECLARE @NewID NVARCHAR(10);
-    
-    -- Lấy UserID lớn nhất hiện tại (VD: NV005)
     SELECT @NewID = MAX(UserID) FROM Users;
     
-    -- Nếu chưa có User nào, bắt đầu từ NV001
     IF @NewID IS NULL
         SET @NewID = 'NV001';
     ELSE
-        -- Lấy số cuối cùng, tăng lên 1 và format lại thành NVxxx
         SET @NewID = 'NV' + RIGHT('000' + CAST(CAST(RIGHT(@NewID, 3) AS INT) + 1 AS NVARCHAR), 3);
 
-    -- Chèn dữ liệu vào bảng Users với UserID tự động sinh
-    INSERT INTO Users (UserID, Password, Role, FullName, Address, Phone, Email)
-    SELECT @NewID, Password, Role, FullName, Address, Phone, Email
+    INSERT INTO Users (UserID, Password, Role, FullName, Address, Phone, Email, note)
+    SELECT @NewID, Password, Role, FullName, Address, Phone, Email, note
     FROM inserted;
 END;
 
 
+--trigger for custommer ID
+CREATE TRIGGER trg_AutoGenerate_CustomerID 
+ON Customers
+INSTEAD OF INSERT
+AS
+BEGIN
+    DECLARE @NewID NVARCHAR(10);
+    DECLARE @MaxID NVARCHAR(10);
+    DECLARE @NextNumber INT;
+
+    SELECT @MaxID = MAX(CustomerID) FROM Customers;
+
+    IF @MaxID IS NULL
+        SET @NewID = 'KH001';
+    ELSE
+    BEGIN
+        SET @NextNumber = CAST(RIGHT(@MaxID, 3) AS INT) + 1;
+        SET @NewID = 'KH' + RIGHT('000' + CAST(@NextNumber AS NVARCHAR), 3);
+    END;
+    INSERT INTO Customers (CustomerID, FullName, Gender, PhoneNumber, Email, Address, Nationality, Notes)
+    SELECT @NewID, FullName, Gender, PhoneNumber, Email, Address, Nationality, Notes
+    FROM inserted;
+END;
+
+
+
 -- Thêm dữ liệu vào bảng Customers
-INSERT INTO Customers (FullName, PhoneNumber, Email, Address)
-VALUES 
-(N'Phạm Văn D', '0987654321', 'phamvand@example.com', N'123 Lê Lợi, Hà Nội'),
-(N'Nguyễn Thị E', '0976543210', 'nguyenthie@example.com', N'456 Hai Bà Trưng, TP.HCM'),
-(N'Hoàng Văn F', '0965432109', NULL, N'789 Trần Phú, Đà Nẵng');
 
 -- Thêm dữ liệu vào bảng Tours
 INSERT INTO Tours (TourName, TourType, Transport, Price, Description)

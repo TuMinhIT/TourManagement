@@ -3,44 +3,16 @@
   "WorkspaceRootPath": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\views\\admin\\employeeslayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\admin\\employeeslayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\views\\tour\\tourlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\tour\\tourlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\views\\tour\\touritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\tour\\touritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\views\\admin\\employeeslayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\admin\\employeeslayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\repositories\\implrepositories\\impluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:repositories\\implrepositories\\impluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\views\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\services\\implservices\\impluserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:services\\implservices\\impluserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\views\\account\\accountlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\account\\accountlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\views\\account\\accountlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\account\\accountlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\views\\tour\\tourlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\tour\\tourlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,130 +34,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmployeesLayout.cs",
-              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Admin\\EmployeesLayout.cs",
-              "RelativeDocumentMoniker": "Views\\Admin\\EmployeesLayout.cs",
-              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Admin\\EmployeesLayout.cs",
-              "RelativeToolTip": "Views\\Admin\\EmployeesLayout.cs",
-              "ViewState": "AgIAAKcAAAAAAAAAAADwv8EAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "TourLayout.cs",
+              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Tour\\TourLayout.cs",
+              "RelativeDocumentMoniker": "Views\\Tour\\TourLayout.cs",
+              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Tour\\TourLayout.cs",
+              "RelativeToolTip": "Views\\Tour\\TourLayout.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T14:37:20.898Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Message.cs",
-              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Message.cs",
-              "RelativeDocumentMoniker": "Views\\Message.cs",
-              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Message.cs",
-              "RelativeToolTip": "Views\\Message.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA/wBsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T15:08:22.551Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ImplUserRepository.cs",
-              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Repositories\\ImplRepositories\\ImplUserRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ImplRepositories\\ImplUserRepository.cs",
-              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Repositories\\ImplRepositories\\ImplUserRepository.cs",
-              "RelativeToolTip": "Repositories\\ImplRepositories\\ImplUserRepository.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAUwA0AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T14:58:26.513Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ImplUserService.cs",
-              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Services\\ImplServices\\ImplUserService.cs",
-              "RelativeDocumentMoniker": "Services\\ImplServices\\ImplUserService.cs",
-              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Services\\ImplServices\\ImplUserService.cs",
-              "RelativeToolTip": "Services\\ImplServices\\ImplUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T14:53:47.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
-              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T14:53:26.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Services\\UserService.cs",
-              "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T14:47:18.448Z",
+              "WhenOpened": "2025-03-02T03:48:29.729Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA0wAwAAAAWAAAAAAAAAA==",
+              "Title": "TourItem.cs",
+              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Tour\\TourItem.cs",
+              "RelativeDocumentMoniker": "Views\\Tour\\TourItem.cs",
+              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Tour\\TourItem.cs*",
+              "RelativeToolTip": "Views\\Tour\\TourItem.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T14:43:21.758Z",
+              "WhenOpened": "2025-03-02T04:28:21.266Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmployeesLayout.cs [Design]",
-              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Admin\\EmployeesLayout.cs",
-              "RelativeDocumentMoniker": "Views\\Admin\\EmployeesLayout.cs",
-              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Admin\\EmployeesLayout.cs [Design]",
-              "RelativeToolTip": "Views\\Admin\\EmployeesLayout.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "TourLayout.cs [Design]",
+              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Tour\\TourLayout.cs",
+              "RelativeDocumentMoniker": "Views\\Tour\\TourLayout.cs",
+              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Tour\\TourLayout.cs [Design]",
+              "RelativeToolTip": "Views\\Tour\\TourLayout.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T14:37:18.174Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AccountLayout.cs",
-              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Account\\AccountLayout.cs",
-              "RelativeDocumentMoniker": "Views\\Account\\AccountLayout.cs",
-              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Account\\AccountLayout.cs",
-              "RelativeToolTip": "Views\\Account\\AccountLayout.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAuwCAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T14:35:48.138Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AccountLayout.cs [Design]",
-              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Account\\AccountLayout.cs",
-              "RelativeDocumentMoniker": "Views\\Account\\AccountLayout.cs",
-              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Account\\AccountLayout.cs [Design]",
-              "RelativeToolTip": "Views\\Account\\AccountLayout.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T14:35:45.928Z",
+              "WhenOpened": "2025-03-01T13:14:41.905Z",
               "EditorCaption": " [Design]"
             }
           ]

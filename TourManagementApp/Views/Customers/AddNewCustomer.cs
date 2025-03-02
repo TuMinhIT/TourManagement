@@ -7,19 +7,59 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TourManagementApp.Models;
+using TourManagementApp.Services.ImplServices;
+using TourManagementApp.Services;
+using System.Windows.Interop;
 
 namespace TourManagementApp.Views.Customers
 {
     public partial class AddNewCustomer : Form
     {
+        Message message = new Message();
         public AddNewCustomer()
         {
             InitializeComponent();
         }
 
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            CustomerService customerService = new ImplCustomerService();
+            if (string.IsNullOrEmpty(tb_name.Text)
+                || string.IsNullOrEmpty(tb_email.Text)
+                || string.IsNullOrEmpty(cbb_gender.SelectedItem.ToString()))
+            {
+                string msg = "Vui lòng nhập đủ thông tin!";
+                message.MessageOK(msg);
+            }
+            else
+            {
+                Customer newCustomer = 
+                    new Customer(tb_name.Text, cbb_gender.SelectedItem.ToString(), tb_phone.Text,
+                                  tb_email.Text, tb_address.Text, tb_national.Text, tb_note.Text);
+                if (customerService.AddNew(newCustomer))
+                {
+                    string msg = $"Bạn đã thêm thành công khách hàng mới! \n";
+                    message.MessageOK(msg);
+                    ResetForm();
+                }
+            }
+        }
+
+        private void ResetForm()
+        {
+            this.Controls.Clear();
+            this.InitializeComponent();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

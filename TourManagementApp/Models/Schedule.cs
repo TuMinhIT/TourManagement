@@ -14,7 +14,7 @@ namespace TourManagementApp.Models
         public string Description { get; set; } = string.Empty;
 
         // Navigation property
-        public Tour Tour { get; set; } = null!;
+        public Tours Tour { get; set; } = null!;
     }
 
 }

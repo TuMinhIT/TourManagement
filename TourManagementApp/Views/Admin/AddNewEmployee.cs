@@ -39,7 +39,7 @@ namespace TourManagementApp.Views.Admin
                     pw = tb_password.PlaceholderText;
                 }
                 Users user = new Users(pw, "Staff", tb_name.Text,
-                   tb_address.Text, tb_phone.Text, tb_email.Text);
+                   tb_address.Text, tb_phone.Text, tb_email.Text,tb_note.Text );
 
                 string newUserId = userService.RegisterUser(user);
 

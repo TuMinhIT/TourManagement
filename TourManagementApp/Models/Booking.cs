@@ -17,7 +17,7 @@ namespace TourManagementApp.Models
 
         // Navigation properties
         public Customer Customer { get; set; } = null!;
-        public Tour Tour { get; set; } = null!;
+        public Tours Tour { get; set; } = null!;
     }
 
 }

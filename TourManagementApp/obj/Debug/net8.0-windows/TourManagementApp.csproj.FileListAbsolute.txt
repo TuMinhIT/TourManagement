@@ -29,7 +29,6 @@ D:\ASP.NET_CORE9\MidTerm\TourManagement\TourManagementApp\obj\Debug\net8.0-windo
 D:\ASP.NET_CORE9\MidTerm\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\TourManagementApp.Views.ForgotPassword.resources
 D:\ASP.NET_CORE9\MidTerm\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\TourManagementApp.Views.Account.AccountLayout.resources
 D:\ASP.NET_CORE9\MidTerm\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\TourManagementApp.Views.Report.statistic.resources
-D:\ASP.NET_CORE9\MidTerm\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\TourManagementApp.Views.Schedule.ScheduleLayout.resources
 E:\HK2-2025\.net\Gk\TourManagement\TourManagementApp\bin\Debug\net8.0-windows\TourManagementApp.exe
 E:\HK2-2025\.net\Gk\TourManagement\TourManagementApp\bin\Debug\net8.0-windows\TourManagementApp.deps.json
 E:\HK2-2025\.net\Gk\TourManagement\TourManagementApp\bin\Debug\net8.0-windows\TourManagementApp.runtimeconfig.json
@@ -126,3 +125,9 @@ D:\ASP.NET_CORE9\MidTerm\TourManagement\TourManagementApp\bin\Debug\net8.0-windo
 D:\ASP.NET_CORE9\MidTerm\TourManagement\TourManagementApp\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 D:\ASP.NET_CORE9\MidTerm\TourManagement\TourManagementApp\bin\Debug\net8.0-windows\BCrypt.Net-Next.dll
 D:\ASP.NET_CORE9\MidTerm\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\TourManagementApp.Views.Admin.EmployeesLayout.resources
+D:\ASP.NET_CORE9\MidTerm\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\TourManagementApp.Views.Admin.EmployeeDetail.resources
+D:\ASP.NET_CORE9\MidTerm\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\TourManagementApp.Views.Schedule.AddSchedule.resources
+D:\ASP.NET_CORE9\MidTerm\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\TourManagementApp.Views.Schedule.EditSchedule.resources
+D:\ASP.NET_CORE9\MidTerm\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\TourManagementApp.Views.Schedule.PaySchedule.resources
+D:\ASP.NET_CORE9\MidTerm\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\TourManagementApp.Views.Customers.CustomerDetail.resources
+D:\ASP.NET_CORE9\MidTerm\TourManagement\TourManagementApp\obj\Debug\net8.0-windows\TourManagementApp.Views.Tour.TourItem.resources

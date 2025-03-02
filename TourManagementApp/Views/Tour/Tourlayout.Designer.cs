@@ -29,164 +29,147 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            comboBox3 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
-            panel2 = new Panel();
-            label6 = new Label();
-            dataGridView1 = new DataGridView();
+            btn_add_new = new FontAwesome.Sharp.IconButton();
+            btn_list = new FontAwesome.Sharp.IconButton();
+            cbb_transport = new ComboBox();
+            cbb_price = new ComboBox();
+            cbb_type = new ComboBox();
+            panel_main = new Panel();
             panel8 = new Panel();
-            iconButton8 = new FontAwesome.Sharp.IconButton();
+            btn_search = new FontAwesome.Sharp.IconButton();
             iconButton6 = new FontAwesome.Sharp.IconButton();
             iconButton3 = new FontAwesome.Sharp.IconButton();
             iconButton5 = new FontAwesome.Sharp.IconButton();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
-            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel8.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(41, 128, 185);
-            panel1.Controls.Add(iconButton2);
-            panel1.Controls.Add(iconButton1);
+            panel1.Controls.Add(btn_add_new);
+            panel1.Controls.Add(btn_list);
             panel1.Location = new Point(3, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(974, 57);
+            panel1.Size = new Size(963, 57);
             panel1.TabIndex = 0;
             // 
-            // iconButton2
+            // btn_add_new
             // 
-            iconButton2.FlatAppearance.BorderSize = 0;
-            iconButton2.FlatStyle = FlatStyle.Flat;
-            iconButton2.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton2.ForeColor = SystemColors.ButtonFace;
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
-            iconButton2.IconColor = SystemColors.ButtonFace;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.IconSize = 32;
-            iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton2.Location = new Point(245, 3);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(146, 46);
-            iconButton2.TabIndex = 12;
-            iconButton2.Text = "Thêm mới";
-            iconButton2.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton2.UseVisualStyleBackColor = true;
+            btn_add_new.FlatAppearance.BorderSize = 0;
+            btn_add_new.FlatStyle = FlatStyle.Flat;
+            btn_add_new.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_add_new.ForeColor = SystemColors.ButtonFace;
+            btn_add_new.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            btn_add_new.IconColor = SystemColors.ButtonFace;
+            btn_add_new.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_add_new.IconSize = 32;
+            btn_add_new.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_add_new.Location = new Point(245, 3);
+            btn_add_new.Name = "btn_add_new";
+            btn_add_new.Size = new Size(146, 46);
+            btn_add_new.TabIndex = 12;
+            btn_add_new.Text = "Thêm mới";
+            btn_add_new.TextAlign = ContentAlignment.MiddleLeft;
+            btn_add_new.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_add_new.UseVisualStyleBackColor = true;
+            btn_add_new.Click += btn_add_new_Click;
             // 
-            // iconButton1
+            // btn_list
             // 
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton1.ForeColor = SystemColors.ButtonFace;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
-            iconButton1.IconColor = SystemColors.ButtonFace;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 32;
-            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(19, 3);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(204, 46);
-            iconButton1.TabIndex = 11;
-            iconButton1.Text = "Danh sách tour";
-            iconButton1.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = true;
+            btn_list.FlatAppearance.BorderSize = 0;
+            btn_list.FlatStyle = FlatStyle.Flat;
+            btn_list.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_list.ForeColor = SystemColors.ButtonFace;
+            btn_list.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
+            btn_list.IconColor = SystemColors.ButtonFace;
+            btn_list.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_list.IconSize = 32;
+            btn_list.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_list.Location = new Point(19, 3);
+            btn_list.Name = "btn_list";
+            btn_list.Size = new Size(204, 46);
+            btn_list.TabIndex = 11;
+            btn_list.Text = "Danh sách tour";
+            btn_list.TextAlign = ContentAlignment.MiddleLeft;
+            btn_list.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_list.UseVisualStyleBackColor = true;
+            btn_list.Click += btn_list_Click;
             // 
-            // comboBox3
+            // cbb_transport
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(542, 57);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(151, 28);
-            comboBox3.TabIndex = 4;
+            cbb_transport.FormattingEnabled = true;
+            cbb_transport.Items.AddRange(new object[] { "Car", "Airplane", "Tất cã" });
+            cbb_transport.Location = new Point(528, 73);
+            cbb_transport.Name = "cbb_transport";
+            cbb_transport.Size = new Size(182, 28);
+            cbb_transport.TabIndex = 4;
+            cbb_transport.Text = "Tất cã";
             // 
-            // comboBox2
+            // cbb_price
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(339, 57);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 28);
-            comboBox2.TabIndex = 2;
+            cbb_price.FormattingEnabled = true;
+            cbb_price.Items.AddRange(new object[] { "Dưới 200$", "Từ 200$ đến 400$", "Từ 400$ đến 800$", "Trên 800$", "Tất cã" });
+            cbb_price.Location = new Point(279, 73);
+            cbb_price.Name = "cbb_price";
+            cbb_price.Size = new Size(184, 28);
+            cbb_price.TabIndex = 2;
+            cbb_price.Text = "Tất cã";
             // 
-            // comboBox1
+            // cbb_type
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(156, 57);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 0;
+            cbb_type.FormattingEnabled = true;
+            cbb_type.Items.AddRange(new object[] { "Luxury", "Standard", "Budget", "Tất cã" });
+            cbb_type.Location = new Point(31, 73);
+            cbb_type.Name = "cbb_type";
+            cbb_type.Size = new Size(192, 28);
+            cbb_type.TabIndex = 0;
+            cbb_type.Text = "Tất cã";
             // 
-            // panel2
+            // panel_main
             // 
-            panel2.BackColor = SystemColors.ControlLight;
-            panel2.Controls.Add(label6);
-            panel2.Controls.Add(dataGridView1);
-            panel2.Location = new Point(3, 165);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(974, 469);
-            panel2.TabIndex = 1;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(300, 180);
-            label6.Name = "label6";
-            label6.Size = new Size(255, 20);
-            label6.TabIndex = 1;
-            label6.Text = "Danh sách tour sẽ hiển thị trong đaya";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(28, 28);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(874, 361);
-            dataGridView1.TabIndex = 0;
+            panel_main.AutoScroll = true;
+            panel_main.BackColor = SystemColors.ActiveCaption;
+            panel_main.Location = new Point(3, 199);
+            panel_main.Name = "panel_main";
+            panel_main.Size = new Size(963, 377);
+            panel_main.TabIndex = 1;
             // 
             // panel8
             // 
             panel8.BackColor = Color.Navy;
-            panel8.Controls.Add(iconButton8);
+            panel8.Controls.Add(btn_search);
             panel8.Controls.Add(iconButton6);
             panel8.Controls.Add(iconButton3);
             panel8.Controls.Add(iconButton5);
-            panel8.Controls.Add(iconButton4);
-            panel8.Controls.Add(comboBox1);
-            panel8.Controls.Add(comboBox2);
-            panel8.Controls.Add(comboBox3);
+            panel8.Controls.Add(cbb_type);
+            panel8.Controls.Add(cbb_price);
+            panel8.Controls.Add(cbb_transport);
             panel8.Location = new Point(3, 56);
             panel8.Name = "panel8";
-            panel8.Size = new Size(974, 103);
+            panel8.Size = new Size(966, 137);
             panel8.TabIndex = 9;
             // 
-            // iconButton8
+            // btn_search
             // 
-            iconButton8.BackColor = Color.FromArgb(255, 128, 0);
-            iconButton8.FlatAppearance.BorderSize = 0;
-            iconButton8.FlatStyle = FlatStyle.Flat;
-            iconButton8.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
-            iconButton8.ForeColor = SystemColors.ButtonFace;
-            iconButton8.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlassArrowRight;
-            iconButton8.IconColor = SystemColors.ButtonFace;
-            iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton8.IconSize = 32;
-            iconButton8.Location = new Point(751, 33);
-            iconButton8.Name = "iconButton8";
-            iconButton8.Size = new Size(127, 42);
-            iconButton8.TabIndex = 16;
-            iconButton8.Text = "Tìm kiếm";
-            iconButton8.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton8.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton8.UseVisualStyleBackColor = false;
+            btn_search.BackColor = Color.FromArgb(255, 128, 0);
+            btn_search.FlatAppearance.BorderSize = 0;
+            btn_search.FlatStyle = FlatStyle.Flat;
+            btn_search.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
+            btn_search.ForeColor = SystemColors.ButtonFace;
+            btn_search.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlassArrowRight;
+            btn_search.IconColor = SystemColors.ButtonFace;
+            btn_search.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_search.IconSize = 32;
+            btn_search.Location = new Point(791, 64);
+            btn_search.Name = "btn_search";
+            btn_search.Size = new Size(127, 42);
+            btn_search.TabIndex = 16;
+            btn_search.Text = "Tìm kiếm";
+            btn_search.TextAlign = ContentAlignment.MiddleLeft;
+            btn_search.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_search.UseVisualStyleBackColor = false;
+            btn_search.Click += btn_search_Click;
             // 
             // iconButton6
             // 
@@ -198,7 +181,7 @@
             iconButton6.IconColor = SystemColors.ButtonFace;
             iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton6.IconSize = 32;
-            iconButton6.Location = new Point(528, 11);
+            iconButton6.Location = new Point(518, 11);
             iconButton6.Name = "iconButton6";
             iconButton6.Size = new Size(165, 43);
             iconButton6.TabIndex = 15;
@@ -217,7 +200,7 @@
             iconButton3.IconColor = SystemColors.ButtonFace;
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton3.IconSize = 32;
-            iconButton3.Location = new Point(339, 11);
+            iconButton3.Location = new Point(279, 11);
             iconButton3.Name = "iconButton3";
             iconButton3.Size = new Size(134, 43);
             iconButton3.TabIndex = 14;
@@ -236,7 +219,7 @@
             iconButton5.IconColor = SystemColors.ButtonFace;
             iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton5.IconSize = 32;
-            iconButton5.Location = new Point(156, 8);
+            iconButton5.Location = new Point(31, 11);
             iconButton5.Name = "iconButton5";
             iconButton5.Size = new Size(136, 43);
             iconButton5.TabIndex = 13;
@@ -245,43 +228,21 @@
             iconButton5.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton5.UseVisualStyleBackColor = true;
             // 
-            // iconButton4
-            // 
-            iconButton4.FlatAppearance.BorderSize = 0;
-            iconButton4.FlatStyle = FlatStyle.Flat;
-            iconButton4.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
-            iconButton4.ForeColor = SystemColors.ButtonFace;
-            iconButton4.IconChar = FontAwesome.Sharp.IconChar.Filter;
-            iconButton4.IconColor = SystemColors.ButtonFace;
-            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.IconSize = 32;
-            iconButton4.Location = new Point(19, 22);
-            iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(77, 43);
-            iconButton4.TabIndex = 12;
-            iconButton4.Text = "Lọc";
-            iconButton4.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton4.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton4.UseVisualStyleBackColor = true;
-            // 
             // Tourlayout
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(980, 646);
-            ControlBox = false;
+            ClientSize = new Size(962, 599);
             Controls.Add(panel8);
-            Controls.Add(panel2);
+            Controls.Add(panel_main);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
-            MinimumSize = new Size(970, 580);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MinimumSize = new Size(980, 646);
             Name = "Tourlayout";
             Text = "Tourlayout";
+            Load += Tourlayout_Load;
             panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel8.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -289,20 +250,16 @@
         #endregion
 
         private Panel panel1;
-        private ComboBox comboBox3;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
-        private Panel panel2;
+        private ComboBox cbb_transport;
+        private ComboBox cbb_price;
+        private ComboBox cbb_type;
+        private Panel panel_main;
         private Panel panel8;
-        private DataGridView dataGridView1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private Label label6;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton btn_add_new;
+        private FontAwesome.Sharp.IconButton btn_list;
         private FontAwesome.Sharp.IconButton iconButton6;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton8;
+        private FontAwesome.Sharp.IconButton btn_search;
     }
 }

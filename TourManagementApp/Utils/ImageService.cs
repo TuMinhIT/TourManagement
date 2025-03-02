@@ -48,7 +48,8 @@ namespace TourManagementApp.Utils
             }
             else
             {
-                MessageBox.Show("Không tìm thấy ảnh!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+                //MessageBox.Show("Không tìm thấy ảnh!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -63,7 +64,8 @@ namespace TourManagementApp.Utils
             }
             else
             {
-                MessageBox.Show("Ảnh không tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return ;
+                //MessageBox.Show("Ảnh không tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

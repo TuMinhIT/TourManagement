@@ -10,10 +10,16 @@
     <Compile Update="Views\Admin\AddNewEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\Admin\EmployeeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\Admin\EmployeesLayout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Customers\AddNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Customers\CustomerDetail.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Customers\CustomerLayout.cs">
@@ -34,7 +40,13 @@
     <Compile Update="Views\Report\statistic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Schedule\ScheduleLayout.cs">
+    <Compile Update="Views\Schedule\AddSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Schedule\EditSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Schedule\PaySchedule.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Tour\AddNewOrder.cs">
@@ -46,7 +58,10 @@
     <Compile Update="Views\Tour\EditTour.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Tour\Tourlayout.cs">
+    <Compile Update="Views\Tour\TourItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Tour\TourLayout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Tour\TourOrder1.cs">

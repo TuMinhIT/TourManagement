@@ -49,7 +49,6 @@ namespace TourManagementApp.Views
             this._user = user;
             InitializeComponent();
             initForm();
-
         }
         private void initForm()
         {
@@ -146,7 +145,7 @@ namespace TourManagementApp.Views
 
         private void btn_schedule_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ScheduleLayout());
+            //OpenChildForm(new );
             ActivateButton(sender, RGBColors.color3);
         }
 

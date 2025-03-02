@@ -29,22 +29,25 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
-            comboBox2 = new ComboBox();
+            cbb_type = new ComboBox();
+            tb_description = new TextBox();
+            cbb_transport = new ComboBox();
             label5 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            iconButton8 = new FontAwesome.Sharp.IconButton();
+            tb_price = new TextBox();
+            tb_name = new TextBox();
+            btn_close = new FontAwesome.Sharp.IconButton();
+            btn_add = new FontAwesome.Sharp.IconButton();
             iconButton3 = new FontAwesome.Sharp.IconButton();
             iconButton4 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             iconButton5 = new FontAwesome.Sharp.IconButton();
-            iconButton6 = new FontAwesome.Sharp.IconButton();
             iconButton7 = new FontAwesome.Sharp.IconButton();
             button1 = new Button();
+            pictureBox = new PictureBox();
+            iconButton6 = new FontAwesome.Sharp.IconButton();
+            btn_loadImage = new FontAwesome.Sharp.IconButton();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -53,35 +56,39 @@
             label1.BackColor = SystemColors.ButtonFace;
             label1.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(41, 128, 185);
-            label1.Location = new Point(210, 19);
+            label1.Location = new Point(134, 9);
             label1.Name = "label1";
             label1.Size = new Size(393, 34);
             label1.TabIndex = 0;
             label1.Text = "Nhập thông tin cho tour mới";
             // 
-            // comboBox1
+            // cbb_type
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(104, 196);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(240, 28);
-            comboBox1.TabIndex = 1;
+            cbb_type.FormattingEnabled = true;
+            cbb_type.Items.AddRange(new object[] { "Luxury", "Standard", "Budget" });
+            cbb_type.Location = new Point(109, 196);
+            cbb_type.Name = "cbb_type";
+            cbb_type.Size = new Size(314, 28);
+            cbb_type.TabIndex = 2;
+            cbb_type.Text = "Standard";
             // 
-            // textBox1
+            // tb_description
             // 
-            textBox1.Location = new Point(104, 102);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(574, 41);
-            textBox1.TabIndex = 2;
+            tb_description.Location = new Point(109, 429);
+            tb_description.Multiline = true;
+            tb_description.Name = "tb_description";
+            tb_description.Size = new Size(548, 95);
+            tb_description.TabIndex = 5;
             // 
-            // comboBox2
+            // cbb_transport
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(434, 196);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(244, 28);
-            comboBox2.TabIndex = 6;
+            cbb_transport.FormattingEnabled = true;
+            cbb_transport.Items.AddRange(new object[] { "Car", "Airplane" });
+            cbb_transport.Location = new Point(110, 265);
+            cbb_transport.Name = "cbb_transport";
+            cbb_transport.Size = new Size(313, 28);
+            cbb_transport.TabIndex = 4;
+            cbb_transport.Text = "Car";
             // 
             // label5
             // 
@@ -92,67 +99,62 @@
             label5.Size = new Size(0, 20);
             label5.TabIndex = 7;
             // 
-            // textBox2
+            // tb_price
             // 
-            textBox2.Location = new Point(109, 275);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(235, 27);
-            textBox2.TabIndex = 10;
+            tb_price.Location = new Point(108, 342);
+            tb_price.Name = "tb_price";
+            tb_price.Size = new Size(315, 27);
+            tb_price.TabIndex = 3;
             // 
-            // textBox3
+            // tb_name
             // 
-            textBox3.Location = new Point(434, 286);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(244, 27);
-            textBox3.TabIndex = 11;
+            tb_name.Location = new Point(109, 93);
+            tb_name.Multiline = true;
+            tb_name.Name = "tb_name";
+            tb_name.Size = new Size(548, 46);
+            tb_name.TabIndex = 1;
             // 
-            // textBox4
+            // btn_close
             // 
-            textBox4.Location = new Point(109, 358);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(569, 27);
-            textBox4.TabIndex = 12;
+            btn_close.BackColor = Color.IndianRed;
+            btn_close.FlatAppearance.BorderSize = 0;
+            btn_close.FlatStyle = FlatStyle.Flat;
+            btn_close.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
+            btn_close.ForeColor = SystemColors.ButtonFace;
+            btn_close.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
+            btn_close.IconColor = SystemColors.ButtonFace;
+            btn_close.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_close.IconSize = 32;
+            btn_close.Location = new Point(508, 545);
+            btn_close.Name = "btn_close";
+            btn_close.Size = new Size(127, 42);
+            btn_close.TabIndex = 9;
+            btn_close.Text = "Hủy";
+            btn_close.TextAlign = ContentAlignment.MiddleLeft;
+            btn_close.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_close.UseVisualStyleBackColor = false;
+            btn_close.Click += btn_close_Click;
             // 
-            // iconButton1
+            // btn_add
             // 
-            iconButton1.BackColor = Color.IndianRed;
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
-            iconButton1.ForeColor = SystemColors.ButtonFace;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
-            iconButton1.IconColor = SystemColors.ButtonFace;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 32;
-            iconButton1.Location = new Point(551, 417);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(127, 42);
-            iconButton1.TabIndex = 19;
-            iconButton1.Text = "Hủy";
-            iconButton1.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // iconButton8
-            // 
-            iconButton8.BackColor = Color.FromArgb(41, 128, 185);
-            iconButton8.FlatAppearance.BorderSize = 0;
-            iconButton8.FlatStyle = FlatStyle.Flat;
-            iconButton8.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
-            iconButton8.ForeColor = SystemColors.ButtonFace;
-            iconButton8.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
-            iconButton8.IconColor = SystemColors.ButtonFace;
-            iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton8.IconSize = 32;
-            iconButton8.Location = new Point(389, 417);
-            iconButton8.Name = "iconButton8";
-            iconButton8.Size = new Size(127, 42);
-            iconButton8.TabIndex = 18;
-            iconButton8.Text = "Xác nhận";
-            iconButton8.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton8.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton8.UseVisualStyleBackColor = false;
+            btn_add.BackColor = Color.FromArgb(41, 128, 185);
+            btn_add.FlatAppearance.BorderSize = 0;
+            btn_add.FlatStyle = FlatStyle.Flat;
+            btn_add.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
+            btn_add.ForeColor = SystemColors.ButtonFace;
+            btn_add.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            btn_add.IconColor = SystemColors.ButtonFace;
+            btn_add.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_add.IconSize = 32;
+            btn_add.Location = new Point(340, 545);
+            btn_add.Name = "btn_add";
+            btn_add.Size = new Size(127, 42);
+            btn_add.TabIndex = 6;
+            btn_add.Text = "Xác nhận";
+            btn_add.TextAlign = ContentAlignment.MiddleLeft;
+            btn_add.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_add.UseVisualStyleBackColor = false;
+            btn_add.Click += btn_add_Click;
             // 
             // iconButton3
             // 
@@ -203,7 +205,7 @@
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 25;
             iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton2.Location = new Point(434, 155);
+            iconButton2.Location = new Point(109, 224);
             iconButton2.Name = "iconButton2";
             iconButton2.Size = new Size(150, 35);
             iconButton2.TabIndex = 23;
@@ -222,32 +224,13 @@
             iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton5.IconSize = 25;
             iconButton5.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton5.Location = new Point(104, 237);
+            iconButton5.Location = new Point(104, 301);
             iconButton5.Name = "iconButton5";
             iconButton5.Size = new Size(79, 35);
             iconButton5.TabIndex = 24;
             iconButton5.Text = "Giá";
             iconButton5.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton5.UseVisualStyleBackColor = true;
-            // 
-            // iconButton6
-            // 
-            iconButton6.FlatAppearance.BorderSize = 0;
-            iconButton6.FlatStyle = FlatStyle.Flat;
-            iconButton6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            iconButton6.ForeColor = Color.FromArgb(41, 128, 185);
-            iconButton6.IconChar = FontAwesome.Sharp.IconChar.ClockRotateLeft;
-            iconButton6.IconColor = Color.FromArgb(41, 128, 185);
-            iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton6.IconSize = 25;
-            iconButton6.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton6.Location = new Point(434, 245);
-            iconButton6.Name = "iconButton6";
-            iconButton6.Size = new Size(150, 35);
-            iconButton6.TabIndex = 25;
-            iconButton6.Text = "thời gian";
-            iconButton6.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton6.UseVisualStyleBackColor = true;
             // 
             // iconButton7
             // 
@@ -260,7 +243,7 @@
             iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton7.IconSize = 25;
             iconButton7.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton7.Location = new Point(104, 317);
+            iconButton7.Location = new Point(110, 388);
             iconButton7.Name = "iconButton7";
             iconButton7.Size = new Size(117, 35);
             iconButton7.TabIndex = 26;
@@ -274,7 +257,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Verdana", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.FromArgb(41, 128, 185);
-            button1.Location = new Point(705, 0);
+            button1.Location = new Point(927, 4);
             button1.Name = "button1";
             button1.Size = new Size(40, 40);
             button1.TabIndex = 27;
@@ -282,33 +265,95 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // pictureBox
+            // 
+            pictureBox.BackColor = SystemColors.ActiveCaption;
+            pictureBox.Location = new Point(672, 169);
+            pictureBox.Name = "pictureBox";
+            pictureBox.Size = new Size(203, 222);
+            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox.TabIndex = 28;
+            pictureBox.TabStop = false;
+            // 
+            // iconButton6
+            // 
+            iconButton6.FlatAppearance.BorderSize = 0;
+            iconButton6.FlatStyle = FlatStyle.Flat;
+            iconButton6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            iconButton6.ForeColor = Color.FromArgb(41, 128, 185);
+            iconButton6.IconChar = FontAwesome.Sharp.IconChar.FunnelDollar;
+            iconButton6.IconColor = Color.FromArgb(41, 128, 185);
+            iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton6.IconSize = 25;
+            iconButton6.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButton6.Location = new Point(701, 128);
+            iconButton6.Name = "iconButton6";
+            iconButton6.Size = new Size(174, 35);
+            iconButton6.TabIndex = 29;
+            iconButton6.Text = "Hình ảnh";
+            iconButton6.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton6.UseVisualStyleBackColor = true;
+            // 
+            // btn_loadImage
+            // 
+            btn_loadImage.BackColor = Color.FromArgb(41, 128, 185);
+            btn_loadImage.FlatAppearance.BorderSize = 0;
+            btn_loadImage.FlatStyle = FlatStyle.Flat;
+            btn_loadImage.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
+            btn_loadImage.ForeColor = SystemColors.ButtonFace;
+            btn_loadImage.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            btn_loadImage.IconColor = SystemColors.ButtonFace;
+            btn_loadImage.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_loadImage.IconSize = 32;
+            btn_loadImage.Location = new Point(748, 397);
+            btn_loadImage.Name = "btn_loadImage";
+            btn_loadImage.Size = new Size(127, 42);
+            btn_loadImage.TabIndex = 30;
+            btn_loadImage.Text = "Thêm";
+            btn_loadImage.TextAlign = ContentAlignment.MiddleLeft;
+            btn_loadImage.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_loadImage.UseVisualStyleBackColor = false;
+            btn_loadImage.Click += btn_ImageLoad_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(381, 345);
+            label2.Name = "label2";
+            label2.Size = new Size(17, 20);
+            label2.TabIndex = 31;
+            label2.Text = "$";
+            // 
             // AddNewTour
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(745, 485);
+            BackColor = SystemColors.Menu;
+            ClientSize = new Size(979, 608);
             ControlBox = false;
+            Controls.Add(label2);
+            Controls.Add(btn_loadImage);
+            Controls.Add(iconButton6);
+            Controls.Add(pictureBox);
             Controls.Add(button1);
             Controls.Add(iconButton7);
-            Controls.Add(iconButton6);
             Controls.Add(iconButton5);
             Controls.Add(iconButton2);
             Controls.Add(iconButton4);
             Controls.Add(iconButton3);
-            Controls.Add(iconButton1);
-            Controls.Add(iconButton8);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(btn_close);
+            Controls.Add(btn_add);
+            Controls.Add(tb_name);
+            Controls.Add(tb_price);
             Controls.Add(label5);
-            Controls.Add(comboBox2);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox1);
+            Controls.Add(cbb_transport);
+            Controls.Add(tb_description);
+            Controls.Add(cbb_type);
             Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "AddNewTour";
             Text = "AddNewTour";
+            ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -316,21 +361,23 @@
         #endregion
 
         private Label label1;
-        private ComboBox comboBox1;
-        private TextBox textBox1;
-        private ComboBox comboBox2;
+        private ComboBox cbb_type;
+        private TextBox tb_description;
+        private ComboBox cbb_transport;
         private Label label5;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton8;
+        private TextBox tb_price;
+        private TextBox tb_name;
+        private FontAwesome.Sharp.IconButton btn_close;
+        private FontAwesome.Sharp.IconButton btn_add;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton6;
         private FontAwesome.Sharp.IconButton iconButton7;
         private Button button1;
+        private PictureBox pictureBox;
+        private FontAwesome.Sharp.IconButton iconButton6;
+        private FontAwesome.Sharp.IconButton btn_loadImage;
+        private Label label2;
     }
 }

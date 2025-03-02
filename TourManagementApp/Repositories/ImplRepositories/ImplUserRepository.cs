@@ -8,11 +8,14 @@ using TourManagementApp.Database;
 using TourManagementApp.Models;
 using TourManagementApp.Services.ImplServices;
 using TourManagementApp.Services;
+using static System.Windows.Forms.LinkLabel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace TourManagementApp.Repositories.ImplRepositories
 {
     class ImplUserRepository : UserRepository
     {
+
         public string AddUser(Users user)
         {
             using (SqlConnection conn = Connection.GetSqlConnection(DatabaseName.TourManagement.ToString()))
@@ -20,8 +23,8 @@ namespace TourManagementApp.Repositories.ImplRepositories
                 try
                 {
                     string insertQuery = @"
-                INSERT INTO Users (Password, Role, FullName, Address, Phone, Email) 
-                VALUES (@Password, @Role, @FullName, @Address, @Phone, @Email);";
+                INSERT INTO Users (Password, Role, FullName, Address, Phone, Email, note) 
+                VALUES (@Password, @Role, @FullName, @Address, @Phone, @Email, @note );";
 
                     using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
                     {
@@ -31,6 +34,7 @@ namespace TourManagementApp.Repositories.ImplRepositories
                         cmd.Parameters.AddWithValue("@Address", user.Address ?? (object)DBNull.Value);
                         cmd.Parameters.AddWithValue("@Phone", user.Phone ?? (object)DBNull.Value);
                         cmd.Parameters.AddWithValue("@Email", user.Email ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@note", user.note ?? (object)DBNull.Value);
 
                         cmd.ExecuteNonQuery();
                     }
@@ -52,7 +56,6 @@ namespace TourManagementApp.Repositories.ImplRepositories
                 }
             }
         }
-
         public bool DeleteById(string userId)
         {
             using (SqlConnection conn = Connection.GetSqlConnection(DatabaseName.TourManagement.ToString()))
@@ -75,19 +78,16 @@ namespace TourManagementApp.Repositories.ImplRepositories
                 }
             }
         }
-
-
         public List<Users> getAllUsers()
-        {
-            List<Users> users = new List<Users>();
+        {           
             using (SqlConnection conn = Connection.GetSqlConnection(DatabaseName.TourManagement.ToString()))
-            {
+            {             
                 if (conn == null)
                 {
                     MessageBox.Show("Kết nối thất bại!");
                     return null;
                 }
-
+                List<Users> users = new List<Users>();
                 string query = "SELECT * FROM Users";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -97,38 +97,39 @@ namespace TourManagementApp.Repositories.ImplRepositories
                         {
                             while (reader.Read())
                             {
-                                //Password, Role, FullName, Address, Phone, Email
-                                string id = reader.GetString(0);
-                                string fullname = reader.GetString(3);
-                                string Address = reader.GetString(4);
-                                string phone = reader.GetString(5);
-                                string email = reader.GetString(6);
-
-                                Users user = new Users(" ", " ", fullname, Address, phone, email);
-                                user.UserID = id;
-                                users.Add(user);
+                                string UserID = reader["UserID"].ToString();
+                                string FullName = reader["FullName"].ToString();
+                                string Role = reader["Role"].ToString();
+                                string Address = reader["Address"] != DBNull.Value ? reader["Address"].ToString() : null;
+                                string Phone = reader["Phone"] != DBNull.Value ? reader["Phone"].ToString() : null;
+                                string Email = reader["Email"].ToString();
+                                string link = reader["link"].ToString();
+                                string note = reader["note"].ToString();                                                           
+                                Users user1 = new Users(" ", " ", FullName, Address, Phone, Email, note);
+                                user1.UserID = UserID;
+                                users.Add(user1);
+                                
                             }
                         }
                         return users;
-
                     }
                     catch (Exception ex)
                     {
                         Console.WriteLine($"Lỗi khi lấy dữ liệu: {ex.Message}");
                     }
                 }
+                return users;
             }
-
-            return users;
+          
         }
-
+        
         public Users GetByEmail(string Email)
         {
             using (SqlConnection conn = Connection.GetSqlConnection(DatabaseName.TourManagement.ToString()))
             {
                 try
                 {
-                    string query = "SELECT UserID, FullName, Role, Address, Phone, Email, link FROM Users WHERE Email = @Email";
+                    string query = "SELECT UserID, FullName, Role, Address, Phone, Email, link, note FROM Users WHERE Email = @Email";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Email", Email);
@@ -146,6 +147,7 @@ namespace TourManagementApp.Repositories.ImplRepositories
                                     Phone = reader["Phone"] != DBNull.Value ? reader["Phone"].ToString() : null,
                                     Email = reader["Email"].ToString(),
                                     link = reader["link"].ToString(),
+                                    note = reader["note"].ToString(),
                                 };
                             }
                         }
@@ -166,7 +168,7 @@ namespace TourManagementApp.Repositories.ImplRepositories
             {
                 try
                 {
-                    string query = "SELECT UserID, FullName, Role, Address, Phone, Email, link FROM Users WHERE UserID = @Id";
+                    string query = "SELECT UserID, FullName, Role, Address, Phone, Email, link, note FROM Users WHERE UserID = @Id";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Id", userId);
@@ -184,6 +186,7 @@ namespace TourManagementApp.Repositories.ImplRepositories
                                     Phone = reader["Phone"] != DBNull.Value ? reader["Phone"].ToString() : null,
                                     Email = reader["Email"].ToString(),
                                     link = reader["link"].ToString(),
+                                    note = reader["note"].ToString()
                                 };
                             }
                         }
@@ -208,20 +211,22 @@ namespace TourManagementApp.Repositories.ImplRepositories
                             FullName = @name,
                             Address = @address,
                             Phone = @phone,
-                            link = @link
+                            link = @link,
+                            note = @note
                         WHERE
                             UserID = @id AND Email = @email";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                     
                         cmd.Parameters.AddWithValue("@name", user.FullName ?? (object)DBNull.Value);
                         cmd.Parameters.AddWithValue("@address", user.Address ?? (object)DBNull.Value);
                         cmd.Parameters.AddWithValue("@phone", user.Phone ?? (object)DBNull.Value);
-                        cmd.Parameters.AddWithValue("@link", user.link);
+                        cmd.Parameters.AddWithValue("@link", user.link );
+                        cmd.Parameters.AddWithValue("@note", user.note);
+
                         cmd.Parameters.AddWithValue("@id", user.UserID);
                         cmd.Parameters.AddWithValue("@email", user.Email);
-
+                        
                         int rowsAffected = cmd.ExecuteNonQuery();
 
                         return rowsAffected > 0; 
@@ -229,26 +234,25 @@ namespace TourManagementApp.Repositories.ImplRepositories
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Lỗi khi cập nhật User: {ex.Message}");
+                    MessageBox.Show($"Lỗi khi cập nhật User: {ex.Message}");
                     return false;
                 }
             }
         }
-
+      
         public Users UserAuth(string id, string pass)
         {
             using (SqlConnection conn = Connection.GetSqlConnection(DatabaseName.TourManagement.ToString()))
             {
                 try
                 {
-                    string query = "SELECT UserID, FullName, Role, Address, Phone, Email, Password, link FROM Users WHERE UserID = @Id";
+                    string query = "SELECT UserID, FullName, Role, Address, Phone, Email, Password, note, link FROM Users WHERE UserID = @Id";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Id", id.Trim());
 
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-
                             if (reader.Read())
                             {
                                 string hashedPassword = reader["Password"].ToString();
@@ -264,6 +268,7 @@ namespace TourManagementApp.Repositories.ImplRepositories
                                         Phone = reader["Phone"] != DBNull.Value ? reader["Phone"].ToString() : null,
                                         Email = reader["Email"].ToString(),
                                         link = reader["link"].ToString(),
+                                        note = reader["note"].ToString(),
                                     };
                                 }
                             }

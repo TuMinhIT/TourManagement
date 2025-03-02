@@ -35,12 +35,8 @@ namespace TourManagementApp.Views.Account
             tb_email.Text = _user.Email;
             tb_name.Text = _user.FullName;
             tb_phone.Text = string.IsNullOrEmpty(_user.Phone) ? "<Trống>" : _user.Phone;
+            note.Text = string.IsNullOrEmpty(_user.note) ? "<Trống>" : _user.note;
             imageService.ShowImage(pic_avatar, _user.link.Trim());
-
-            //if (!string.IsNullOrEmpty(_user.link))
-            //{
-            //    imageService.ShowImage(pic_avatar, _user.link.Trim());
-            //}
             enable_Pannel(false);
         }
 
@@ -67,9 +63,8 @@ namespace TourManagementApp.Views.Account
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-            //check the text
 
-            if (string.IsNullOrEmpty(tb_name.Text)|| string.IsNullOrEmpty(tb_phone.Text))
+            if (string.IsNullOrEmpty(tb_name.Text) || string.IsNullOrEmpty(tb_phone.Text))
             {
                 message.MessageWarning("Không bõ trống các thông tin! ");
                 return;
@@ -80,6 +75,7 @@ namespace TourManagementApp.Views.Account
             user.Address = tb_address.Text;
             user.FullName = tb_name.Text;
             user.Phone = tb_phone.Text;
+            user.note = note.Text;
             if (!string.IsNullOrEmpty(imagePath))
             {
                 user.link = imagePath;
@@ -87,8 +83,8 @@ namespace TourManagementApp.Views.Account
             //update in database         
             if (userService.UpdateUser(user))
             {
-                _user= user;
-                message.MessageOK("Cập nhật thông tin thành công");       
+                _user = user;
+                message.MessageOK("Cập nhật thông tin thành công");
             }
             enable_Pannel(false);
             //reload
@@ -96,7 +92,8 @@ namespace TourManagementApp.Views.Account
             return;
         }
 
-        private void enable_Pannel(bool flag) {
+        private void enable_Pannel(bool flag)
+        {
             if (flag)
             {
                 panel.Enabled = true;
@@ -117,6 +114,11 @@ namespace TourManagementApp.Views.Account
         private void btn_fix_Click(object sender, EventArgs e)
         {
             enable_Pannel(true);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
