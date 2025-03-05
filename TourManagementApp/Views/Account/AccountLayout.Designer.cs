@@ -163,7 +163,7 @@
             btn_update.IconChar = FontAwesome.Sharp.IconChar.None;
             btn_update.IconColor = Color.Black;
             btn_update.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_update.Location = new Point(548, 463);
+            btn_update.Location = new Point(585, 451);
             btn_update.Name = "btn_update";
             btn_update.Size = new Size(120, 38);
             btn_update.TabIndex = 12;
@@ -205,6 +205,7 @@
             // 
             // panel
             // 
+            panel.BackColor = Color.SteelBlue;
             panel.Controls.Add(tb_note);
             panel.Controls.Add(note);
             panel.Controls.Add(pic_avatar);
@@ -222,7 +223,7 @@
             panel.Controls.Add(tb_name);
             panel.Location = new Point(48, 45);
             panel.Name = "panel";
-            panel.Size = new Size(886, 529);
+            panel.Size = new Size(818, 504);
             panel.TabIndex = 16;
             // 
             // tb_note
@@ -250,6 +251,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
+            BackgroundImage = Properties.Resources.ccc;
             ClientSize = new Size(962, 599);
             Controls.Add(panel);
             Controls.Add(btn_fix);

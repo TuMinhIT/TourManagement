@@ -36,6 +36,8 @@
             btn_list = new FontAwesome.Sharp.IconButton();
             btn_add = new FontAwesome.Sharp.IconButton();
             panel2 = new Panel();
+            btn_import = new FontAwesome.Sharp.IconButton();
+            btn_excel = new FontAwesome.Sharp.IconButton();
             dataGridView = new DataGridView();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -53,7 +55,7 @@
             panel1.Controls.Add(btn_add);
             panel1.Location = new Point(1, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(955, 155);
+            panel1.Size = new Size(955, 130);
             panel1.TabIndex = 0;
             // 
             // tb_search
@@ -150,20 +152,48 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.AppWorkspace;
+            panel2.Controls.Add(btn_import);
+            panel2.Controls.Add(btn_excel);
             panel2.Controls.Add(dataGridView);
-            panel2.Location = new Point(1, 153);
+            panel2.Location = new Point(1, 128);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1057, 481);
+            panel2.Size = new Size(1057, 506);
             panel2.TabIndex = 5;
+            // 
+            // btn_import
+            // 
+            btn_import.IconChar = FontAwesome.Sharp.IconChar.None;
+            btn_import.IconColor = Color.Black;
+            btn_import.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_import.Location = new Point(797, 390);
+            btn_import.Name = "btn_import";
+            btn_import.Size = new Size(138, 35);
+            btn_import.TabIndex = 22;
+            btn_import.Text = "Nhập file";
+            btn_import.UseVisualStyleBackColor = true;
+            btn_import.Click += btn_import_Click;
+            // 
+            // btn_excel
+            // 
+            btn_excel.IconChar = FontAwesome.Sharp.IconChar.None;
+            btn_excel.IconColor = Color.Black;
+            btn_excel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_excel.Location = new Point(797, 431);
+            btn_excel.Name = "btn_excel";
+            btn_excel.Size = new Size(145, 34);
+            btn_excel.TabIndex = 21;
+            btn_excel.Text = "Xuất Excel";
+            btn_excel.UseVisualStyleBackColor = true;
+            btn_excel.Click += btn_excel_Click;
             // 
             // dataGridView
             // 
             dataGridView.BackgroundColor = SystemColors.ActiveCaption;
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView.Location = new Point(3, 21);
+            dataGridView.Location = new Point(3, 8);
             dataGridView.Name = "dataGridView";
             dataGridView.RowHeadersWidth = 51;
-            dataGridView.Size = new Size(1009, 457);
+            dataGridView.Size = new Size(1009, 470);
             dataGridView.TabIndex = 5;
             // 
             // CustomerLayout
@@ -171,11 +201,12 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(980, 646);
+            ClientSize = new Size(1012, 602);
             ControlBox = false;
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximumSize = new Size(1030, 649);
             Name = "CustomerLayout";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CustomerLayout";
@@ -198,5 +229,7 @@
         private TextBox tb_search;
         private Label lb_type;
         private ComboBox cbb_type;
+        private FontAwesome.Sharp.IconButton btn_excel;
+        private FontAwesome.Sharp.IconButton btn_import;
     }
 }

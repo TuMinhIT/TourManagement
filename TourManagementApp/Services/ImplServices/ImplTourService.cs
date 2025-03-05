@@ -43,5 +43,7 @@ namespace TourManagementApp.Services.ImplServices
         {
             return _tourRepository.GetByAttribute(attribute, value);
         }
+
+     
     }
 }

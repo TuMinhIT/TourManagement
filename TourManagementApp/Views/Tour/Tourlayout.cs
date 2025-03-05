@@ -13,6 +13,7 @@ namespace TourManagementApp.Views.Tour
         private TourService _tourService = new ImplTourService();
         private readonly ImageService _imageService = new ImageService();
         private List<Tours> list_tour = new List<Tours>();
+        private readonly Message message = new Message();
         public Tourlayout()
         {
             InitializeComponent();
@@ -77,17 +78,17 @@ namespace TourManagementApp.Views.Tour
                 case "Trên 800$":
                     list_price = _tourService.GetByPrice(800, 10000000);
                     break;
-                default:              
+                default:
                     break;
             }
 
             #endregion
 
             #region search by type
-            List<Tours> list_type = new List<Tours>();  
+            List<Tours> list_type = new List<Tours>();
             if (cbb_type.Text != "Tất cã")
             {
-               list_type = _tourService.GetByAttribute("TourType", cbb_type.SelectedItem.ToString());
+                list_type = _tourService.GetByAttribute("TourType", cbb_type.SelectedItem.ToString());
             }
 
             #endregion
@@ -99,11 +100,35 @@ namespace TourManagementApp.Views.Tour
                 list_transport = _tourService.GetByAttribute("Transport", cbb_transport.SelectedItem.ToString());
             }
 
-            List <Tours> list_distinct = list_price.Union(list_type).ToList();
-            list_distinct =list_distinct.Union(list_transport).ToList();
+            List<Tours> list_distinct = list_price.Union(list_type).ToList();
+            list_distinct = list_distinct.Union(list_transport).ToList();
 
             generate_data(list_distinct);
 
         }
+
+        private void btn_import_Click(object sender, EventArgs e)
+        {
+            List<Tours> list_tour = new List<Tours>();
+            using (OpenFileDialog ofd = new OpenFileDialog { Filter = "Excel files (*.xlsx)|*.xlsx" })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    list_tour = FileInteraction.ImportTourFromExcel(ofd.FileName);
+                }
+            }
+
+            if (list_tour.Count > 0)
+            {
+                foreach (Tours tour in list_tour)
+                {
+                    _tourService.AddNew(tour);
+                }
+                message.MessageOK("Nhập dữ liệu thành công! ");
+                list_tour = _tourService.getAll();
+                generate_data(list_tour);
+            }
+        }
+        
     }
 }

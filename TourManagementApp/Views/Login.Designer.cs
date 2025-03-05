@@ -128,6 +128,7 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ButtonFace;
+            panel2.BackgroundImage = Properties.Resources.ccc;
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(iconButton2);
             panel2.Controls.Add(iconButton1);
@@ -147,7 +148,7 @@
             // 
             // iconButton2
             // 
-            iconButton2.BackColor = SystemColors.ButtonFace;
+            iconButton2.BackColor = SystemColors.HighlightText;
             iconButton2.FlatAppearance.BorderSize = 0;
             iconButton2.FlatStyle = FlatStyle.Flat;
             iconButton2.ForeColor = Color.DarkKhaki;
@@ -155,9 +156,9 @@
             iconButton2.IconColor = Color.FromArgb(41, 128, 185);
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 32;
-            iconButton2.Location = new Point(18, 194);
+            iconButton2.Location = new Point(27, 208);
             iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(103, 77);
+            iconButton2.Size = new Size(94, 68);
             iconButton2.TabIndex = 18;
             iconButton2.UseVisualStyleBackColor = false;
             // 

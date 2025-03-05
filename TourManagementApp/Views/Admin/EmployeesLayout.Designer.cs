@@ -193,7 +193,7 @@
             dataGridView.Location = new Point(0, 45);
             dataGridView.Name = "dataGridView";
             dataGridView.RowHeadersWidth = 51;
-            dataGridView.Size = new Size(1125, 393);
+            dataGridView.Size = new Size(1101, 393);
             dataGridView.TabIndex = 5;
             // 
             // btn_add
@@ -254,10 +254,11 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(962, 599);
+            ClientSize = new Size(1012, 602);
             Controls.Add(panel_mid);
             Controls.Add(panel_main);
             Controls.Add(panel_top);
+            MinimumSize = new Size(1030, 649);
             Name = "EmployeesLayout";
             Text = "EmployeesLayout";
             Load += EmployeesLayout_Load;

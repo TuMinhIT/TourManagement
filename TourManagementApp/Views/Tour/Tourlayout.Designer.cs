@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btn_import = new FontAwesome.Sharp.IconButton();
             btn_add_new = new FontAwesome.Sharp.IconButton();
             btn_list = new FontAwesome.Sharp.IconButton();
             cbb_transport = new ComboBox();
@@ -47,12 +48,26 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(41, 128, 185);
+            panel1.Controls.Add(btn_import);
             panel1.Controls.Add(btn_add_new);
             panel1.Controls.Add(btn_list);
             panel1.Location = new Point(3, 1);
             panel1.Name = "panel1";
             panel1.Size = new Size(963, 57);
             panel1.TabIndex = 0;
+            // 
+            // btn_import
+            // 
+            btn_import.IconChar = FontAwesome.Sharp.IconChar.None;
+            btn_import.IconColor = Color.Black;
+            btn_import.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_import.Location = new Point(791, 11);
+            btn_import.Name = "btn_import";
+            btn_import.Size = new Size(163, 36);
+            btn_import.TabIndex = 0;
+            btn_import.Text = "Nhập dữ liệu excel";
+            btn_import.UseVisualStyleBackColor = true;
+            btn_import.Click += btn_import_Click;
             // 
             // btn_add_new
             // 
@@ -233,11 +248,12 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(962, 599);
+            ClientSize = new Size(1012, 602);
             Controls.Add(panel8);
             Controls.Add(panel_main);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximumSize = new Size(1030, 649);
             MinimumSize = new Size(980, 646);
             Name = "Tourlayout";
             Text = "Tourlayout";
@@ -261,5 +277,6 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton btn_search;
+        private FontAwesome.Sharp.IconButton btn_import;
     }
 }

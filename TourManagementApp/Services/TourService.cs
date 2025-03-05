@@ -12,5 +12,6 @@ namespace TourManagementApp.Services
         List<Tours> GetByPrice(int price_min, int price_max);
         bool DeleteById(int Id);
         public List<Tours> GetByAttribute(string attribute, string value);
+
     }
 }

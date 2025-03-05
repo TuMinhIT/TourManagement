@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
+using System.Windows.Forms;
 using TourManagementApp.Models;
 using TourManagementApp.Services;
 using TourManagementApp.Services.ImplServices;
@@ -15,7 +17,7 @@ namespace TourManagementApp.Views.Customers
         public CustomerLayout()
         {
             InitializeComponent();
-            _customerService = new ImplCustomerService();     
+            _customerService = new ImplCustomerService();
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -82,7 +84,7 @@ namespace TourManagementApp.Views.Customers
 
         #region custom datagitview customers
         private void custom_dataGitView()
-        {        
+        {
             //căn chỉnh tiêu đề
             dataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Regular);
             dataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkGray;
@@ -146,7 +148,7 @@ namespace TourManagementApp.Views.Customers
                 dataGridView.Columns["Delete"].Width = 80;
                 dataGridView.Columns["Delete"].DisplayIndex = 1;
             }
-            dataGridView.CellClick -= dataGridView_CellClick; 
+            dataGridView.CellClick -= dataGridView_CellClick;
             dataGridView.CellClick += dataGridView_CellClick;
         }
         #endregion
@@ -205,5 +207,45 @@ namespace TourManagementApp.Views.Customers
 
             generate_data(listCustomer);
         }
+
+        private void btn_excel_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog { Filter = "Excel files (*.xlsx)|*.xlsx" })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    bool success = FileInteraction.ExportToExcel(dataGridView, sfd.FileName);
+                    if (success)
+                    {
+                        MessageBox.Show("Xuất file thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+        }
+
+        private void btn_import_Click(object sender, EventArgs e)
+        {
+            List<Customer> list_customer = new List<Customer>();    
+            using (OpenFileDialog ofd = new OpenFileDialog { Filter = "Excel files (*.xlsx)|*.xlsx" })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    list_customer  = FileInteraction.ImportCustomersFromExcel(ofd.FileName);                  
+                }
+            }
+
+            if (list_customer.Count > 0)
+            {
+                foreach (Customer customer in list_customer)
+                {
+                    _customerService.AddNew(customer);
+                }
+                message.MessageOK("Nhập dữ liệu thành công! ");
+                _customerList = _customerService.getAllCustomer();
+                generate_data(_customerList);
+            }
+        }
+
     }
 }
+

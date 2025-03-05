@@ -45,6 +45,7 @@
             btn_delete = new FontAwesome.Sharp.IconButton();
             btn_change = new FontAwesome.Sharp.IconButton();
             panel1 = new Panel();
+            btn_order = new FontAwesome.Sharp.IconButton();
             btn_save = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             panel1.SuspendLayout();
@@ -53,9 +54,9 @@
             // pictureBox
             // 
             pictureBox.BackColor = Color.LightYellow;
-            pictureBox.Location = new Point(12, 7);
+            pictureBox.Location = new Point(31, 16);
             pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(152, 187);
+            pictureBox.Size = new Size(132, 140);
             pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox.TabIndex = 0;
             pictureBox.TabStop = false;
@@ -243,7 +244,7 @@
             btn_change.IconChar = FontAwesome.Sharp.IconChar.None;
             btn_change.IconColor = Color.Black;
             btn_change.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_change.Location = new Point(39, 197);
+            btn_change.Location = new Point(49, 171);
             btn_change.Name = "btn_change";
             btn_change.Size = new Size(105, 34);
             btn_change.TabIndex = 47;
@@ -253,7 +254,8 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.CadetBlue;
+            panel1.BackColor = Color.SteelBlue;
+            panel1.Controls.Add(btn_order);
             panel1.Controls.Add(btn_save);
             panel1.Controls.Add(tb_description);
             panel1.Controls.Add(btn_delete);
@@ -274,12 +276,26 @@
             panel1.Size = new Size(976, 234);
             panel1.TabIndex = 48;
             // 
+            // btn_order
+            // 
+            btn_order.BackColor = Color.Tomato;
+            btn_order.IconChar = FontAwesome.Sharp.IconChar.None;
+            btn_order.IconColor = Color.Black;
+            btn_order.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_order.Location = new Point(852, 113);
+            btn_order.Name = "btn_order";
+            btn_order.Size = new Size(105, 34);
+            btn_order.TabIndex = 49;
+            btn_order.Text = "Order";
+            btn_order.UseVisualStyleBackColor = false;
+            btn_order.Click += btn_order_Click;
+            // 
             // btn_save
             // 
             btn_save.IconChar = FontAwesome.Sharp.IconChar.None;
             btn_save.IconColor = Color.Black;
             btn_save.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_save.Location = new Point(852, 96);
+            btn_save.Location = new Point(852, 56);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(105, 34);
             btn_save.TabIndex = 48;
@@ -326,5 +342,6 @@
         private FontAwesome.Sharp.IconButton btn_change;
         private Panel panel1;
         private FontAwesome.Sharp.IconButton btn_save;
+        private FontAwesome.Sharp.IconButton btn_order;
     }
 }

@@ -4,6 +4,7 @@ using TourManagementApp.Views;
 using TourManagementApp.Views.Account;
 using TourManagementApp.Views.Admin;
 using TourManagementApp.Views.Customers;
+using TourManagementApp.Views.Schedule_form;
 using TourManagementApp.Views.Tour;
 namespace TourManagementApp
 {

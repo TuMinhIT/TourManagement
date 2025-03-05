@@ -9,15 +9,27 @@ namespace TourManagementApp.Models
     public class Booking
     {
         public int BookingID { get; set; }
-        public int CustomerID { get; set; }
+        public string CustomerID { get; set; }
+        public string CustomerName{ get; set; }
         public int TourID { get; set; }
+        public string TourName { get; set; }
         public DateTime BookingDate { get; set; } = DateTime.Now;
-        public string Status { get; set; } = "Deposited"; // Deposited, Completed, Canceled
-        public decimal TotalAmount { get; set; }
+        public string Status { get; set; } = "Booked"; // Deposited, Completed, Canceled
+        public int TotalAmount { get; set; }
+        public int PrePay {  get; set; }   
 
-        // Navigation properties
-        public Customer Customer { get; set; } = null!;
-        public Tours Tour { get; set; } = null!;
+ 
+        public Booking( string customerID,string customerName, int tourID, string tourName ,DateTime bookingDate , string status, int totalAmount = 0, int prePay = 0)
+        {
+            CustomerID = customerID;
+            CustomerName = customerName;
+            TourID = tourID;
+            TourName = tourName;
+            BookingDate = bookingDate;
+            Status = status;
+            TotalAmount = totalAmount;
+            PrePay = prePay;
+        }
     }
 
 }

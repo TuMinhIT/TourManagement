@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\views\\tour\\touritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\tour\\touritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\views\\tour\\tourlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\tour\\tourlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,32 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TourLayout.cs",
-              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Tour\\TourLayout.cs",
-              "RelativeDocumentMoniker": "Views\\Tour\\TourLayout.cs",
-              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Tour\\TourLayout.cs",
-              "RelativeToolTip": "Views\\Tour\\TourLayout.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T03:48:29.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TourItem.cs",
-              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Tour\\TourItem.cs",
-              "RelativeDocumentMoniker": "Views\\Tour\\TourItem.cs",
-              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Tour\\TourItem.cs",
-              "RelativeToolTip": "Views\\Tour\\TourItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T04:28:21.266Z",
-              "EditorCaption": ""
             }
           ]
         }

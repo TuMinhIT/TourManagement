@@ -102,13 +102,13 @@ namespace TourManagementApp.Views.Tour
                 newTour.Price = tb_price.Text;
                 newTour.LinkImage = imagePath;
                 newTour.Description = tb_description.Text;
-                newTour.LinkImage= _tour.LinkImage;
+                newTour.LinkImage = _tour.LinkImage;
 
                 if (!string.IsNullOrEmpty(imagePath))
                 {
                     newTour.LinkImage = imagePath;
                 }
-                
+
                 if (_tourService.Update(newTour))
                 {
                     _tour = newTour;
@@ -116,7 +116,7 @@ namespace TourManagementApp.Views.Tour
                     enable_control(false);
                     return;
                 }
-            }           
+            }
         }
         private void btn_change_Click(object sender, EventArgs e)
         {
@@ -126,6 +126,12 @@ namespace TourManagementApp.Views.Tour
             {
                 _imageService.ShowImage(pictureBox, imagePath);
             }
+        }
+
+        private void btn_order_Click(object sender, EventArgs e)
+        {
+            AddNewOrder addNewOrder = new AddNewOrder(_tour.TourID, _tour.TourName);
+            addNewOrder.ShowDialog();
         }
     }
 }

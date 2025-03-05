@@ -40,22 +40,25 @@
     <Compile Update="Views\Report\statistic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Schedule\AddSchedule.cs">
+    <Compile Update="Views\Schedule_form\AddSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Schedule\EditSchedule.cs">
+    <Compile Update="Views\Schedule_form\EditSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Schedule\PaySchedule.cs">
+    <Compile Update="Views\Schedule_form\ScheduleItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Tour\AddNewOrder.cs">
+    <Compile Update="Views\Schedule_form\ScheduleLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\TourOrder\AddNewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\TourOrder\TourOrderDetail.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Tour\AddNewTour.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\Tour\EditTour.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Tour\TourItem.cs">
@@ -64,7 +67,7 @@
     <Compile Update="Views\Tour\TourLayout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Tour\TourOrder1.cs">
+    <Compile Update="Views\TourOrder\TourOrderLayout.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

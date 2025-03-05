@@ -29,19 +29,6 @@ CREATE TABLE Customers (
     Nationality NVARCHAR(50) NULL,
     Notes NVARCHAR(500) NULL 
 );
-
-go
--- Bảng lưu danh sách tour của khách hàng
-CREATE TABLE CustomerTours (
-    BookingID INT IDENTITY(1,1) PRIMARY KEY,
-    CustomerID INT NOT NULL,
-    TourID INT NOT NULL,
-    BookingDate DATETIME DEFAULT GETDATE(),
-	Status NVARCHAR(50) CHECK (Status IN ('Deposited', 'Completed', 'Canceled')) NOT NULL,
-    TotalAmount DECIMAL(18,2) NOT NULL,
-    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID) ON DELETE CASCADE,
-    FOREIGN KEY (TourID) REFERENCES Tours(TourID) ON DELETE CASCADE
-);
 go
 -- Bảng Tour
 CREATE TABLE Tours (
@@ -54,18 +41,37 @@ CREATE TABLE Tours (
 	Description NVARCHAR(1000) NULL
 );
 
+go
+-- Bảng lưu danh sách tour của khách hàng
+CREATE TABLE CustomerTours (
+    BookingID INT IDENTITY(1,1) PRIMARY KEY,
+    CustomerID NVARCHAR(10)  NOT NULL,
+	CustomerName NVARCHAR(100) NOT NULL,
+    TourID INT NOT NULL,
+	TourName NVARCHAR(255) NOT NULL,
+    BookingDate DATETIME DEFAULT GETDATE(),
+	Status NVARCHAR(50) CHECK (Status IN ('Booked', 'Completed', 'Canceled')) NOT NULL,
+    TotalAmount INT NOT NULL,
+	PrePay INT,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID) ON DELETE CASCADE,
+    FOREIGN KEY (TourID) REFERENCES Tours(TourID) ON DELETE CASCADE
+);
 
 go
-
--- Bảng Lịch Trình (Itinerary)
+ -- bảng lịch trình
 CREATE TABLE Schedule (
-    ItineraryID INT IDENTITY(1,1) PRIMARY KEY,
+    ScheduleID INT IDENTITY(1,1) PRIMARY KEY,
     TourID INT NOT NULL,
-    DayNumber INT NOT NULL,
+    TourName NVARCHAR(255) NOT NULL, 
+    CustomerID NVARCHAR(50), 
+    CustomerName NVARCHAR(255), 
+    Day_Start DATETIME NOT NULL, 
+    Day_End DATETIME NOT NULL, 
+    Status_Pay NVARCHAR(50), 
     Description NVARCHAR(MAX) NOT NULL,
     FOREIGN KEY (TourID) REFERENCES Tours(TourID) ON DELETE CASCADE
 );
-go
+GO
 
 -- Bảng Báo Cáo Doanh Thu
 CREATE TABLE RevenueReports (
@@ -75,16 +81,7 @@ CREATE TABLE RevenueReports (
     TotalRevenue DECIMAL(18,2) NOT NULL
 );
 go
--- Bảng Nhật Ký Hệ Thống
-CREATE TABLE SystemLogs (
-    LogID INT IDENTITY(1,1) PRIMARY KEY,
-    UserID NVARCHAR(10),
-    Action NVARCHAR(255) NOT NULL,
-    LogDate DATETIME DEFAULT GETDATE(),
-    FOREIGN KEY (UserID) REFERENCES Users(UserID) ON DELETE SET NULL
-);
 
-go
 --triger generate User id
 CREATE TRIGGER trg_AutoGenerate_UserID ON Users
 INSTEAD OF INSERT
@@ -129,40 +126,11 @@ BEGIN
 END;
 
 
-
--- Thêm dữ liệu vào bảng Customers
-
--- Thêm dữ liệu vào bảng Tours
-INSERT INTO Tours (TourName, TourType, Transport, Price, Description)
-VALUES 
-(N'Du lịch Hạ Long 3N2Đ', 'Luxury ', 'Car', 5000000, N'Chuyến đi Hạ Long 3 ngày 2 đêm'),
-(N'Tour Đà Nẵng 4N3Đ', 'Standard', 'Airplane', 7000000, N'Khám phá Đà Nẵng cùng biển Mỹ Khê'),
-(N'Phú Quốc 5N4Đ', 'Budget', 'Airplane', 9000000, N'Du lịch Phú Quốc với giá hấp dẫn');
-
--- Thêm dữ liệu vào bảng Bookings
-INSERT INTO Bookings (CustomerID, TourID, BookingDate, Status, TotalAmount)
-VALUES 
-(1, 1, GETDATE(), 'Deposited', 5000000),
-(2, 2, GETDATE(), 'Completed', 7000000),
-(3, 3, GETDATE(), 'Canceled', 9000000);
-
--- Thêm dữ liệu vào bảng Itineraries
-INSERT INTO Schedule(TourID, DayNumber, Description)
-VALUES 
-(1, 1, N'Khởi hành từ Hà Nội, tham quan Vịnh Hạ Long'),
-(1, 2, N'Tham quan hang Sửng Sốt và đảo Ti Tốp'),
-(2, 1, N'Bay đến Đà Nẵng, nhận phòng khách sạn');
-
--- Thêm dữ liệu vào bảng RevenueReports
-
--- Thêm dữ liệu vào bảng SystemLogs
-INSERT INTO SystemLogs (UserID, Action, LogDate)
-VALUES 
-(1, N'Tạo mới tour Hạ Long 3N2Đ', GETDATE()),
-(2, N'Cập nhật giá tour Đà Nẵng', GETDATE()),
-(3, N'Hủy booking của khách hàng Hoàng Văn F', GETDATE());
-
-
-SELECT UserID, FullName, Role, Address, Phone, Email FROM Users WHERE UserID = 'NV008' AND Password = '$2a$11$Iakk36m.XHr6hJHAwRDWdeJy//cHL1xijxdXisePp7pEiNaAXFRV2'
-
-                 
+INSERT INTO Users ( Password, Role, FullName, Address, Phone, Email, link, note) 
+VALUES ( 'hashedpassword123', 'Admin', 'Nguyễn Văn A', '123 Đường ABC, Hà Nội', '0123456789', 'nguyenvana@example.com', '', 'Ghi chú về user A');
+go
+INSERT INTO Customers ( FullName, Gender, PhoneNumber, Email, Address, Nationality, Notes) 
+VALUES ( 'Trần Thị B', 'Female', '0987654321', 'tranthib@example.com', '456 Đường XYZ, TP.HCM', 'Vietnam', 'Khách hàng VIP');
+go
+INSERT INTO Tours (TourName, TourType, Transport, Price, LinkImage, Description) 
+VALUES ('Hà Nội - Hạ Long 3N2Đ', 'Nội địa', 'Xe khách', '3,500,000 VND', '', 'Tour du lịch khám phá Vịnh Hạ Long với lịch trình hấp dẫn.');

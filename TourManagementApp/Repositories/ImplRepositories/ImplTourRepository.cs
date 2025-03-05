@@ -222,5 +222,6 @@ namespace TourManagementApp.Repositories.ImplRepositories
             }
             return list_tour;
         }
+
     }
 }

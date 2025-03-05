@@ -8,13 +8,27 @@ namespace TourManagementApp.Models
 {
     public class Schedule
     {
-        public int ItineraryID { get; set; }
+        public int ScheduleID { get; set; }
         public int TourID { get; set; }
-        public int DayNumber { get; set; }
+        public string TourName { get; set; } = string.Empty;
+        public string? CustomerID { get; set; }
+        public string? CustomerName { get; set; }
+        public DateTime Day_Start { get; set; }
+        public DateTime Day_End { get; set; }
+        public string? Status_pay { get; set; }
         public string Description { get; set; } = string.Empty;
-
-        // Navigation property
-        public Tours Tour { get; set; } = null!;
+       
+        public Schedule(int tourID, string tourName, string? customerID, string? customerName,
+                        DateTime dayStart, DateTime dayEnd, string? statusPay, string description)
+        {
+            TourID = tourID;
+            TourName = tourName;
+            CustomerID = customerID;
+            CustomerName = customerName;
+            Day_Start = dayStart;
+            Day_End = dayEnd;
+            Status_pay = statusPay;
+            Description = description;
+        }
     }
-
 }

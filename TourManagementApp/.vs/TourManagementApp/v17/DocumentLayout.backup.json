@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\views\\tour\\tourlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\tour\\tourlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\views\\tourorder\\tourorderlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\tourorder\\tourorderlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\views\\tour\\touritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\tour\\touritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\views\\tour\\tourlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\tour\\tourlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|d:\\asp.net_core9\\midterm\\tourmanagement\\tourmanagementapp\\views\\tourorder\\tourorderlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{00507E81-10B9-4D0C-BD7F-60EC51D5D097}|TourManagementApp.csproj|solutionrelative:views\\tourorder\\tourorderlayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,40 +30,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TourLayout.cs",
-              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Tour\\TourLayout.cs",
-              "RelativeDocumentMoniker": "Views\\Tour\\TourLayout.cs",
-              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Tour\\TourLayout.cs",
-              "RelativeToolTip": "Views\\Tour\\TourLayout.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "TourOrderLayout.cs",
+              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\TourOrder\\TourOrderLayout.cs",
+              "RelativeDocumentMoniker": "Views\\TourOrder\\TourOrderLayout.cs",
+              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\TourOrder\\TourOrderLayout.cs",
+              "RelativeToolTip": "Views\\TourOrder\\TourOrderLayout.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAiwMoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T03:48:29.729Z",
+              "WhenOpened": "2025-03-05T14:55:55.809Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TourItem.cs",
-              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Tour\\TourItem.cs",
-              "RelativeDocumentMoniker": "Views\\Tour\\TourItem.cs",
-              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Tour\\TourItem.cs*",
-              "RelativeToolTip": "Views\\Tour\\TourItem.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Title": "TourOrderLayout.cs [Design]",
+              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\TourOrder\\TourOrderLayout.cs",
+              "RelativeDocumentMoniker": "Views\\TourOrder\\TourOrderLayout.cs",
+              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\TourOrder\\TourOrderLayout.cs [Design]",
+              "RelativeToolTip": "Views\\TourOrder\\TourOrderLayout.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T04:28:21.266Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TourLayout.cs [Design]",
-              "DocumentMoniker": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Tour\\TourLayout.cs",
-              "RelativeDocumentMoniker": "Views\\Tour\\TourLayout.cs",
-              "ToolTip": "D:\\ASP.NET_CORE9\\MidTerm\\TourManagement\\TourManagementApp\\Views\\Tour\\TourLayout.cs [Design]",
-              "RelativeToolTip": "Views\\Tour\\TourLayout.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T13:14:41.905Z",
+              "WhenOpened": "2025-03-05T14:55:53.726Z",
               "EditorCaption": " [Design]"
             }
           ]

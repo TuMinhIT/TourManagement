@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using TourManagementApp.Views.Tour;
 using TourManagementApp.Views.Customers;
 using TourManagementApp.Views.Report;
-using TourManagementApp.Views.Schedule;
+using TourManagementApp.Views.Schedule_form;
 using FontAwesome.Sharp;
 using System.Runtime.InteropServices;
 using TourManagementApp.Views.Admin;
@@ -118,7 +118,7 @@ namespace TourManagementApp.Views
             iconCurrentChildForm.IconColor = Color.MediumPurple;
         }
 
-        private void label_userName_Click(object sender, EventArgs e){}
+        private void label_userName_Click(object sender, EventArgs e) { }
 
         private void btn_home_Click(object sender, EventArgs e)
         {
@@ -145,7 +145,7 @@ namespace TourManagementApp.Views
 
         private void btn_schedule_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new );
+            OpenChildForm(new ScheduleLayout() );
             ActivateButton(sender, RGBColors.color3);
         }
 
@@ -168,6 +168,12 @@ namespace TourManagementApp.Views
         private void btn_X_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_order_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new TourOrderLayout());
+            ActivateButton(sender, RGBColors.color1);
         }
     }
 }
