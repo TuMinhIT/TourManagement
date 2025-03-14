@@ -34,9 +34,8 @@
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             panel3 = new Panel();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
+            panel5 = new Panel();
             iconButton3 = new FontAwesome.Sharp.IconButton();
-            pictureBox3 = new PictureBox();
             panel4 = new Panel();
             label1 = new Label();
             iconButton2 = new FontAwesome.Sharp.IconButton();
@@ -45,10 +44,10 @@
             label8 = new Label();
             label2 = new Label();
             label9 = new Label();
+            label3 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel4.SuspendLayout();
             SuspendLayout();
             // 
@@ -121,30 +120,23 @@
             // panel3
             // 
             panel3.BackColor = Color.SteelBlue;
-            panel3.Controls.Add(iconButton4);
+            panel3.Controls.Add(label3);
+            panel3.Controls.Add(panel5);
             panel3.Controls.Add(iconButton3);
-            panel3.Controls.Add(pictureBox3);
-            panel3.Location = new Point(27, 97);
+            panel3.Location = new Point(0, 97);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1144, 603);
+            panel3.Size = new Size(1171, 603);
             panel3.TabIndex = 1;
             panel3.Paint += panel3_Paint;
             // 
-            // iconButton4
+            // panel5
             // 
-            iconButton4.FlatAppearance.BorderSize = 0;
-            iconButton4.FlatStyle = FlatStyle.Flat;
-            iconButton4.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton4.ForeColor = Color.FromArgb(255, 128, 0);
-            iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconButton4.IconColor = SystemColors.ActiveCaption;
-            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.Location = new Point(841, 0);
-            iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(289, 54);
-            iconButton4.TabIndex = 4;
-            iconButton4.Text = "Hãy đến với Tripverse";
-            iconButton4.UseVisualStyleBackColor = true;
+            panel5.BackgroundImage = Properties.Resources.halong_bay_4646615_640;
+            panel5.BackgroundImageLayout = ImageLayout.Stretch;
+            panel5.Location = new Point(0, 0);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(830, 433);
+            panel5.TabIndex = 5;
             // 
             // iconButton3
             // 
@@ -162,16 +154,6 @@
             iconButton3.Text = "Chúng tôi đem đến những giá trị giải pháp ứng dụng Du lịch, Khách sạn, Sự kiện quốc tế. Trải nghiệm tính tương tác, nghiệp vụ, trong ứng dụng công nghệ cho doanh nghiệp của bạn";
             iconButton3.UseVisualStyleBackColor = true;
             // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.ccc1;
-            pictureBox3.Location = new Point(0, 0);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(830, 518);
-            pictureBox3.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox3.TabIndex = 2;
-            pictureBox3.TabStop = false;
-            // 
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(30, 31, 68);
@@ -182,9 +164,9 @@
             panel4.Controls.Add(label8);
             panel4.Controls.Add(label2);
             panel4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            panel4.Location = new Point(0, 536);
+            panel4.Location = new Point(0, 529);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1171, 162);
+            panel4.Size = new Size(1171, 169);
             panel4.TabIndex = 2;
             // 
             // label1
@@ -290,6 +272,17 @@
             label9.Size = new Size(0, 31);
             label9.TabIndex = 3;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold);
+            label3.ForeColor = Color.FromArgb(255, 128, 0);
+            label3.Location = new Point(836, 21);
+            label3.Name = "label3";
+            label3.Size = new Size(303, 34);
+            label3.TabIndex = 0;
+            label3.Text = "Hãy đến với Tripverse";
+            // 
             // About
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -310,7 +303,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ResumeLayout(false);
@@ -331,10 +323,10 @@
         private FontAwesome.Sharp.IconButton iconButton6;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private PictureBox pictureBox3;
         private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton4;
         private Button button1;
         private Label label1;
+        private Panel panel5;
+        private Label label3;
     }
 }

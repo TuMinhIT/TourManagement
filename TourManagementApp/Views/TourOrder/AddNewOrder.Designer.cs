@@ -50,6 +50,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(41, 128, 185);
             label1.Location = new Point(231, 7);
@@ -76,6 +77,7 @@
             // lb_customer
             // 
             lb_customer.AutoSize = true;
+            lb_customer.BackColor = Color.Transparent;
             lb_customer.ForeColor = Color.Chocolate;
             lb_customer.Location = new Point(48, 269);
             lb_customer.Name = "lb_customer";
@@ -127,12 +129,13 @@
             // 
             // iconButton2
             // 
+            iconButton2.BackColor = Color.Transparent;
             iconButton2.FlatAppearance.BorderSize = 0;
             iconButton2.FlatStyle = FlatStyle.Flat;
-            iconButton2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton2.ForeColor = Color.FromArgb(41, 128, 185);
+            iconButton2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            iconButton2.ForeColor = Color.Navy;
             iconButton2.IconChar = FontAwesome.Sharp.IconChar.Code;
-            iconButton2.IconColor = Color.FromArgb(41, 128, 185);
+            iconButton2.IconColor = Color.Navy;
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 32;
             iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
@@ -142,16 +145,17 @@
             iconButton2.TabIndex = 18;
             iconButton2.Text = "Nhập mã khách hàng";
             iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton2.UseVisualStyleBackColor = true;
+            iconButton2.UseVisualStyleBackColor = false;
             // 
             // iconButton3
             // 
+            iconButton3.BackColor = Color.Transparent;
             iconButton3.FlatAppearance.BorderSize = 0;
             iconButton3.FlatStyle = FlatStyle.Flat;
-            iconButton3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton3.ForeColor = Color.FromArgb(41, 128, 185);
+            iconButton3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            iconButton3.ForeColor = Color.Navy;
             iconButton3.IconChar = FontAwesome.Sharp.IconChar.ClockFour;
-            iconButton3.IconColor = Color.FromArgb(41, 128, 185);
+            iconButton3.IconColor = Color.Navy;
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton3.IconSize = 32;
             iconButton3.ImageAlign = ContentAlignment.MiddleLeft;
@@ -161,7 +165,7 @@
             iconButton3.TabIndex = 19;
             iconButton3.Text = "Ngày đặt";
             iconButton3.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton3.UseVisualStyleBackColor = true;
+            iconButton3.UseVisualStyleBackColor = false;
             // 
             // tb_total
             // 
@@ -173,8 +177,9 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Blue;
+            label2.ForeColor = Color.Navy;
             label2.Location = new Point(473, 213);
             label2.Name = "label2";
             label2.Size = new Size(143, 23);
@@ -192,9 +197,10 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Blue;
-            label3.Location = new Point(61, 79);
+            label3.ForeColor = Color.Navy;
+            label3.Location = new Point(48, 67);
             label3.Name = "label3";
             label3.Size = new Size(119, 23);
             label3.TabIndex = 26;
@@ -202,10 +208,14 @@
             // 
             // btn_addCustomer
             // 
-            btn_addCustomer.BackColor = SystemColors.ActiveCaption;
-            btn_addCustomer.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_addCustomer.IconColor = Color.Black;
+            btn_addCustomer.BackColor = Color.Transparent;
+            btn_addCustomer.FlatAppearance.BorderSize = 0;
+            btn_addCustomer.FlatStyle = FlatStyle.Flat;
+            btn_addCustomer.ForeColor = Color.Transparent;
+            btn_addCustomer.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            btn_addCustomer.IconColor = Color.FromArgb(41, 128, 185);
             btn_addCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_addCustomer.IconSize = 30;
             btn_addCustomer.Location = new Point(321, 188);
             btn_addCustomer.Name = "btn_addCustomer";
             btn_addCustomer.Size = new Size(58, 39);
@@ -224,8 +234,9 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Blue;
+            label4.ForeColor = Color.Navy;
             label4.Location = new Point(473, 311);
             label4.Name = "label4";
             label4.Size = new Size(84, 23);
@@ -245,8 +256,9 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Blue;
+            label5.ForeColor = Color.Navy;
             label5.Location = new Point(473, 106);
             label5.Name = "label5";
             label5.Size = new Size(92, 23);
@@ -258,6 +270,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
+            BackgroundImage = Properties.Resources.hon_doi_moi_phu_quoc_11;
             ClientSize = new Size(817, 522);
             Controls.Add(label5);
             Controls.Add(cbb_status);

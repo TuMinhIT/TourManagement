@@ -42,20 +42,26 @@
             // 
             // btn_delete
             // 
-            btn_delete.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_delete.IconColor = Color.Black;
+            btn_delete.BackColor = Color.Green;
+            btn_delete.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            btn_delete.ForeColor = Color.White;
+            btn_delete.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            btn_delete.IconColor = Color.White;
             btn_delete.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_delete.Location = new Point(901, 3);
+            btn_delete.IconSize = 30;
+            btn_delete.Location = new Point(882, 17);
             btn_delete.Name = "btn_delete";
-            btn_delete.Size = new Size(100, 29);
+            btn_delete.Size = new Size(119, 41);
             btn_delete.TabIndex = 0;
             btn_delete.Text = "Xóa";
-            btn_delete.UseVisualStyleBackColor = true;
+            btn_delete.TextAlign = ContentAlignment.MiddleLeft;
+            btn_delete.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_delete.UseVisualStyleBackColor = false;
             btn_delete.Click += btn_delete_Click;
             // 
             // panel
             // 
-            panel.BackColor = SystemColors.ButtonHighlight;
+            panel.BackColor = Color.FromArgb(41, 128, 185);
             panel.Controls.Add(tb_description);
             panel.Controls.Add(btn_detail);
             panel.Controls.Add(label2);
@@ -65,7 +71,7 @@
             panel.Controls.Add(btn_delete);
             panel.Location = new Point(0, 0);
             panel.Name = "panel";
-            panel.Size = new Size(1013, 134);
+            panel.Size = new Size(1013, 150);
             panel.TabIndex = 3;
             panel.Paint += panel_Paint;
             // 
@@ -79,15 +85,21 @@
             // 
             // btn_detail
             // 
-            btn_detail.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_detail.IconColor = Color.Black;
+            btn_detail.BackColor = Color.OrangeRed;
+            btn_detail.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            btn_detail.ForeColor = Color.White;
+            btn_detail.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
+            btn_detail.IconColor = Color.White;
             btn_detail.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_detail.Location = new Point(901, 38);
+            btn_detail.IconSize = 30;
+            btn_detail.Location = new Point(882, 69);
             btn_detail.Name = "btn_detail";
-            btn_detail.Size = new Size(100, 29);
+            btn_detail.Size = new Size(119, 41);
             btn_detail.TabIndex = 10;
             btn_detail.Text = "Chi tiết";
-            btn_detail.UseVisualStyleBackColor = true;
+            btn_detail.TextAlign = ContentAlignment.MiddleLeft;
+            btn_detail.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_detail.UseVisualStyleBackColor = false;
             btn_detail.Click += btn_detail_Click;
             // 
             // label2

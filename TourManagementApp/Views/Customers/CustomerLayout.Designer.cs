@@ -69,10 +69,11 @@
             // lb_type
             // 
             lb_type.AutoSize = true;
+            lb_type.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             lb_type.ForeColor = SystemColors.Control;
             lb_type.Location = new Point(30, 78);
             lb_type.Name = "lb_type";
-            lb_type.Size = new Size(37, 20);
+            lb_type.Size = new Size(53, 25);
             lb_type.TabIndex = 19;
             lb_type.Text = "Loại";
             // 
@@ -80,7 +81,7 @@
             // 
             cbb_type.FormattingEnabled = true;
             cbb_type.Items.AddRange(new object[] { "Số điện thoại", "Mã khách hàng", "Địa chỉ", "Tên" });
-            cbb_type.Location = new Point(73, 78);
+            cbb_type.Location = new Point(98, 79);
             cbb_type.Name = "cbb_type";
             cbb_type.Size = new Size(179, 28);
             cbb_type.TabIndex = 18;
@@ -162,28 +163,45 @@
             // 
             // btn_import
             // 
-            btn_import.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_import.IconColor = Color.Black;
+            btn_import.BackColor = Color.FromArgb(41, 128, 185);
+            btn_import.FlatAppearance.BorderSize = 0;
+            btn_import.FlatStyle = FlatStyle.Flat;
+            btn_import.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            btn_import.ForeColor = Color.White;
+            btn_import.IconChar = FontAwesome.Sharp.IconChar.File;
+            btn_import.IconColor = Color.White;
             btn_import.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_import.Location = new Point(797, 390);
+            btn_import.IconSize = 30;
+            btn_import.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_import.Location = new Point(804, 340);
             btn_import.Name = "btn_import";
-            btn_import.Size = new Size(138, 35);
+            btn_import.Size = new Size(159, 45);
             btn_import.TabIndex = 22;
             btn_import.Text = "Nhập file";
-            btn_import.UseVisualStyleBackColor = true;
+            btn_import.TextAlign = ContentAlignment.MiddleLeft;
+            btn_import.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_import.UseVisualStyleBackColor = false;
             btn_import.Click += btn_import_Click;
             // 
             // btn_excel
             // 
-            btn_excel.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_excel.IconColor = Color.Black;
+            btn_excel.BackColor = SystemColors.ControlDark;
+            btn_excel.FlatAppearance.BorderSize = 0;
+            btn_excel.FlatStyle = FlatStyle.Flat;
+            btn_excel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            btn_excel.ForeColor = Color.White;
+            btn_excel.IconChar = FontAwesome.Sharp.IconChar.Table;
+            btn_excel.IconColor = Color.White;
             btn_excel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_excel.Location = new Point(797, 431);
+            btn_excel.IconSize = 30;
+            btn_excel.Location = new Point(804, 402);
             btn_excel.Name = "btn_excel";
-            btn_excel.Size = new Size(145, 34);
+            btn_excel.Size = new Size(159, 46);
             btn_excel.TabIndex = 21;
             btn_excel.Text = "Xuất Excel";
-            btn_excel.UseVisualStyleBackColor = true;
+            btn_excel.TextAlign = ContentAlignment.MiddleLeft;
+            btn_excel.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_excel.UseVisualStyleBackColor = false;
             btn_excel.Click += btn_excel_Click;
             // 
             // dataGridView

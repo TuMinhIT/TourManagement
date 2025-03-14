@@ -63,15 +63,22 @@
             // 
             // btn_edit
             // 
-            btn_edit.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_edit.IconColor = Color.Black;
+            btn_edit.BackColor = Color.DeepSkyBlue;
+            btn_edit.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btn_edit.ForeColor = SystemColors.ButtonFace;
+            btn_edit.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            btn_edit.IconColor = SystemColors.ButtonFace;
             btn_edit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_edit.Location = new Point(852, 56);
+            btn_edit.IconSize = 25;
+            btn_edit.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_edit.Location = new Point(852, 71);
             btn_edit.Name = "btn_edit";
-            btn_edit.Size = new Size(105, 34);
+            btn_edit.Size = new Size(105, 39);
             btn_edit.TabIndex = 1;
             btn_edit.Text = "Edit";
-            btn_edit.UseVisualStyleBackColor = true;
+            btn_edit.TextAlign = ContentAlignment.MiddleLeft;
+            btn_edit.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_edit.UseVisualStyleBackColor = false;
             btn_edit.Click += btn_edit_Click;
             // 
             // tb_name
@@ -227,15 +234,21 @@
             // 
             // btn_delete
             // 
-            btn_delete.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_delete.IconColor = Color.Black;
+            btn_delete.BackColor = Color.FromArgb(192, 0, 0);
+            btn_delete.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btn_delete.ForeColor = SystemColors.ButtonFace;
+            btn_delete.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            btn_delete.IconColor = SystemColors.ButtonFace;
             btn_delete.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_delete.IconSize = 25;
             btn_delete.Location = new Point(852, 16);
             btn_delete.Name = "btn_delete";
-            btn_delete.Size = new Size(105, 34);
+            btn_delete.Size = new Size(105, 42);
             btn_delete.TabIndex = 46;
             btn_delete.Text = "Delete";
-            btn_delete.UseVisualStyleBackColor = true;
+            btn_delete.TextAlign = ContentAlignment.MiddleLeft;
+            btn_delete.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_delete.UseVisualStyleBackColor = false;
             btn_delete.Click += btn_delete_Click;
             // 
             // btn_change
@@ -279,28 +292,39 @@
             // btn_order
             // 
             btn_order.BackColor = Color.Tomato;
-            btn_order.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_order.IconColor = Color.Black;
+            btn_order.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btn_order.ForeColor = SystemColors.ButtonFace;
+            btn_order.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            btn_order.IconColor = SystemColors.ButtonFace;
             btn_order.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_order.Location = new Point(852, 113);
+            btn_order.IconSize = 25;
+            btn_order.Location = new Point(852, 131);
             btn_order.Name = "btn_order";
-            btn_order.Size = new Size(105, 34);
+            btn_order.Size = new Size(105, 44);
             btn_order.TabIndex = 49;
             btn_order.Text = "Order";
+            btn_order.TextAlign = ContentAlignment.MiddleLeft;
+            btn_order.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_order.UseVisualStyleBackColor = false;
             btn_order.Click += btn_order_Click;
             // 
             // btn_save
             // 
-            btn_save.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_save.IconColor = Color.Black;
+            btn_save.BackColor = Color.DarkCyan;
+            btn_save.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btn_save.ForeColor = SystemColors.ButtonFace;
+            btn_save.IconChar = FontAwesome.Sharp.IconChar.Bookmark;
+            btn_save.IconColor = SystemColors.ButtonFace;
             btn_save.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_save.Location = new Point(852, 56);
+            btn_save.IconSize = 25;
+            btn_save.Location = new Point(852, 71);
             btn_save.Name = "btn_save";
-            btn_save.Size = new Size(105, 34);
+            btn_save.Size = new Size(105, 45);
             btn_save.TabIndex = 48;
             btn_save.Text = "Save";
-            btn_save.UseVisualStyleBackColor = true;
+            btn_save.TextAlign = ContentAlignment.MiddleLeft;
+            btn_save.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_save.UseVisualStyleBackColor = false;
             btn_save.Click += btn_save_Click;
             // 
             // TourItem

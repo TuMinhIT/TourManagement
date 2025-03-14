@@ -78,7 +78,7 @@
             iconButton6.IconColor = SystemColors.ButtonFace;
             iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton6.IconSize = 32;
-            iconButton6.Location = new Point(397, -1);
+            iconButton6.Location = new Point(393, 6);
             iconButton6.Name = "iconButton6";
             iconButton6.Size = new Size(161, 43);
             iconButton6.TabIndex = 13;
@@ -97,7 +97,7 @@
             icon_MNV.IconColor = SystemColors.ButtonFace;
             icon_MNV.IconFont = FontAwesome.Sharp.IconFont.Auto;
             icon_MNV.IconSize = 32;
-            icon_MNV.Location = new Point(147, -1);
+            icon_MNV.Location = new Point(147, 8);
             icon_MNV.Name = "icon_MNV";
             icon_MNV.Size = new Size(180, 42);
             icon_MNV.TabIndex = 12;
@@ -171,9 +171,9 @@
             iconButton11.FlatAppearance.BorderSize = 0;
             iconButton11.FlatStyle = FlatStyle.Flat;
             iconButton11.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton11.ForeColor = SystemColors.ActiveCaptionText;
+            iconButton11.ForeColor = SystemColors.ButtonFace;
             iconButton11.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
-            iconButton11.IconColor = SystemColors.ActiveCaptionText;
+            iconButton11.IconColor = SystemColors.ButtonFace;
             iconButton11.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton11.IconSize = 32;
             iconButton11.ImageAlign = ContentAlignment.MiddleLeft;

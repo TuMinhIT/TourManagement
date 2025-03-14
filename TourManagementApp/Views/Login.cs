@@ -16,13 +16,49 @@ namespace TourManagementApp.Views
 {
     public partial class Login : Form
     {
+        private string fullText = "Đăng nhập vào tài khoản";
+        private int currentCharIndex = 0;
+        private System.Windows.Forms.Timer typingTimer;
         public Login()
         {
             InitializeComponent();
 
             this.BackColor = Color.Magenta;  
-            this.TransparencyKey = Color.Magenta; 
+            this.TransparencyKey = Color.Magenta;
+
+            SetupTypingEffect();
         }
+        private void SetupTypingEffect()
+        {
+            label8.Text = "";
+            typingTimer = new System.Windows.Forms.Timer();
+            typingTimer.Interval = 100;
+            typingTimer.Tick += TypingTimer_Tick;
+            typingTimer.Start();
+        }
+
+        private void TypingTimer_Tick(object sender, EventArgs e)
+        {
+            if (currentCharIndex < fullText.Length)
+            {
+                label8.Text += fullText[currentCharIndex];
+                currentCharIndex++;
+            }
+            else
+            {
+                typingTimer.Stop();
+                System.Threading.Tasks.Task.Delay(1000).ContinueWith(_ =>
+                {
+                    this.Invoke(new Action(() =>
+                    {
+                        label8.Text = "";
+                        currentCharIndex = 0;
+                        typingTimer.Start();
+                    }));
+                });
+            }
+        }
+
 
         //Users user = userService.UserAuth(tb_userName.Text, tb_password.Text);
         private void buttonLogin_Click(object sender, EventArgs e)

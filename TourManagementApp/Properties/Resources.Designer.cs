@@ -113,6 +113,26 @@ namespace TourManagementApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ccc2 {
+            get {
+                object obj = ResourceManager.GetObject("ccc2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Du_Lich_2 {
+            get {
+                object obj = ResourceManager.GetObject("Du-Lich_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap final_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("final-removebg-preview", resourceCulture);
@@ -126,6 +146,36 @@ namespace TourManagementApp.Properties {
         internal static System.Drawing.Bitmap final_removebg_preview1 {
             get {
                 object obj = ResourceManager.GetObject("final-removebg-preview1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap halong_bay_4646615_640 {
+            get {
+                object obj = ResourceManager.GetObject("halong-bay-4646615_640", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hon_doi_moi_phu_quoc_1 {
+            get {
+                object obj = ResourceManager.GetObject("hon-doi-moi-phu-quoc-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hon_doi_moi_phu_quoc_11 {
+            get {
+                object obj = ResourceManager.GetObject("hon-doi-moi-phu-quoc-11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +206,26 @@ namespace TourManagementApp.Properties {
         internal static System.Drawing.Bitmap logo_removebg_preview__1_1 {
             get {
                 object obj = ResourceManager.GetObject("logo-removebg-preview (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mau_background_vali_du_lich_110856208 {
+            get {
+                object obj = ResourceManager.GetObject("mau-background-vali-du-lich_110856208", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Nam_phu_quoc_6 {
+            get {
+                object obj = ResourceManager.GetObject("Nam-phu-quoc-6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

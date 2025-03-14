@@ -53,15 +53,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 1);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold);
+            label1.ForeColor = Color.WhiteSmoke;
+            label1.Location = new Point(336, 4);
             label1.Name = "label1";
-            label1.Size = new Size(208, 31);
+            label1.Size = new Size(255, 38);
             label1.TabIndex = 0;
             label1.Text = "Thông tin cá nhân";
             // 
             // tb_name
             // 
+            tb_name.BackColor = SystemColors.ActiveCaption;
             tb_name.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             tb_name.Location = new Point(428, 52);
             tb_name.Name = "tb_name";
@@ -71,45 +74,54 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            label2.ForeColor = Color.Black;
             label2.Location = new Point(426, 18);
             label2.Name = "label2";
-            label2.Size = new Size(117, 31);
+            label2.Size = new Size(104, 25);
             label2.TabIndex = 2;
             label2.Text = "Họ và tên";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            label3.ForeColor = Color.Black;
             label3.Location = new Point(428, 152);
             label3.Name = "label3";
-            label3.Size = new Size(73, 31);
+            label3.Size = new Size(65, 25);
             label3.TabIndex = 3;
             label3.Text = "Email";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(428, 315);
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(428, 321);
             label4.Name = "label4";
-            label4.Size = new Size(86, 31);
+            label4.Size = new Size(78, 25);
             label4.TabIndex = 4;
-            label4.Text = "địa chỉ";
+            label4.Text = "Địa chỉ";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            label5.ForeColor = Color.Black;
             label5.Location = new Point(428, 233);
             label5.Name = "label5";
-            label5.Size = new Size(157, 31);
+            label5.Size = new Size(139, 25);
             label5.TabIndex = 5;
             label5.Text = "Số điện thoại";
             // 
             // tb_email
             // 
+            tb_email.BackColor = SystemColors.ActiveCaption;
             tb_email.Enabled = false;
             tb_email.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             tb_email.Location = new Point(428, 186);
@@ -119,6 +131,7 @@
             // 
             // tb_phone
             // 
+            tb_phone.BackColor = SystemColors.ActiveCaption;
             tb_phone.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             tb_phone.Location = new Point(428, 267);
             tb_phone.Name = "tb_phone";
@@ -127,6 +140,7 @@
             // 
             // tb_address
             // 
+            tb_address.BackColor = SystemColors.ActiveCaption;
             tb_address.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             tb_address.Location = new Point(428, 355);
             tb_address.Multiline = true;
@@ -147,45 +161,73 @@
             // 
             // btn_fix
             // 
-            btn_fix.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_fix.IconColor = Color.Black;
+            btn_fix.BackColor = Color.Transparent;
+            btn_fix.FlatAppearance.BorderSize = 0;
+            btn_fix.FlatStyle = FlatStyle.Flat;
+            btn_fix.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btn_fix.ForeColor = Color.Indigo;
+            btn_fix.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            btn_fix.IconColor = Color.WhiteSmoke;
             btn_fix.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_fix.Location = new Point(830, 1);
+            btn_fix.IconSize = 30;
+            btn_fix.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_fix.Location = new Point(807, 6);
             btn_fix.Name = "btn_fix";
-            btn_fix.Size = new Size(120, 38);
+            btn_fix.Size = new Size(151, 38);
             btn_fix.TabIndex = 11;
             btn_fix.Text = "Chỉnh sửa";
-            btn_fix.UseVisualStyleBackColor = true;
+            btn_fix.TextAlign = ContentAlignment.MiddleLeft;
+            btn_fix.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_fix.UseVisualStyleBackColor = false;
             btn_fix.Click += btn_fix_Click;
             // 
             // btn_update
             // 
-            btn_update.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_update.IconColor = Color.Black;
+            btn_update.BackColor = Color.Transparent;
+            btn_update.FlatAppearance.BorderSize = 0;
+            btn_update.FlatStyle = FlatStyle.Flat;
+            btn_update.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_update.ForeColor = Color.Indigo;
+            btn_update.IconChar = FontAwesome.Sharp.IconChar.Highlighter;
+            btn_update.IconColor = Color.WhiteSmoke;
             btn_update.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_update.Location = new Point(585, 451);
+            btn_update.IconSize = 30;
+            btn_update.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_update.Location = new Point(597, 445);
             btn_update.Name = "btn_update";
-            btn_update.Size = new Size(120, 38);
+            btn_update.Size = new Size(170, 38);
             btn_update.TabIndex = 12;
             btn_update.Text = "Cập nhật";
-            btn_update.UseVisualStyleBackColor = true;
+            btn_update.TextAlign = ContentAlignment.MiddleLeft;
+            btn_update.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_update.UseVisualStyleBackColor = false;
             btn_update.Click += btn_update_Click;
             // 
             // btn_changeAva
             // 
-            btn_changeAva.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_changeAva.IconColor = Color.Black;
+            btn_changeAva.BackColor = Color.Transparent;
+            btn_changeAva.FlatAppearance.BorderSize = 0;
+            btn_changeAva.FlatStyle = FlatStyle.Flat;
+            btn_changeAva.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            btn_changeAva.ForeColor = Color.Black;
+            btn_changeAva.IconChar = FontAwesome.Sharp.IconChar.Images;
+            btn_changeAva.IconColor = Color.WhiteSmoke;
             btn_changeAva.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_changeAva.Location = new Point(58, 246);
+            btn_changeAva.IconSize = 30;
+            btn_changeAva.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_changeAva.Location = new Point(43, 242);
             btn_changeAva.Name = "btn_changeAva";
-            btn_changeAva.Size = new Size(104, 37);
+            btn_changeAva.Size = new Size(152, 37);
             btn_changeAva.TabIndex = 13;
             btn_changeAva.Text = "Đổi avata";
-            btn_changeAva.UseVisualStyleBackColor = true;
+            btn_changeAva.TextAlign = ContentAlignment.MiddleLeft;
+            btn_changeAva.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_changeAva.UseVisualStyleBackColor = false;
             btn_changeAva.Click += btn_changeAva_Click;
             // 
             // tb_code
             // 
+            tb_code.BackColor = SystemColors.ActiveCaption;
             tb_code.Enabled = false;
             tb_code.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             tb_code.Location = new Point(428, 119);
@@ -196,16 +238,20 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            label7.ForeColor = Color.Black;
             label7.Location = new Point(426, 85);
             label7.Name = "label7";
-            label7.Size = new Size(159, 31);
+            label7.Size = new Size(142, 25);
             label7.TabIndex = 15;
             label7.Text = "Mã nhân viên";
             // 
             // panel
             // 
             panel.BackColor = Color.SteelBlue;
+            panel.BackgroundImage = Properties.Resources.halong_bay_4646615_640;
+            panel.BackgroundImageLayout = ImageLayout.Stretch;
             panel.Controls.Add(tb_note);
             panel.Controls.Add(note);
             panel.Controls.Add(pic_avatar);
@@ -221,7 +267,7 @@
             panel.Controls.Add(label2);
             panel.Controls.Add(label3);
             panel.Controls.Add(tb_name);
-            panel.Location = new Point(48, 45);
+            panel.Location = new Point(57, 60);
             panel.Name = "panel";
             panel.Size = new Size(818, 504);
             panel.TabIndex = 16;
@@ -229,7 +275,9 @@
             // tb_note
             // 
             tb_note.AutoSize = true;
+            tb_note.BackColor = Color.Transparent;
             tb_note.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tb_note.ForeColor = Color.Black;
             tb_note.Location = new Point(3, 315);
             tb_note.Name = "tb_note";
             tb_note.Size = new Size(175, 31);
@@ -238,6 +286,7 @@
             // 
             // note
             // 
+            note.BackColor = SystemColors.ActiveCaption;
             note.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             note.Location = new Point(3, 359);
             note.Multiline = true;
@@ -252,6 +301,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             BackgroundImage = Properties.Resources.ccc;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(962, 599);
             Controls.Add(panel);
             Controls.Add(btn_fix);

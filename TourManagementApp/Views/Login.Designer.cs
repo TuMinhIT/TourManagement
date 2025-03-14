@@ -46,7 +46,7 @@
             // 
             // tb_userName
             // 
-            tb_userName.Location = new Point(127, 153);
+            tb_userName.Location = new Point(139, 176);
             tb_userName.Name = "tb_userName";
             tb_userName.PlaceholderText = "Mã nhân viên";
             tb_userName.Size = new Size(351, 27);
@@ -54,7 +54,7 @@
             // 
             // tb_password
             // 
-            tb_password.Location = new Point(127, 219);
+            tb_password.Location = new Point(139, 242);
             tb_password.Name = "tb_password";
             tb_password.PlaceholderText = "Mật khẩu";
             tb_password.Size = new Size(351, 27);
@@ -64,14 +64,15 @@
             // check_hide
             // 
             check_hide.AutoSize = true;
+            check_hide.BackColor = Color.Transparent;
             check_hide.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             check_hide.ForeColor = Color.FromArgb(41, 128, 185);
-            check_hide.Location = new Point(127, 252);
+            check_hide.Location = new Point(139, 295);
             check_hide.Name = "check_hide";
             check_hide.Size = new Size(133, 24);
             check_hide.TabIndex = 4;
             check_hide.Text = "Hiện mật khẩu";
-            check_hide.UseVisualStyleBackColor = true;
+            check_hide.UseVisualStyleBackColor = false;
             check_hide.CheckedChanged += check_hide_CheckedChanged;
             // 
             // buttonLogin
@@ -81,7 +82,7 @@
             buttonLogin.FlatStyle = FlatStyle.Flat;
             buttonLogin.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonLogin.ForeColor = SystemColors.ButtonFace;
-            buttonLogin.Location = new Point(176, 324);
+            buttonLogin.Location = new Point(188, 347);
             buttonLogin.Name = "buttonLogin";
             buttonLogin.Size = new Size(137, 43);
             buttonLogin.TabIndex = 6;
@@ -92,9 +93,10 @@
             // lb_forgot
             // 
             lb_forgot.AutoSize = true;
+            lb_forgot.BackColor = Color.Transparent;
             lb_forgot.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lb_forgot.ForeColor = Color.Black;
-            lb_forgot.Location = new Point(334, 252);
+            lb_forgot.ForeColor = Color.FromArgb(41, 128, 185);
+            lb_forgot.Location = new Point(346, 292);
             lb_forgot.Name = "lb_forgot";
             lb_forgot.Size = new Size(144, 25);
             lb_forgot.TabIndex = 7;
@@ -103,24 +105,26 @@
             // 
             // buttonExit
             // 
+            buttonExit.BackColor = Color.Transparent;
             buttonExit.FlatAppearance.BorderSize = 0;
             buttonExit.FlatStyle = FlatStyle.Flat;
             buttonExit.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
             buttonExit.ForeColor = Color.FromArgb(41, 128, 185);
-            buttonExit.Location = new Point(343, 324);
+            buttonExit.Location = new Point(355, 347);
             buttonExit.Name = "buttonExit";
             buttonExit.Size = new Size(113, 43);
             buttonExit.TabIndex = 9;
             buttonExit.Text = "Thoát";
-            buttonExit.UseVisualStyleBackColor = true;
+            buttonExit.UseVisualStyleBackColor = false;
             buttonExit.Click += buttonExit_Click;
             // 
             // pictureBox1
             // 
+            pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Properties.Resources.final_removebg_preview1;
             pictureBox1.Location = new Point(3, 3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(166, 72);
+            pictureBox1.Size = new Size(176, 84);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
@@ -128,7 +132,8 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ButtonFace;
-            panel2.BackgroundImage = Properties.Resources.ccc;
+            panel2.BackgroundImage = Properties.Resources.mau_background_vali_du_lich_110856208;
+            panel2.BackgroundImageLayout = ImageLayout.Center;
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(iconButton2);
             panel2.Controls.Add(iconButton1);
@@ -148,7 +153,7 @@
             // 
             // iconButton2
             // 
-            iconButton2.BackColor = SystemColors.HighlightText;
+            iconButton2.BackColor = Color.Transparent;
             iconButton2.FlatAppearance.BorderSize = 0;
             iconButton2.FlatStyle = FlatStyle.Flat;
             iconButton2.ForeColor = Color.DarkKhaki;
@@ -156,15 +161,15 @@
             iconButton2.IconColor = Color.FromArgb(41, 128, 185);
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 32;
-            iconButton2.Location = new Point(27, 208);
+            iconButton2.Location = new Point(80, 235);
             iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(94, 68);
+            iconButton2.Size = new Size(53, 34);
             iconButton2.TabIndex = 18;
             iconButton2.UseVisualStyleBackColor = false;
             // 
             // iconButton1
             // 
-            iconButton1.BackColor = SystemColors.ButtonFace;
+            iconButton1.BackColor = Color.Transparent;
             iconButton1.FlatAppearance.BorderSize = 0;
             iconButton1.FlatStyle = FlatStyle.Flat;
             iconButton1.ForeColor = Color.DarkKhaki;
@@ -172,18 +177,19 @@
             iconButton1.IconColor = Color.FromArgb(41, 128, 185);
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton1.IconSize = 32;
-            iconButton1.Location = new Point(27, 130);
+            iconButton1.Location = new Point(80, 170);
             iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(94, 72);
+            iconButton1.Size = new Size(53, 38);
             iconButton1.TabIndex = 17;
             iconButton1.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
             label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
             label8.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.FromArgb(41, 128, 185);
-            label8.Location = new Point(127, 78);
+            label8.Location = new Point(139, 101);
             label8.Name = "label8";
             label8.Size = new Size(360, 34);
             label8.TabIndex = 15;
@@ -191,6 +197,7 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.Transparent;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Verdana", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);

@@ -56,54 +56,67 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(38, 9);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(368, 9);
             label1.Name = "label1";
-            label1.Size = new Size(107, 20);
+            label1.Size = new Size(212, 34);
             label1.TabIndex = 2;
             label1.Text = "Thêm lịch trình";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            label3.ForeColor = Color.White;
             label3.Location = new Point(21, 43);
             label3.Name = "label3";
-            label3.Size = new Size(63, 20);
+            label3.Size = new Size(65, 18);
             label3.TabIndex = 1;
             label3.Text = "Tên tour";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            label4.ForeColor = Color.White;
             label4.Location = new Point(15, 107);
             label4.Name = "label4";
-            label4.Size = new Size(86, 20);
+            label4.Size = new Size(97, 18);
             label4.TabIndex = 2;
             label4.Text = "Khách hàng";
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            label5.ForeColor = Color.White;
             label5.Location = new Point(15, 192);
             label5.Name = "label5";
-            label5.Size = new Size(112, 20);
+            label5.Size = new Size(125, 18);
             label5.TabIndex = 3;
             label5.Text = "Ngày khởi hành";
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            label6.ForeColor = Color.White;
             label6.Location = new Point(15, 261);
             label6.Name = "label6";
-            label6.Size = new Size(100, 20);
+            label6.Size = new Size(110, 18);
             label6.TabIndex = 4;
             label6.Text = "Ngày kết thúc";
             // 
             // label7
             // 
             label7.AutoSize = true;
+            label7.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            label7.ForeColor = Color.White;
             label7.Location = new Point(21, 320);
             label7.Name = "label7";
-            label7.Size = new Size(76, 20);
+            label7.Size = new Size(77, 18);
             label7.TabIndex = 5;
             label7.Text = "Tình trạng";
             // 
@@ -133,28 +146,45 @@
             // 
             // btn_save
             // 
-            btn_save.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_save.IconColor = Color.Black;
-            btn_save.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_save.Location = new Point(671, 451);
+            btn_save.BackColor = Color.Green;
+            btn_save.FlatAppearance.BorderSize = 0;
+            btn_save.FlatStyle = FlatStyle.Flat;
+            btn_save.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            btn_save.ForeColor = Color.White;
+            btn_save.IconChar = FontAwesome.Sharp.IconChar.Bookmark;
+            btn_save.IconColor = Color.White;
+            btn_save.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            btn_save.IconSize = 30;
+            btn_save.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_save.Location = new Point(637, 424);
             btn_save.Name = "btn_save";
-            btn_save.Size = new Size(132, 29);
+            btn_save.Size = new Size(180, 34);
             btn_save.TabIndex = 18;
             btn_save.Text = "Lưu lịch trình";
-            btn_save.UseVisualStyleBackColor = true;
+            btn_save.TextAlign = ContentAlignment.MiddleLeft;
+            btn_save.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_save.UseVisualStyleBackColor = false;
             btn_save.Click += btn_save_Click;
             // 
             // btn_cancel
             // 
-            btn_cancel.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_cancel.IconColor = Color.Black;
+            btn_cancel.BackColor = SystemColors.ControlDark;
+            btn_cancel.FlatAppearance.BorderSize = 0;
+            btn_cancel.FlatStyle = FlatStyle.Flat;
+            btn_cancel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            btn_cancel.ForeColor = Color.White;
+            btn_cancel.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
+            btn_cancel.IconColor = Color.White;
             btn_cancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_cancel.Location = new Point(519, 451);
+            btn_cancel.IconSize = 30;
+            btn_cancel.Location = new Point(505, 424);
             btn_cancel.Name = "btn_cancel";
-            btn_cancel.Size = new Size(104, 29);
+            btn_cancel.Size = new Size(104, 34);
             btn_cancel.TabIndex = 19;
             btn_cancel.Text = "Hủy";
-            btn_cancel.UseVisualStyleBackColor = true;
+            btn_cancel.TextAlign = ContentAlignment.MiddleLeft;
+            btn_cancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_cancel.UseVisualStyleBackColor = false;
             btn_cancel.Click += btn_cancel_Click;
             // 
             // tb_tourName
@@ -192,9 +222,9 @@
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
-            groupBox1.Location = new Point(38, 32);
+            groupBox1.Location = new Point(38, 57);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(878, 510);
+            groupBox1.Size = new Size(878, 497);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             // 
@@ -212,9 +242,11 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            label9.ForeColor = Color.White;
             label9.Location = new Point(25, 383);
             label9.Name = "label9";
-            label9.Size = new Size(118, 20);
+            label9.Size = new Size(125, 18);
             label9.TabIndex = 26;
             label9.Text = "Tổng thanh toán";
             // 
@@ -222,7 +254,7 @@
             // 
             cbb_payment.FormattingEnabled = true;
             cbb_payment.Items.AddRange(new object[] { "Đã thanh toán", "Chưa thanh toán" });
-            cbb_payment.Location = new Point(163, 421);
+            cbb_payment.Location = new Point(146, 419);
             cbb_payment.Name = "cbb_payment";
             cbb_payment.Size = new Size(199, 28);
             cbb_payment.TabIndex = 25;
@@ -231,9 +263,11 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            label8.ForeColor = Color.White;
             label8.Location = new Point(25, 429);
             label8.Name = "label8";
-            label8.Size = new Size(83, 20);
+            label8.Size = new Size(88, 18);
             label8.TabIndex = 24;
             label8.Text = "Thanh toán";
             // 
@@ -249,9 +283,11 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            label2.ForeColor = Color.White;
             label2.Location = new Point(14, 7);
             label2.Name = "label2";
-            label2.Size = new Size(48, 20);
+            label2.Size = new Size(49, 18);
             label2.TabIndex = 24;
             label2.Text = "Mô tả";
             // 
@@ -271,6 +307,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SteelBlue;
+            BackgroundImage = Properties.Resources.Nam_phu_quoc_6;
             ClientSize = new Size(944, 566);
             Controls.Add(groupBox1);
             Controls.Add(label1);

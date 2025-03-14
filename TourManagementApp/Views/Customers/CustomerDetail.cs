@@ -55,7 +55,7 @@ namespace TourManagementApp.Views.Customers
                 new Customer(tb_name.Text, cbb_gender.SelectedItem.ToString(), tb_phone.Text,
                                 tb_email.Text, tb_address.Text, tb_national.Text, tb_note.Text)
                 { CustomerID = tb_code.Text };
-              
+
                 if (customerService.Update(newCustomer))
                 {
                     string msg = $"Bạn đã cập nhật thành công ! \n";
@@ -78,6 +78,11 @@ namespace TourManagementApp.Views.Customers
         private void CustomerDetail_Load(object sender, EventArgs e)
         {
             _generate_data(_customers);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

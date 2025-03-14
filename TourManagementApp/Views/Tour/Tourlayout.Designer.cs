@@ -58,14 +58,21 @@
             // 
             // btn_import
             // 
-            btn_import.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_import.IconColor = Color.Black;
+            btn_import.FlatAppearance.BorderSize = 0;
+            btn_import.FlatStyle = FlatStyle.Flat;
+            btn_import.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            btn_import.ForeColor = Color.WhiteSmoke;
+            btn_import.IconChar = FontAwesome.Sharp.IconChar.FileUpload;
+            btn_import.IconColor = Color.WhiteSmoke;
             btn_import.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_import.Location = new Point(791, 11);
+            btn_import.IconSize = 25;
+            btn_import.Location = new Point(753, 11);
             btn_import.Name = "btn_import";
-            btn_import.Size = new Size(163, 36);
+            btn_import.Size = new Size(201, 36);
             btn_import.TabIndex = 0;
             btn_import.Text = "Nhập dữ liệu excel";
+            btn_import.TextAlign = ContentAlignment.MiddleLeft;
+            btn_import.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_import.UseVisualStyleBackColor = true;
             btn_import.Click += btn_import_Click;
             // 
@@ -248,7 +255,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(1012, 602);
+            ClientSize = new Size(967, 602);
             Controls.Add(panel8);
             Controls.Add(panel_main);
             Controls.Add(panel1);

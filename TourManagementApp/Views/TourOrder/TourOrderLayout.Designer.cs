@@ -69,15 +69,23 @@
             // 
             // btn_addSchedule
             // 
-            btn_addSchedule.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_addSchedule.IconColor = Color.Black;
+            btn_addSchedule.BackColor = Color.DarkCyan;
+            btn_addSchedule.FlatAppearance.BorderSize = 0;
+            btn_addSchedule.FlatStyle = FlatStyle.Flat;
+            btn_addSchedule.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btn_addSchedule.ForeColor = SystemColors.ButtonHighlight;
+            btn_addSchedule.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            btn_addSchedule.IconColor = SystemColors.ButtonHighlight;
             btn_addSchedule.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_addSchedule.IconSize = 25;
             btn_addSchedule.Location = new Point(9, 15);
             btn_addSchedule.Name = "btn_addSchedule";
-            btn_addSchedule.Size = new Size(135, 29);
+            btn_addSchedule.Size = new Size(147, 29);
             btn_addSchedule.TabIndex = 2;
             btn_addSchedule.Text = "Xem lịch trình";
-            btn_addSchedule.UseVisualStyleBackColor = true;
+            btn_addSchedule.TextAlign = ContentAlignment.MiddleLeft;
+            btn_addSchedule.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_addSchedule.UseVisualStyleBackColor = false;
             btn_addSchedule.Click += btn_addSchedule_Click;
             // 
             // tb_number
@@ -92,15 +100,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(161, 24);
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(162, 19);
             label1.Name = "label1";
-            label1.Size = new Size(118, 20);
+            label1.Size = new Size(122, 20);
             label1.TabIndex = 4;
             label1.Text = "Cho đơn đặt của";
             // 
             // panel1
             // 
-            panel1.BackColor = Color.MidnightBlue;
+            panel1.BackColor = Color.FromArgb(41, 128, 185);
             panel1.Controls.Add(cbb_status);
             panel1.Controls.Add(iconButton1);
             panel1.Controls.Add(btn_list);
@@ -113,9 +123,10 @@
             // cbb_status
             // 
             cbb_status.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            cbb_status.ForeColor = SystemColors.ButtonHighlight;
             cbb_status.FormattingEnabled = true;
             cbb_status.Items.AddRange(new object[] { "Booked", "Completed", "Canceled", "Tất cã" });
-            cbb_status.Location = new Point(501, 48);
+            cbb_status.Location = new Point(536, 32);
             cbb_status.Name = "cbb_status";
             cbb_status.Size = new Size(232, 36);
             cbb_status.TabIndex = 2;
@@ -124,30 +135,44 @@
             // 
             // iconButton1
             // 
-            iconButton1.BackColor = Color.DarkSlateBlue;
+            iconButton1.BackColor = Color.FromArgb(255, 128, 0);
+            iconButton1.FlatAppearance.BorderSize = 0;
+            iconButton1.FlatStyle = FlatStyle.Flat;
             iconButton1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconButton1.IconColor = Color.Black;
+            iconButton1.ForeColor = SystemColors.ButtonHighlight;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Filter;
+            iconButton1.IconColor = SystemColors.ButtonHighlight;
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.Location = new Point(260, 48);
+            iconButton1.IconSize = 30;
+            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButton1.Location = new Point(259, 22);
             iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(221, 36);
+            iconButton1.Size = new Size(242, 46);
             iconButton1.TabIndex = 1;
             iconButton1.Text = "Lọc theo trạng thái";
+            iconButton1.TextAlign = ContentAlignment.MiddleLeft;
+            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton1.UseVisualStyleBackColor = false;
             // 
             // btn_list
             // 
-            btn_list.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btn_list.IconChar = FontAwesome.Sharp.IconChar.None;
-            btn_list.IconColor = Color.Black;
+            btn_list.BackColor = Color.DarkCyan;
+            btn_list.FlatAppearance.BorderSize = 0;
+            btn_list.FlatStyle = FlatStyle.Flat;
+            btn_list.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            btn_list.ForeColor = SystemColors.ButtonHighlight;
+            btn_list.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            btn_list.IconColor = SystemColors.ButtonHighlight;
             btn_list.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_list.Location = new Point(12, 12);
+            btn_list.IconSize = 30;
+            btn_list.Location = new Point(24, 22);
             btn_list.Name = "btn_list";
             btn_list.Size = new Size(167, 41);
             btn_list.TabIndex = 0;
             btn_list.Text = "Xem tất cả";
-            btn_list.UseVisualStyleBackColor = true;
+            btn_list.TextAlign = ContentAlignment.MiddleLeft;
+            btn_list.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_list.UseVisualStyleBackColor = false;
             btn_list.Click += btn_list_Click;
             // 
             // dataGridView
