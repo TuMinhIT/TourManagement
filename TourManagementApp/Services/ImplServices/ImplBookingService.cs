@@ -42,5 +42,10 @@ namespace TourManagementApp.Services.ImplServices
         {
             return _bookingRepository.Update(booking);
         }
+
+        public List<Booking> GetByBookingDate(DateTime bookingDate)
+        {
+            return _bookingRepository.GetByBookingDate(bookingDate);
+        }
     }
 }

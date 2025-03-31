@@ -46,18 +46,20 @@
             // 
             // tb_userName
             // 
-            tb_userName.Location = new Point(139, 176);
+            tb_userName.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            tb_userName.Location = new Point(139, 145);
             tb_userName.Name = "tb_userName";
             tb_userName.PlaceholderText = "Mã nhân viên";
-            tb_userName.Size = new Size(351, 27);
+            tb_userName.Size = new Size(351, 30);
             tb_userName.TabIndex = 0;
             // 
             // tb_password
             // 
-            tb_password.Location = new Point(139, 242);
+            tb_password.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            tb_password.Location = new Point(139, 205);
             tb_password.Name = "tb_password";
             tb_password.PlaceholderText = "Mật khẩu";
-            tb_password.Size = new Size(351, 27);
+            tb_password.Size = new Size(351, 30);
             tb_password.TabIndex = 2;
             tb_password.UseSystemPasswordChar = true;
             // 
@@ -67,7 +69,7 @@
             check_hide.BackColor = Color.Transparent;
             check_hide.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             check_hide.ForeColor = Color.FromArgb(41, 128, 185);
-            check_hide.Location = new Point(139, 295);
+            check_hide.Location = new Point(139, 261);
             check_hide.Name = "check_hide";
             check_hide.Size = new Size(133, 24);
             check_hide.TabIndex = 4;
@@ -82,7 +84,7 @@
             buttonLogin.FlatStyle = FlatStyle.Flat;
             buttonLogin.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonLogin.ForeColor = SystemColors.ButtonFace;
-            buttonLogin.Location = new Point(188, 347);
+            buttonLogin.Location = new Point(188, 332);
             buttonLogin.Name = "buttonLogin";
             buttonLogin.Size = new Size(137, 43);
             buttonLogin.TabIndex = 6;
@@ -96,7 +98,7 @@
             lb_forgot.BackColor = Color.Transparent;
             lb_forgot.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lb_forgot.ForeColor = Color.FromArgb(41, 128, 185);
-            lb_forgot.Location = new Point(346, 292);
+            lb_forgot.Location = new Point(346, 261);
             lb_forgot.Name = "lb_forgot";
             lb_forgot.Size = new Size(144, 25);
             lb_forgot.TabIndex = 7;
@@ -108,9 +110,9 @@
             buttonExit.BackColor = Color.Transparent;
             buttonExit.FlatAppearance.BorderSize = 0;
             buttonExit.FlatStyle = FlatStyle.Flat;
-            buttonExit.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
+            buttonExit.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             buttonExit.ForeColor = Color.FromArgb(41, 128, 185);
-            buttonExit.Location = new Point(355, 347);
+            buttonExit.Location = new Point(346, 332);
             buttonExit.Name = "buttonExit";
             buttonExit.Size = new Size(113, 43);
             buttonExit.TabIndex = 9;
@@ -161,7 +163,7 @@
             iconButton2.IconColor = Color.FromArgb(41, 128, 185);
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 32;
-            iconButton2.Location = new Point(80, 235);
+            iconButton2.Location = new Point(80, 205);
             iconButton2.Name = "iconButton2";
             iconButton2.Size = new Size(53, 34);
             iconButton2.TabIndex = 18;
@@ -177,7 +179,7 @@
             iconButton1.IconColor = Color.FromArgb(41, 128, 185);
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton1.IconSize = 32;
-            iconButton1.Location = new Point(80, 170);
+            iconButton1.Location = new Point(80, 139);
             iconButton1.Name = "iconButton1";
             iconButton1.Size = new Size(53, 38);
             iconButton1.TabIndex = 17;
@@ -189,11 +191,11 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.FromArgb(41, 128, 185);
-            label8.Location = new Point(139, 101);
+            label8.Location = new Point(215, 80);
             label8.Name = "label8";
-            label8.Size = new Size(360, 34);
+            label8.Size = new Size(166, 34);
             label8.TabIndex = 15;
-            label8.Text = "Đăng nhập vào tài khoản";
+            label8.Text = "Đăng nhập";
             // 
             // button1
             // 

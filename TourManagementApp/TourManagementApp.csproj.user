@@ -37,7 +37,7 @@
     <Compile Update="Views\Report\ReportLayout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Report\statistic.cs">
+    <Compile Update="Views\Report\Statistic.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Schedule_form\AddSchedule.cs">

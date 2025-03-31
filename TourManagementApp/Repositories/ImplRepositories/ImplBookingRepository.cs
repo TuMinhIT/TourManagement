@@ -187,6 +187,52 @@ namespace TourManagementApp.Repositories.ImplRepositories
             return list_booking ;
         }
 
+        public List<Booking> GetByBookingDate(DateTime bookingDate)
+        {
+            List<Booking> list_booking = new List<Booking>();
+
+            string query = "SELECT * FROM CustomerTours WHERE CAST(BookingDate AS DATE) = @bookingDate";
+
+            using (SqlConnection conn = Connection.GetSqlConnection(DatabaseName.TourManagement.ToString()))
+            {
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@bookingDate", bookingDate.Date);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                int id = reader.GetInt32(0);
+                                string customerID = reader.GetString(1);
+                                string customerName = reader.GetString(2);
+                                int tourID = reader.GetInt32(3);
+                                string tourName = reader.GetString(4);
+                                DateTime date = reader.GetDateTime(5);
+                                string status = reader.GetString(6);
+                                int total = reader.GetInt32(7);
+                                int prepay = reader.GetInt32(8);
+
+                                Booking newBooking = new Booking(customerID, customerName, tourID, tourName, date,
+                                    status, prepay);
+                                newBooking.BookingID = id;
+                                list_booking.Add(newBooking);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Lỗi: " + ex.Message);
+                }
+            }
+            return list_booking;
+        }
+
+
+
         public Booking GetById(int id)
         {      
             using (SqlConnection conn = Connection.GetSqlConnection(DatabaseName.TourManagement.ToString()))
@@ -217,7 +263,7 @@ namespace TourManagementApp.Repositories.ImplRepositories
                                 int prepay = reader.GetInt32(8);
 
                                 Booking newBooking = new Booking(customerID, customerName, tourID, tourName, bookingDate,
-                                    status, prepay);
+                                    status, total,prepay);
                                 newBooking.BookingID = bookingId;
 
                                 return newBooking;

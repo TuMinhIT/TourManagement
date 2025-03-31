@@ -68,19 +68,12 @@ CREATE TABLE Schedule (
     Day_Start DATETIME NOT NULL, 
     Day_End DATETIME NOT NULL, 
     Status_Pay NVARCHAR(50), 
+	TotalAmount INT NOT NULL,
     Description NVARCHAR(MAX) NOT NULL,
     FOREIGN KEY (TourID) REFERENCES Tours(TourID) ON DELETE CASCADE
 );
 GO
 
--- Bảng Báo Cáo Doanh Thu
-CREATE TABLE RevenueReports (
-    ReportID INT IDENTITY(1,1) PRIMARY KEY,
-    ReportDate DATETIME DEFAULT GETDATE(),
-    TourType NVARCHAR(50),
-    TotalRevenue DECIMAL(18,2) NOT NULL
-);
-go
 
 --triger generate User id
 CREATE TRIGGER trg_AutoGenerate_UserID ON Users
@@ -124,13 +117,3 @@ BEGIN
     SELECT @NewID, FullName, Gender, PhoneNumber, Email, Address, Nationality, Notes
     FROM inserted;
 END;
-
-
-INSERT INTO Users ( Password, Role, FullName, Address, Phone, Email, link, note) 
-VALUES ( 'hashedpassword123', 'Admin', 'Nguyễn Văn A', '123 Đường ABC, Hà Nội', '0123456789', 'nguyenvana@example.com', '', 'Ghi chú về user A');
-go
-INSERT INTO Customers ( FullName, Gender, PhoneNumber, Email, Address, Nationality, Notes) 
-VALUES ( 'Trần Thị B', 'Female', '0987654321', 'tranthib@example.com', '456 Đường XYZ, TP.HCM', 'Vietnam', 'Khách hàng VIP');
-go
-INSERT INTO Tours (TourName, TourType, Transport, Price, LinkImage, Description) 
-VALUES ('Hà Nội - Hạ Long 3N2Đ', 'Nội địa', 'Xe khách', '3,500,000 VND', '', 'Tour du lịch khám phá Vịnh Hạ Long với lịch trình hấp dẫn.');

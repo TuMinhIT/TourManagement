@@ -42,7 +42,6 @@
             iconButton2 = new FontAwesome.Sharp.IconButton();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             tb_note = new TextBox();
-            btn_X = new Button();
             label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pic_avatar).BeginInit();
             panel.SuspendLayout();
@@ -50,11 +49,10 @@
             // 
             // pic_avatar
             // 
-            pic_avatar.BackColor = SystemColors.ActiveCaptionText;
-            pic_avatar.Image = Properties.Resources.ccc;
-            pic_avatar.Location = new Point(560, 65);
+            pic_avatar.BackColor = SystemColors.GradientActiveCaption;
+            pic_avatar.Location = new Point(572, 104);
             pic_avatar.Name = "pic_avatar";
-            pic_avatar.Size = new Size(203, 133);
+            pic_avatar.Size = new Size(173, 202);
             pic_avatar.SizeMode = PictureBoxSizeMode.Zoom;
             pic_avatar.TabIndex = 9;
             pic_avatar.TabStop = false;
@@ -98,7 +96,7 @@
             tb_name.BackColor = SystemColors.ActiveCaption;
             tb_name.Enabled = false;
             tb_name.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            tb_name.ForeColor = SystemColors.InactiveBorder;
+            tb_name.ForeColor = SystemColors.ControlText;
             tb_name.Location = new Point(63, 47);
             tb_name.Name = "tb_name";
             tb_name.PlaceholderText = "  Họ và tên";
@@ -134,17 +132,15 @@
             panel.Controls.Add(iconButton3);
             panel.Controls.Add(iconButton2);
             panel.Controls.Add(iconButton1);
-            panel.Controls.Add(tb_note);
-            panel.Controls.Add(pic_avatar);
             panel.Controls.Add(tb_address);
             panel.Controls.Add(tb_code);
             panel.Controls.Add(tb_phone);
             panel.Controls.Add(tb_email);
             panel.Controls.Add(tb_name);
             panel.ForeColor = SystemColors.ControlText;
-            panel.Location = new Point(12, 41);
+            panel.Location = new Point(12, 36);
             panel.Name = "panel";
-            panel.Size = new Size(842, 471);
+            panel.Size = new Size(471, 474);
             panel.TabIndex = 19;
             // 
             // iconButton4
@@ -232,28 +228,12 @@
             tb_note.BackColor = SystemColors.ActiveCaption;
             tb_note.Enabled = false;
             tb_note.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            tb_note.Location = new Point(452, 369);
+            tb_note.Location = new Point(507, 401);
             tb_note.Multiline = true;
             tb_note.Name = "tb_note";
             tb_note.PlaceholderText = "  Thông tin khác";
             tb_note.Size = new Size(347, 80);
             tb_note.TabIndex = 16;
-            // 
-            // btn_X
-            // 
-            btn_X.BackColor = Color.Transparent;
-            btn_X.Enabled = false;
-            btn_X.FlatAppearance.BorderSize = 0;
-            btn_X.FlatStyle = FlatStyle.Flat;
-            btn_X.Font = new Font("Verdana", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_X.ForeColor = Color.WhiteSmoke;
-            btn_X.Location = new Point(829, -5);
-            btn_X.Name = "btn_X";
-            btn_X.Size = new Size(40, 40);
-            btn_X.TabIndex = 20;
-            btn_X.Text = "X";
-            btn_X.UseVisualStyleBackColor = false;
-            btn_X.Click += btn_X_Click;
             // 
             // label2
             // 
@@ -275,9 +255,10 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(866, 545);
             Controls.Add(label2);
-            Controls.Add(btn_X);
             Controls.Add(label1);
             Controls.Add(panel);
+            Controls.Add(pic_avatar);
+            Controls.Add(tb_note);
             Name = "EmployeeDetail";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EmployeeDetail";
@@ -299,7 +280,6 @@
         private TextBox tb_email;
         private Panel panel;
         private TextBox tb_note;
-        private Button btn_X;
         private FontAwesome.Sharp.IconButton iconButton6;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;

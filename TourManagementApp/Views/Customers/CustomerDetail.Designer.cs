@@ -50,12 +50,28 @@
             btn_save = new FontAwesome.Sharp.IconButton();
             btn_x = new Button();
             btn_close = new FontAwesome.Sharp.IconButton();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
             panel.SuspendLayout();
             SuspendLayout();
             // 
             // panel
             // 
             panel.BackColor = Color.Transparent;
+            panel.Controls.Add(label9);
+            panel.Controls.Add(label8);
+            panel.Controls.Add(label7);
+            panel.Controls.Add(label6);
+            panel.Controls.Add(label5);
+            panel.Controls.Add(label4);
+            panel.Controls.Add(label3);
+            panel.Controls.Add(label2);
             panel.Controls.Add(iconButton8);
             panel.Controls.Add(iconButton5);
             panel.Controls.Add(iconButton6);
@@ -72,9 +88,9 @@
             panel.Controls.Add(tb_phone);
             panel.Controls.Add(tb_email);
             panel.Controls.Add(tb_name);
-            panel.Location = new Point(50, 83);
+            panel.Location = new Point(51, 61);
             panel.Name = "panel";
-            panel.Size = new Size(941, 463);
+            panel.Size = new Size(941, 432);
             panel.TabIndex = 0;
             // 
             // iconButton8
@@ -86,7 +102,7 @@
             iconButton8.IconColor = Color.WhiteSmoke;
             iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton8.IconSize = 32;
-            iconButton8.Location = new Point(489, 90);
+            iconButton8.Location = new Point(489, 56);
             iconButton8.Name = "iconButton8";
             iconButton8.Size = new Size(68, 35);
             iconButton8.TabIndex = 72;
@@ -98,10 +114,10 @@
             iconButton5.FlatAppearance.BorderSize = 0;
             iconButton5.FlatStyle = FlatStyle.Flat;
             iconButton5.IconChar = FontAwesome.Sharp.IconChar.PenClip;
-            iconButton5.IconColor = Color.WhiteSmoke;
+            iconButton5.IconColor = SystemColors.ScrollBar;
             iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton5.IconSize = 32;
-            iconButton5.Location = new Point(489, 311);
+            iconButton5.Location = new Point(489, 279);
             iconButton5.Name = "iconButton5";
             iconButton5.Size = new Size(68, 35);
             iconButton5.TabIndex = 71;
@@ -116,7 +132,7 @@
             iconButton6.IconColor = Color.WhiteSmoke;
             iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton6.IconSize = 32;
-            iconButton6.Location = new Point(489, 174);
+            iconButton6.Location = new Point(489, 143);
             iconButton6.Name = "iconButton6";
             iconButton6.Size = new Size(68, 35);
             iconButton6.TabIndex = 70;
@@ -289,7 +305,7 @@
             // 
             // btn_update
             // 
-            btn_update.BackColor = Color.Green;
+            btn_update.BackColor = Color.RoyalBlue;
             btn_update.FlatAppearance.BorderSize = 0;
             btn_update.FlatStyle = FlatStyle.Flat;
             btn_update.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
@@ -298,7 +314,7 @@
             btn_update.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_update.IconSize = 30;
             btn_update.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_update.Location = new Point(327, 556);
+            btn_update.Location = new Point(328, 520);
             btn_update.Name = "btn_update";
             btn_update.Size = new Size(156, 42);
             btn_update.TabIndex = 53;
@@ -319,7 +335,7 @@
             btn_save.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_save.IconSize = 30;
             btn_save.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_save.Location = new Point(327, 556);
+            btn_save.Location = new Point(347, 520);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(124, 42);
             btn_save.TabIndex = 52;
@@ -355,7 +371,7 @@
             btn_close.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_close.IconSize = 30;
             btn_close.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_close.Location = new Point(551, 556);
+            btn_close.Location = new Point(534, 520);
             btn_close.Name = "btn_close";
             btn_close.Size = new Size(125, 42);
             btn_close.TabIndex = 54;
@@ -365,6 +381,95 @@
             btn_close.UseVisualStyleBackColor = false;
             btn_close.Click += btn_x_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(82, 44);
+            label2.Name = "label2";
+            label2.Size = new Size(131, 23);
+            label2.TabIndex = 73;
+            label2.Text = "Tên khách hàng";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(82, 129);
+            label3.Name = "label3";
+            label3.RightToLeft = RightToLeft.No;
+            label3.Size = new Size(130, 23);
+            label3.TabIndex = 74;
+            label3.Text = "Mã khách hàng";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(82, 199);
+            label4.Name = "label4";
+            label4.Size = new Size(75, 23);
+            label4.TabIndex = 75;
+            label4.Text = "Giới tính";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Black;
+            label5.Location = new Point(82, 279);
+            label5.Name = "label5";
+            label5.Size = new Size(51, 23);
+            label5.TabIndex = 76;
+            label5.Text = "Email";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(82, 349);
+            label6.Name = "label6";
+            label6.Size = new Size(111, 23);
+            label6.TabIndex = 77;
+            label6.Text = "Số điện thoại";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(563, 61);
+            label7.Name = "label7";
+            label7.Size = new Size(84, 23);
+            label7.TabIndex = 78;
+            label7.Text = "Quốc tịch";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.Black;
+            label8.Location = new Point(563, 286);
+            label8.Name = "label8";
+            label8.Size = new Size(125, 23);
+            label8.TabIndex = 79;
+            label8.Text = "Thông tin khác";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.Black;
+            label9.Location = new Point(563, 148);
+            label9.Name = "label9";
+            label9.Size = new Size(62, 23);
+            label9.TabIndex = 80;
+            label9.Text = "Địa chỉ";
+            // 
             // CustomerDetail
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -372,7 +477,7 @@
             BackColor = SystemColors.ActiveCaption;
             BackgroundImage = Properties.Resources.hon_doi_moi_phu_quoc_1;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1042, 606);
+            ClientSize = new Size(1042, 573);
             Controls.Add(btn_close);
             Controls.Add(btn_update);
             Controls.Add(panel);
@@ -413,5 +518,13 @@
         private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton iconButton6;
         private FontAwesome.Sharp.IconButton iconButton8;
+        private Label label9;
+        private Label label8;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
     }
 }

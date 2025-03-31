@@ -18,5 +18,6 @@ namespace TourManagementApp.Services
         List<Customer> GetByAddess(string Email);
         List<Customer> GetByName(string Email);
         bool DeleteById(string customerId);
+       
     }
 }

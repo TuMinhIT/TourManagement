@@ -14,10 +14,11 @@ namespace TourManagementApp.Views.Tour
         private BookingService _bookingService = new ImplBookingService();
         private readonly ScheduleService _scheduleService = new ImplScheduleService();
         private readonly Message message = new Message();
-       
+
         private List<Booking> _bookingList = new List<Booking>();
         private string _customerID; //id khách hàng dang chọn
         private int _tourID;
+        private string _total;
         private int IDBooking;
         public TourOrderLayout()
         {
@@ -32,30 +33,16 @@ namespace TourManagementApp.Views.Tour
         {
             _bookingList = _bookingService.getAll();
             generate_data(_bookingList);
-            cbb_status.Text = "Tất cã";
+          
         }
 
-        private void cbb_change(object sender, EventArgs e)
-        {
-            if (cbb_status.Text != "Tất cã")
-            {
-                List<Booking> list_status = new List<Booking>();
-                list_status = _bookingService.GetByAttribute("Status", cbb_status.Text);
-                generate_data(list_status);
-            }
-            else
-            {
-                _bookingList = _bookingService.getAll();
-                generate_data(_bookingList);
-            }
-
-        }
+     
 
         private void generate_data(List<Booking> list_Booking)
         {
             dataGridView.DataSource = list_Booking;
             custom_dataGitView();
-          
+
         }
 
         #region custom cell click
@@ -98,10 +85,10 @@ namespace TourManagementApp.Views.Tour
 
                 //Show button
                 if (Id != null)
-                {   
+                {
                     panel_schedule.Show();
                     _customerID = dataGridView.Rows[e.RowIndex].Cells["CustomerID"].Value?.ToString();
-                    _tourID = int.Parse( dataGridView.Rows[e.RowIndex].Cells["TourID"].Value?.ToString());
+                    _tourID = int.Parse(dataGridView.Rows[e.RowIndex].Cells["TourID"].Value?.ToString());
                     tb_number.Text = _customerID;
                     IDBooking = Id;
                 }
@@ -127,12 +114,14 @@ namespace TourManagementApp.Views.Tour
             dataGridView.Columns["CustomerName"].HeaderText = "Tên khách";
             dataGridView.Columns["TourID"].HeaderText = "Mã tour";
             dataGridView.Columns["TourName"].HeaderText = "Tên Tour";
-            dataGridView.Columns["Status"].HeaderText = "Trạng thái";
+
+            dataGridView.Columns["BookingDate"].HeaderText = "Ngày đặt";
             dataGridView.Columns["BookingID"].HeaderText = "ID";
+
 
             //ẩn date total
 
-            dataGridView.Columns["BookingDate"].Visible = false;
+            dataGridView.Columns["Status"].Visible = false;
             dataGridView.Columns["TotalAmount"].Visible = false;
             dataGridView.Columns["PrePay"].Visible = false;
 
@@ -193,7 +182,6 @@ namespace TourManagementApp.Views.Tour
         {
             _bookingList = _bookingService.getAll();
             generate_data(_bookingList);
-            cbb_status.Text = "Tất cã";
         }
 
         private void btn_addSchedule_Click(object sender, EventArgs e)
@@ -202,11 +190,11 @@ namespace TourManagementApp.Views.Tour
             {
                 return;
             }
-            Schedule getSchedule = _scheduleService.getByTourID(_tourID, _customerID);            
+            Schedule getSchedule = _scheduleService.getByTourID(_tourID, _customerID);
             if (getSchedule == null)
             {
-                if ( message.MessageOKCancel("Tour chưa có lịch trình bạn có muốn thêm không?"))
-                {             
+                if (message.MessageOKCancel("Tour chưa có lịch trình bạn có muốn thêm không?"))
+                {
                     AddSchedule addSchedule = new AddSchedule(_bookingService.GetByID(IDBooking));
                     addSchedule.ShowDialog();
                 }
@@ -217,5 +205,21 @@ namespace TourManagementApp.Views.Tour
                 editSchedule.ShowDialog();
             }
         }
+
+
+        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime selectedDate = dateTimePicker.Value;
+            List<Booking> bookings = _bookingService.GetByBookingDate(selectedDate);
+            if (bookings != null)
+            {
+                generate_data(bookings);
+            } else {
+
+                _bookingList = _bookingService.getAll();
+                generate_data(_bookingList);
+            }                  
+        }
+        
     }
 }

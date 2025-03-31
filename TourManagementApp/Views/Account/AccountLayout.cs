@@ -34,7 +34,7 @@ namespace TourManagementApp.Views.Account
             tb_code.Text = _user.UserID;
             tb_email.Text = _user.Email;
             tb_name.Text = _user.FullName;
-            tb_phone.Text = string.IsNullOrEmpty(_user.Phone) ? "<Trống>" : _user.Phone;
+            tb_phone.Text = string.IsNullOrEmpty(_user.Phone) ? "000" : _user.Phone;
             note.Text = string.IsNullOrEmpty(_user.note) ? "<Trống>" : _user.note;
             imageService.ShowImage(pic_avatar, _user.link.Trim());
             enable_Pannel(false);
@@ -67,6 +67,12 @@ namespace TourManagementApp.Views.Account
             if (string.IsNullOrEmpty(tb_name.Text) || string.IsNullOrEmpty(tb_phone.Text))
             {
                 message.MessageWarning("Không bõ trống các thông tin! ");
+                return;
+            }
+
+            if (tb_phone.Text.Any(char.IsLetter))
+            {
+                MessageBox.Show("Số điện thoại không được chứa chữ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

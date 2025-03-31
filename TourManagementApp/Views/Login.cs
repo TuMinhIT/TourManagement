@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 using TourManagementApp.Services;
 using TourManagementApp.Services.ImplServices;
 using TourManagementApp.Views;
@@ -16,7 +9,7 @@ namespace TourManagementApp.Views
 {
     public partial class Login : Form
     {
-        private string fullText = "Đăng nhập vào tài khoản";
+        private string fullText = "Đăng nhập";
         private int currentCharIndex = 0;
         private System.Windows.Forms.Timer typingTimer;
         public Login()
@@ -39,28 +32,28 @@ namespace TourManagementApp.Views
 
         private void TypingTimer_Tick(object sender, EventArgs e)
         {
-            if (currentCharIndex < fullText.Length)
-            {
-                label8.Text += fullText[currentCharIndex];
-                currentCharIndex++;
-            }
-            else
-            {
-                typingTimer.Stop();
-                System.Threading.Tasks.Task.Delay(1000).ContinueWith(_ =>
-                {
-                    this.Invoke(new Action(() =>
-                    {
-                        label8.Text = "";
-                        currentCharIndex = 0;
-                        typingTimer.Start();
-                    }));
-                });
-            }
+            //if (currentCharIndex < fullText.Length)
+            //{
+            //    label8.Text += fullText[currentCharIndex];
+            //    currentCharIndex++;
+            //}
+            //else
+            //{
+            //    typingTimer.Stop();
+            //    System.Threading.Tasks.Task.Delay(1000).ContinueWith(_ =>
+            //    {
+            //        this.Invoke(new Action(() =>
+            //        {
+            //            label8.Text = "";
+            //            currentCharIndex = 0;
+            //            typingTimer.Start();
+            //        }));
+            //    });
+            //}
         }
 
 
-        //Users user = userService.UserAuth(tb_userName.Text, tb_password.Text);
+       
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             Message message = new Message();
@@ -70,13 +63,10 @@ namespace TourManagementApp.Views
                 message.MessageOK("Xin nhập đầy đủ thông tin");
                 return;
             }
-            UserService userService = new ImplUserService();       
-            Users user = userService.UserAuth("NV001", "1111");
+            UserService userService = new ImplUserService();
+            Users user = userService.UserAuth(tb_userName.Text, tb_password.Text);
             if (user != null)
             {
-                //Layout layout = new Layout(user);
-                //layout.ShowDialog();
-                //this.Close();
                 Layout layout = new Layout(user);
                 this.Hide();  
                 layout.ShowDialog();

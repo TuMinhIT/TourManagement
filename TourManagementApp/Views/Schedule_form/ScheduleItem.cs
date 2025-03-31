@@ -1,13 +1,5 @@
 ﻿using Azure.Core;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 using TourManagementApp.Models;
 using TourManagementApp.Services;
 using TourManagementApp.Services.ImplServices;
@@ -31,6 +23,9 @@ namespace TourManagementApp.Views.Schedule_form
             tb_customerName.Text = _schedule.CustomerName;
             tb_tourName.Text = _schedule.TourName;
             tb_description.Text = _schedule.Description;
+            tb_cost.Text = _schedule.Total.ToString();
+            tb_status.Text = _schedule.Status_pay;
+           
         }
 
         private void panel1_MouseEnter(object sender, EventArgs e)

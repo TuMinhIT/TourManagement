@@ -285,5 +285,36 @@ namespace TourManagementApp.Repositories.ImplRepositories
 
             }
         }
+
+        public bool changePassword(Users user)
+        {
+            using (SqlConnection conn = Connection.GetSqlConnection(DatabaseName.TourManagement.ToString()))
+            {
+                try
+                {
+                    string query = @"UPDATE Users SET                                   
+                            Password = @password                       
+                        WHERE
+                            Email = @email";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@password", user.Password);                                          
+                        cmd.Parameters.AddWithValue("@email", user.Email);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        return rowsAffected > 0;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi đổi mật khẩu User: {ex.Message}");
+                    return false;
+                }
+            }
+        }
     }
+
+
 }

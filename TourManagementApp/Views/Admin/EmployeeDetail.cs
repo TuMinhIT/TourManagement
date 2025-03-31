@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TourManagementApp.Models;
+using TourManagementApp.Utils;
 
 namespace TourManagementApp.Views.Admin
 {
     public partial class EmployeeDetail : Form
     {
         private Users _user;
+        private ImageService imageService = new ImageService();
         public EmployeeDetail(Users user)
         {
             this._user = user;
@@ -34,6 +36,10 @@ namespace TourManagementApp.Views.Admin
             tb_address.Text = _user.Address;
             tb_email.Text = _user.Email;
             tb_phone.Text = _user.Phone;
+            if (!string.IsNullOrEmpty(_user.link))
+            {         
+               imageService.ShowImage(pic_avatar, _user.link);      
+            }
         }
 
         private void EmployeeDetail_Load(object sender, EventArgs e)

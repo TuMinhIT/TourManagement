@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 using TourManagementApp.Models;
 using TourManagementApp.Services;
+using TourManagementApp.Services.ImplServices;
 
 namespace TourManagementApp.Views.Schedule_form
 {
@@ -16,6 +10,7 @@ namespace TourManagementApp.Views.Schedule_form
     {
         private Schedule _schedule;
         private Message message= new Message();
+        private ScheduleService _scheduleService = new ImplScheduleService();
         public EditSchedule(Schedule schedule)
         {
             InitializeComponent();
@@ -25,12 +20,13 @@ namespace TourManagementApp.Views.Schedule_form
 
         private void generate_data()
         {
+            tb_total.Text= _schedule.Total.ToString();
             tb_customerName.Text = _schedule.CustomerName;
             tb_description.Text = _schedule.Description;
             tb_tourName.Text = _schedule.TourName;
             dateTimePicker_end.Value =_schedule.Day_End;
             dateTimePicker_start.Value =_schedule.Day_Start;
-            cbb_payment.Text = _schedule.Status_pay;
+            cbb_status.Text = _schedule.Status_pay;
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
@@ -45,7 +41,8 @@ namespace TourManagementApp.Views.Schedule_form
            {
                 Schedule scheduleNew = new Schedule(_schedule.TourID, _schedule.TourName,
                 _schedule.CustomerID, _schedule.CustomerName, dateTimePicker_start.Value,
-                dateTimePicker_end.Value, cbb_status.Text, tb_description.Text);
+                dateTimePicker_end.Value, cbb_status.Text,int.Parse(tb_total.Text), tb_description.Text);
+                _scheduleService.Update(scheduleNew);
            }
 
         }

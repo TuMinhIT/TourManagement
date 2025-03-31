@@ -9,17 +9,23 @@ namespace TourManagementApp.Views.Tour
 {
     public partial class AddNewOrder : Form
     {
-        private int tourID;
-        private string tourName;
+        private int tourID =1;
+        private string tourName ="null";
+        private string total = "null";
         private readonly CustomerService _customerService = new ImplCustomerService();
         private readonly TourService _tourService = new ImplTourService();
         private readonly BookingService _bookingService = new ImplBookingService();
+        private List<Customer> _customerList = new List<Customer>();
         private readonly Message message = new Message();
-        public AddNewOrder(int tourID, string tourName)
+        
+        public AddNewOrder(int tourID, string tourName, string total)
         {
             InitializeComponent();
             this.tourID = tourID;
             this.tourName = tourName;
+            this.total = total;
+            _customerList = _customerService.getAllCustomer();
+            getCustomer(_customerList);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,14 +46,15 @@ namespace TourManagementApp.Views.Tour
 
         private void AddNewOrder_Load(object sender, EventArgs e)
         {
-            tb_tourInf.Text = "Mã tour: "+tourID.ToString() + "----" + tourName;
+            tb_tourInf.Text = "Mã tour: " + tourID.ToString() + "----" + tourName;
+            tb_total.Text = total;
         }
-
+        
+        private string _cusName;
         private void btn_save_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(tb_total.Text) || string.IsNullOrEmpty(tb_code.Text)
-                || string.IsNullOrEmpty(cbb_status.Text) ||
-                dateTimePicker.Value == null)
+        {   
+            if (string.IsNullOrEmpty(tb_total.Text) || dateTimePicker.Value == null || 
+                cbb_customer.Text =="<trống>")
             {
                 message.MessageOK("Xin hãy nhập đủ thông tin!");
                 return;
@@ -57,41 +64,64 @@ namespace TourManagementApp.Views.Tour
             int prePay = int.TryParse(tb_prePay.Text, out int p) ? p : 0;
 
             Booking newBooking = new
-                Booking(tb_code.Text,_cusName ,tourID,tourName ,dateTimePicker.Value,
-                cbb_status.SelectedItem.ToString(),
+                Booking(cbb_customer.Text, _cusName, tourID, tourName, dateTimePicker.Value,
+                "Booked",
                 total, prePay);
             if (_bookingService.AddNew(newBooking))
             {
                 message.MessageOK("Thêm thành công! ");
-                reset();
+                this.Close();
             }
 
         }
-
-        private string _cusName;
-        private void load_customer_Click(object sender, EventArgs e)
+        
+        private void cbb_customer_Leave(object sender, EventArgs e)
         {
-            Customer customer = _customerService.GetById(tb_code.Text);
-            if (customer != null)
+            string selectedText = cbb_customer.Text;
+
+            bool exists = cbb_customer.Items.Contains(selectedText);
+
+            if (!exists)
             {
-                _cusName = customer.FullName;
-                lb_customer.Text = customer.FullName.ToString() + "___" + customer.Email;
+                lb_customer.Text = "Giá trị nhập không hợp lệ, vui lòng chọn trong danh sách!";
+                lb_customer.ForeColor = Color.Red;
+                cbb_customer.Focus();
             }
             else
+            {              
+                Customer customer = _customerList.FirstOrDefault(c => c.CustomerID == selectedText);
+
+                if (customer != null)
+                {
+                    lb_customer.Text = $"{selectedText}  {customer.FullName}";
+                    lb_customer.ForeColor = Color.Black;
+                    _cusName = customer.FullName;
+                }
+            }
+            
+        }
+
+
+        private void load_customer_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+
+        private void lb_customer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void getCustomer(List<Customer> _customerList)
+        {
+            cbb_customer.Items.Clear(); 
+
+            foreach (Customer customer in _customerList)
             {
-                message.MessageWarning("Mã khách hàng không tồn tại!");
+                string id = customer.CustomerID; 
+                cbb_customer.Items.Add(id);
             }
         }
-
-        private void reset()
-        {
-            tb_code.Text = string.Empty;
-            tb_prePay.Text = string.Empty;
-            tb_total.Text = string.Empty;
-            cbb_status.Text = "Booked";
-            lb_customer = new Label();
-
-        }
-
     }
 }

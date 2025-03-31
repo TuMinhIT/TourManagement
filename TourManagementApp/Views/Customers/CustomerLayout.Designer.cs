@@ -55,15 +55,16 @@
             panel1.Controls.Add(btn_add);
             panel1.Location = new Point(1, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(955, 130);
+            panel1.Size = new Size(992, 130);
             panel1.TabIndex = 0;
             // 
             // tb_search
             // 
-            tb_search.Location = new Point(344, 78);
+            tb_search.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tb_search.Location = new Point(330, 71);
             tb_search.Name = "tb_search";
             tb_search.PlaceholderText = "Nội dung tìm kiếm";
-            tb_search.Size = new Size(350, 27);
+            tb_search.Size = new Size(350, 31);
             tb_search.TabIndex = 20;
             // 
             // lb_type
@@ -71,7 +72,7 @@
             lb_type.AutoSize = true;
             lb_type.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             lb_type.ForeColor = SystemColors.Control;
-            lb_type.Location = new Point(30, 78);
+            lb_type.Location = new Point(31, 71);
             lb_type.Name = "lb_type";
             lb_type.Size = new Size(53, 25);
             lb_type.TabIndex = 19;
@@ -79,11 +80,12 @@
             // 
             // cbb_type
             // 
+            cbb_type.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cbb_type.FormattingEnabled = true;
             cbb_type.Items.AddRange(new object[] { "Số điện thoại", "Mã khách hàng", "Địa chỉ", "Tên" });
-            cbb_type.Location = new Point(98, 79);
+            cbb_type.Location = new Point(102, 69);
             cbb_type.Name = "cbb_type";
-            cbb_type.Size = new Size(179, 28);
+            cbb_type.Size = new Size(179, 33);
             cbb_type.TabIndex = 18;
             cbb_type.Text = "<trống>";
             // 
@@ -98,9 +100,9 @@
             btn_search.IconColor = SystemColors.ButtonFace;
             btn_search.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_search.IconSize = 32;
-            btn_search.Location = new Point(747, 69);
+            btn_search.Location = new Point(764, 69);
             btn_search.Name = "btn_search";
-            btn_search.Size = new Size(127, 42);
+            btn_search.Size = new Size(132, 33);
             btn_search.TabIndex = 15;
             btn_search.Text = "Tìm kiếm";
             btn_search.TextAlign = ContentAlignment.MiddleLeft;
@@ -163,19 +165,19 @@
             // 
             // btn_import
             // 
-            btn_import.BackColor = Color.FromArgb(41, 128, 185);
+            btn_import.BackColor = Color.Yellow;
             btn_import.FlatAppearance.BorderSize = 0;
             btn_import.FlatStyle = FlatStyle.Flat;
             btn_import.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            btn_import.ForeColor = Color.White;
+            btn_import.ForeColor = Color.Black;
             btn_import.IconChar = FontAwesome.Sharp.IconChar.File;
-            btn_import.IconColor = Color.White;
+            btn_import.IconColor = Color.LightGray;
             btn_import.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_import.IconSize = 30;
             btn_import.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_import.Location = new Point(804, 340);
+            btn_import.Location = new Point(834, 367);
             btn_import.Name = "btn_import";
-            btn_import.Size = new Size(159, 45);
+            btn_import.Size = new Size(158, 37);
             btn_import.TabIndex = 22;
             btn_import.Text = "Nhập file";
             btn_import.TextAlign = ContentAlignment.MiddleLeft;
@@ -185,18 +187,18 @@
             // 
             // btn_excel
             // 
-            btn_excel.BackColor = SystemColors.ControlDark;
+            btn_excel.BackColor = Color.MediumSeaGreen;
             btn_excel.FlatAppearance.BorderSize = 0;
             btn_excel.FlatStyle = FlatStyle.Flat;
             btn_excel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            btn_excel.ForeColor = Color.White;
+            btn_excel.ForeColor = Color.Black;
             btn_excel.IconChar = FontAwesome.Sharp.IconChar.Table;
-            btn_excel.IconColor = Color.White;
+            btn_excel.IconColor = Color.FromArgb(192, 255, 192);
             btn_excel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_excel.IconSize = 30;
-            btn_excel.Location = new Point(804, 402);
+            btn_excel.Location = new Point(834, 410);
             btn_excel.Name = "btn_excel";
-            btn_excel.Size = new Size(159, 46);
+            btn_excel.Size = new Size(158, 32);
             btn_excel.TabIndex = 21;
             btn_excel.Text = "Xuất Excel";
             btn_excel.TextAlign = ContentAlignment.MiddleLeft;
@@ -208,10 +210,10 @@
             // 
             dataGridView.BackgroundColor = SystemColors.ActiveCaption;
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView.Location = new Point(3, 8);
+            dataGridView.Location = new Point(3, 0);
             dataGridView.Name = "dataGridView";
             dataGridView.RowHeadersWidth = 51;
-            dataGridView.Size = new Size(1009, 470);
+            dataGridView.Size = new Size(1009, 478);
             dataGridView.TabIndex = 5;
             // 
             // CustomerLayout

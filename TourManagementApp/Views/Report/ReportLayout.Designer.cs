@@ -29,244 +29,262 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
-            iconButton3 = new FontAwesome.Sharp.IconButton();
+            dataGridViewBooked = new DataGridView();
+            dataGridViewCompleted = new DataGridView();
+            panel2 = new Panel();
+            label1 = new Label();
+            lb_sum = new Label();
+            label2 = new Label();
+            lb_tour = new Label();
+            lb_booked = new Label();
+            lb_completed = new Label();
             label7 = new Label();
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            dateTimePicker2 = new DateTimePicker();
-            label6 = new Label();
-            label5 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            comboBox3 = new ComboBox();
-            comboBox2 = new ComboBox();
             label4 = new Label();
             label3 = new Label();
-            label2 = new Label();
-            comboBox1 = new ComboBox();
-            label1 = new Label();
-            button1 = new Button();
+            btn_fillter = new Button();
+            dateEnd = new DateTimePicker();
+            label6 = new Label();
+            label5 = new Label();
+            dateStart = new DateTimePicker();
+            panel = new Panel();
+            label8 = new Label();
+            label9 = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewBooked).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCompleted).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(iconButton4);
-            panel1.Controls.Add(iconButton3);
+            panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(dataGridViewBooked);
+            panel1.Controls.Add(dataGridViewCompleted);
+            panel1.Controls.Add(panel2);
             panel1.Controls.Add(label7);
-            panel1.Controls.Add(dataGridView1);
-            panel1.Controls.Add(iconButton2);
-            panel1.Controls.Add(iconButton1);
-            panel1.Controls.Add(dateTimePicker2);
+            panel1.Controls.Add(btn_fillter);
+            panel1.Controls.Add(dateEnd);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(dateTimePicker1);
-            panel1.Controls.Add(comboBox3);
-            panel1.Controls.Add(comboBox2);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(comboBox1);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(button1);
-            panel1.Location = new Point(0, 6);
+            panel1.Controls.Add(dateStart);
+            panel1.Location = new Point(3, -3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(925, 581);
+            panel1.Size = new Size(943, 641);
             panel1.TabIndex = 2;
             // 
-            // iconButton4
+            // dataGridViewBooked
             // 
-            iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconButton4.IconColor = Color.Black;
-            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.Location = new Point(487, 536);
-            iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(169, 29);
-            iconButton4.TabIndex = 22;
-            iconButton4.Text = "Thoát";
-            iconButton4.UseVisualStyleBackColor = true;
+            dataGridViewBooked.BackgroundColor = SystemColors.InactiveCaption;
+            dataGridViewBooked.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewBooked.Location = new Point(34, 466);
+            dataGridViewBooked.Name = "dataGridViewBooked";
+            dataGridViewBooked.RowHeadersWidth = 51;
+            dataGridViewBooked.Size = new Size(861, 145);
+            dataGridViewBooked.TabIndex = 33;
             // 
-            // iconButton3
+            // dataGridViewCompleted
             // 
-            iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconButton3.IconColor = Color.Black;
-            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton3.Location = new Point(147, 536);
-            iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(169, 29);
-            iconButton3.TabIndex = 21;
-            iconButton3.Text = "In báo cáo";
-            iconButton3.UseVisualStyleBackColor = true;
+            dataGridViewCompleted.BackgroundColor = SystemColors.ButtonFace;
+            dataGridViewCompleted.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCompleted.Location = new Point(34, 257);
+            dataGridViewCompleted.Name = "dataGridViewCompleted";
+            dataGridViewCompleted.RowHeadersWidth = 51;
+            dataGridViewCompleted.Size = new Size(861, 135);
+            dataGridViewCompleted.TabIndex = 32;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.ButtonFace;
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(lb_sum);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(lb_booked);
+            panel2.Controls.Add(lb_tour);
+            panel2.Controls.Add(lb_completed);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(label3);
+            panel2.Location = new Point(34, 133);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(861, 71);
+            panel2.TabIndex = 31;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label1.ForeColor = Color.FromArgb(0, 0, 192);
+            label1.Location = new Point(3, 15);
+            label1.Name = "label1";
+            label1.Size = new Size(138, 23);
+            label1.TabIndex = 22;
+            label1.Text = "Tổng doanh thu";
+            // 
+            // lb_sum
+            // 
+            lb_sum.AutoSize = true;
+            lb_sum.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lb_sum.ForeColor = Color.Black;
+            lb_sum.Location = new Point(49, 38);
+            lb_sum.Name = "lb_sum";
+            lb_sum.Size = new Size(24, 28);
+            lb_sum.TabIndex = 27;
+            lb_sum.Text = "0";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label2.ForeColor = Color.FromArgb(0, 0, 192);
+            label2.Location = new Point(251, 15);
+            label2.Name = "label2";
+            label2.Size = new Size(112, 23);
+            label2.TabIndex = 23;
+            label2.Text = "Tổng số tour";
+            label2.Click += label2_Click;
+            // 
+            // lb_tour
+            // 
+            lb_tour.AutoSize = true;
+            lb_tour.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lb_tour.ForeColor = Color.Black;
+            lb_tour.Location = new Point(293, 38);
+            lb_tour.Name = "lb_tour";
+            lb_tour.Size = new Size(24, 28);
+            lb_tour.TabIndex = 28;
+            lb_tour.Text = "0";
+            // 
+            // lb_booked
+            // 
+            lb_booked.AutoSize = true;
+            lb_booked.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lb_booked.ForeColor = Color.Black;
+            lb_booked.Location = new Point(755, 43);
+            lb_booked.Name = "lb_booked";
+            lb_booked.Size = new Size(24, 28);
+            lb_booked.TabIndex = 30;
+            lb_booked.Text = "0";
+            // 
+            // lb_completed
+            // 
+            lb_completed.AutoSize = true;
+            lb_completed.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lb_completed.ForeColor = Color.Black;
+            lb_completed.Location = new Point(510, 38);
+            lb_completed.Name = "lb_completed";
+            lb_completed.Size = new Size(24, 28);
+            lb_completed.TabIndex = 29;
+            lb_completed.Text = "0";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(366, 270);
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(3, 4);
             label7.Name = "label7";
-            label7.Size = new Size(212, 20);
-            label7.TabIndex = 20;
-            label7.Text = "DataGridView hiển thị báo cáo";
+            label7.Size = new Size(116, 28);
+            label7.TabIndex = 26;
+            label7.Text = "Lọc dữ liệu";
             // 
-            // dataGridView1
+            // label4
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
-            dataGridView1.Location = new Point(228, 306);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(428, 204);
-            dataGridView1.TabIndex = 19;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label4.ForeColor = Color.Maroon;
+            label4.Location = new Point(651, 15);
+            label4.Name = "label4";
+            label4.Size = new Size(207, 23);
+            label4.TabIndex = 25;
+            label4.Text = "Số tour chưa hoàn thành";
             // 
-            // Column1
+            // label3
             // 
-            Column1.HeaderText = "Loại tour";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Width = 125;
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label3.ForeColor = Color.DarkGreen;
+            label3.Location = new Point(417, 15);
+            label3.Name = "label3";
+            label3.Size = new Size(189, 23);
+            label3.TabIndex = 24;
+            label3.Text = "Số tour đã hoàn thành";
             // 
-            // Column2
+            // btn_fillter
             // 
-            Column2.HeaderText = "Số lượng Tours";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 125;
+            btn_fillter.BackColor = Color.FromArgb(0, 192, 0);
+            btn_fillter.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_fillter.ForeColor = SystemColors.ButtonFace;
+            btn_fillter.Location = new Point(789, 58);
+            btn_fillter.Name = "btn_fillter";
+            btn_fillter.Size = new Size(106, 35);
+            btn_fillter.TabIndex = 21;
+            btn_fillter.Text = "xem";
+            btn_fillter.UseVisualStyleBackColor = false;
+            btn_fillter.Click += btn_fillter_Click;
             // 
-            // Column3
+            // dateEnd
             // 
-            Column3.HeaderText = "Tổng doanh thu";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 125;
-            // 
-            // iconButton2
-            // 
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconButton2.IconColor = Color.Black;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.Location = new Point(525, 224);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(169, 29);
-            iconButton2.TabIndex = 18;
-            iconButton2.Text = "Xuất excel";
-            iconButton2.UseVisualStyleBackColor = true;
-            // 
-            // iconButton1
-            // 
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.Location = new Point(179, 236);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(169, 29);
-            iconButton1.TabIndex = 17;
-            iconButton1.Text = "Lọc báo cáo";
-            iconButton1.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Location = new Point(586, 145);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(250, 27);
-            dateTimePicker2.TabIndex = 16;
+            dateEnd.Location = new Point(493, 66);
+            dateEnd.Name = "dateEnd";
+            dateEnd.Size = new Size(250, 27);
+            dateEnd.TabIndex = 16;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(461, 147);
+            label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label6.Location = new Point(388, 72);
             label6.Name = "label6";
-            label6.Size = new Size(72, 20);
+            label6.Size = new Size(86, 23);
             label6.TabIndex = 15;
             label6.Text = "Đến ngày";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(43, 152);
+            label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label5.Location = new Point(9, 66);
             label5.Name = "label5";
-            label5.Size = new Size(62, 20);
+            label5.Size = new Size(75, 23);
             label5.TabIndex = 14;
             label5.Text = "Từ ngày";
             // 
-            // dateTimePicker1
+            // dateStart
             // 
-            dateTimePicker1.Location = new Point(165, 147);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
-            dateTimePicker1.TabIndex = 13;
+            dateStart.Location = new Point(86, 66);
+            dateStart.Name = "dateStart";
+            dateStart.Size = new Size(250, 27);
+            dateStart.TabIndex = 13;
             // 
-            // comboBox3
+            // panel
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(711, 74);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(151, 28);
-            comboBox3.TabIndex = 12;
+            panel.BackColor = SystemColors.ActiveBorder;
+            panel.Location = new Point(3, 644);
+            panel.Name = "panel";
+            panel.Size = new Size(940, 351);
+            panel.TabIndex = 21;
             // 
-            // comboBox2
+            // label8
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(450, 74);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 28);
-            comboBox2.TabIndex = 11;
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label8.ForeColor = Color.DarkGreen;
+            label8.Location = new Point(34, 231);
+            label8.Name = "label8";
+            label8.Size = new Size(250, 23);
+            label8.TabIndex = 31;
+            label8.Text = "Danh sách tour đã hoàn thành";
             // 
-            // label4
+            // label9
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(618, 77);
-            label4.Name = "label4";
-            label4.Size = new Size(76, 20);
-            label4.TabIndex = 10;
-            label4.Text = "Chọn năm";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(342, 77);
-            label3.Name = "label3";
-            label3.Size = new Size(85, 20);
-            label3.TabIndex = 9;
-            label3.Text = "Chọn tháng";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(43, 77);
-            label2.Name = "label2";
-            label2.Size = new Size(103, 20);
-            label2.TabIndex = 8;
-            label2.Text = "Chọn loại tour";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(165, 74);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 7;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(384, 13);
-            label1.Name = "label1";
-            label1.Size = new Size(134, 20);
-            label1.TabIndex = 6;
-            label1.Text = "Báo cáo doanh thu";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(739, 603);
-            button1.Name = "button1";
-            button1.Size = new Size(123, 30);
-            button1.TabIndex = 4;
-            button1.Text = "Xuất excel ";
-            button1.UseVisualStyleBackColor = true;
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label9.ForeColor = Color.Maroon;
+            label9.Location = new Point(34, 420);
+            label9.Name = "label9";
+            label9.Size = new Size(268, 23);
+            label9.TabIndex = 31;
+            label9.Text = "Danh sách tour chưa hoàn thành";
             // 
             // ReportLayout
             // 
@@ -274,37 +292,41 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             ClientSize = new Size(962, 599);
+            Controls.Add(panel);
             Controls.Add(panel1);
             Name = "ReportLayout";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Báo cáo doanh thu";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewBooked).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCompleted).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
         private Panel panel1;
-        private Button button1;
-        private Label label1;
-        private ComboBox comboBox1;
+        private Label label5;
+        private DateTimePicker dateStart;
+        private Label label6;
+        private DateTimePicker dateEnd;
+        private Panel panel;
+        private Button btn_fillter;
         private Label label2;
-        private ComboBox comboBox3;
-        private ComboBox comboBox2;
+        private Label label1;
         private Label label4;
         private Label label3;
-        private Label label5;
-        private DateTimePicker dateTimePicker1;
-        private Label label6;
-        private DateTimePicker dateTimePicker2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private Label label7;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private Label lb_booked;
+        private Label lb_completed;
+        private Label lb_tour;
+        private Label lb_sum;
+        private Panel panel2;
+        private DataGridView dataGridViewBooked;
+        private DataGridView dataGridViewCompleted;
+        private Label label9;
+        private Label label8;
     }
 }

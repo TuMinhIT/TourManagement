@@ -16,5 +16,6 @@ namespace TourManagementApp.Repositories
         Users GetById(string userId);
         Users GetByEmail(string Email);
         bool DeleteById(string userId);
+        bool changePassword(Users user);
     }
 }

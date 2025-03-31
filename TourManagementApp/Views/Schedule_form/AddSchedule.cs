@@ -34,7 +34,7 @@ namespace TourManagementApp.Views.Schedule_form
         {
             tb_customerName.Text = _booking.CustomerName;
             tb_tourName.Text = _booking.TourName;
-            lb_total.Text = _booking.TotalAmount.ToString();
+            tb_total.Text = _booking.TotalAmount.ToString();
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace TourManagementApp.Views.Schedule_form
         {
             Schedule scheduleNew = new Schedule(_booking.TourID, _booking.TourName,
                 _booking.CustomerID, _booking.CustomerName, dateTimePicker_start.Value,
-                dateTimePicker_end.Value,cbb_status.Text , tb_description.Text);
+                dateTimePicker_end.Value,cbb_status.Text ,int.Parse(tb_total.Text), tb_description.Text);
             if (_ScheduleService.AddNew(scheduleNew))
             {
                 message.MessageOK("Thêm lịch trình thành công!");

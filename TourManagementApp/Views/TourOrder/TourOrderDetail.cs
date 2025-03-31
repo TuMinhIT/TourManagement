@@ -37,9 +37,10 @@ namespace TourManagementApp.Views.TourOrder
             tb_CustomerName.Text = _booking.CustomerName;
             tb_tourID.Text = _booking.TourID.ToString();
             tb_tourName.Text = _booking.TourName;
-            tb_status.Text = _booking.Status;
+
             tb_total.Text = _booking.TotalAmount.ToString();
             tb_prepay.Text = _booking.PrePay.ToString();
+
             dateTimePicker.Value =_booking.BookingDate;
         }
     }

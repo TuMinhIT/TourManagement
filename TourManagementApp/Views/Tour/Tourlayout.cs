@@ -30,6 +30,8 @@ namespace TourManagementApp.Views.Tour
         {
             AddNewTour addNewTour = new AddNewTour();
             addNewTour.ShowDialog();
+            list_tour = _tourService.getAll();
+            generate_data(list_tour);
         }
         private void btn_list_Click(object sender, EventArgs e)
         {

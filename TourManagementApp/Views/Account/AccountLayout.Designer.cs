@@ -133,7 +133,7 @@
             // 
             tb_phone.BackColor = SystemColors.ActiveCaption;
             tb_phone.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            tb_phone.Location = new Point(428, 267);
+            tb_phone.Location = new Point(426, 274);
             tb_phone.Name = "tb_phone";
             tb_phone.Size = new Size(363, 30);
             tb_phone.TabIndex = 7;
@@ -165,9 +165,9 @@
             btn_fix.FlatAppearance.BorderSize = 0;
             btn_fix.FlatStyle = FlatStyle.Flat;
             btn_fix.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btn_fix.ForeColor = Color.Indigo;
+            btn_fix.ForeColor = Color.MediumBlue;
             btn_fix.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            btn_fix.IconColor = Color.WhiteSmoke;
+            btn_fix.IconColor = Color.Navy;
             btn_fix.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_fix.IconSize = 30;
             btn_fix.ImageAlign = ContentAlignment.MiddleLeft;
@@ -183,13 +183,13 @@
             // 
             // btn_update
             // 
-            btn_update.BackColor = Color.Transparent;
+            btn_update.BackColor = Color.SeaShell;
             btn_update.FlatAppearance.BorderSize = 0;
             btn_update.FlatStyle = FlatStyle.Flat;
             btn_update.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_update.ForeColor = Color.Indigo;
             btn_update.IconChar = FontAwesome.Sharp.IconChar.Highlighter;
-            btn_update.IconColor = Color.WhiteSmoke;
+            btn_update.IconColor = Color.Black;
             btn_update.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_update.IconSize = 30;
             btn_update.ImageAlign = ContentAlignment.MiddleLeft;
@@ -211,7 +211,7 @@
             btn_changeAva.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             btn_changeAva.ForeColor = Color.Black;
             btn_changeAva.IconChar = FontAwesome.Sharp.IconChar.Images;
-            btn_changeAva.IconColor = Color.WhiteSmoke;
+            btn_changeAva.IconColor = Color.Black;
             btn_changeAva.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_changeAva.IconSize = 30;
             btn_changeAva.ImageAlign = ContentAlignment.MiddleLeft;
@@ -269,7 +269,7 @@
             panel.Controls.Add(tb_name);
             panel.Location = new Point(57, 60);
             panel.Name = "panel";
-            panel.Size = new Size(818, 504);
+            panel.Size = new Size(809, 493);
             panel.TabIndex = 16;
             // 
             // tb_note
@@ -287,7 +287,7 @@
             // note
             // 
             note.BackColor = SystemColors.ActiveCaption;
-            note.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            note.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             note.Location = new Point(3, 359);
             note.Multiline = true;
             note.Name = "note";

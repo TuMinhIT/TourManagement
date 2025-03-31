@@ -16,10 +16,11 @@ namespace TourManagementApp.Models
         public DateTime Day_Start { get; set; }
         public DateTime Day_End { get; set; }
         public string? Status_pay { get; set; }
+        public int Total {  get; set; } 
         public string Description { get; set; } = string.Empty;
        
         public Schedule(int tourID, string tourName, string? customerID, string? customerName,
-                        DateTime dayStart, DateTime dayEnd, string? statusPay, string description)
+                        DateTime dayStart, DateTime dayEnd, string? statusPay,int total, string description)
         {
             TourID = tourID;
             TourName = tourName;
@@ -28,6 +29,7 @@ namespace TourManagementApp.Models
             Day_Start = dayStart;
             Day_End = dayEnd;
             Status_pay = statusPay;
+            Total = total;
             Description = description;
         }
     }

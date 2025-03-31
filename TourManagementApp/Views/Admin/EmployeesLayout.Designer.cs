@@ -58,9 +58,9 @@
             btn_search.IconColor = SystemColors.ButtonFace;
             btn_search.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_search.IconSize = 32;
-            btn_search.Location = new Point(698, 41);
+            btn_search.Location = new Point(757, 41);
             btn_search.Name = "btn_search";
-            btn_search.Size = new Size(127, 42);
+            btn_search.Size = new Size(134, 36);
             btn_search.TabIndex = 15;
             btn_search.Text = "Tìm kiếm";
             btn_search.TextAlign = ContentAlignment.MiddleLeft;
@@ -130,7 +130,7 @@
             tb_code.Location = new Point(147, 50);
             tb_code.Name = "tb_code";
             tb_code.PlaceholderText = "<Tất cã>";
-            tb_code.Size = new Size(180, 27);
+            tb_code.Size = new Size(201, 27);
             tb_code.TabIndex = 9;
             // 
             // panel_mid
@@ -153,7 +153,7 @@
             tb_email.Location = new Point(404, 50);
             tb_email.Name = "tb_email";
             tb_email.PlaceholderText = "<Tất cã>";
-            tb_email.Size = new Size(215, 27);
+            tb_email.Size = new Size(273, 27);
             tb_email.TabIndex = 16;
             // 
             // panel_main

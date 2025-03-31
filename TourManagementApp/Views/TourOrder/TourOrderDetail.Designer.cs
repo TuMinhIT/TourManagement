@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label5 = new Label();
             label2 = new Label();
             tb_total = new TextBox();
             btn_close = new FontAwesome.Sharp.IconButton();
@@ -40,7 +39,6 @@
             label6 = new Label();
             label7 = new Label();
             tb_prepay = new TextBox();
-            tb_status = new TextBox();
             tb_tourName = new TextBox();
             label9 = new Label();
             label10 = new Label();
@@ -48,25 +46,13 @@
             tb_CustomerName = new TextBox();
             SuspendLayout();
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Navy;
-            label5.Location = new Point(512, 156);
-            label5.Name = "label5";
-            label5.Size = new Size(92, 23);
-            label5.TabIndex = 48;
-            label5.Text = "Trạng thái";
-            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Navy;
-            label2.Location = new Point(512, 212);
+            label2.Location = new Point(135, 255);
             label2.Name = "label2";
             label2.Size = new Size(143, 23);
             label2.TabIndex = 41;
@@ -75,9 +61,9 @@
             // tb_total
             // 
             tb_total.Enabled = false;
-            tb_total.Location = new Point(512, 241);
+            tb_total.Location = new Point(135, 281);
             tb_total.Name = "tb_total";
-            tb_total.Size = new Size(317, 27);
+            tb_total.Size = new Size(241, 27);
             tb_total.TabIndex = 40;
             // 
             // btn_close
@@ -91,7 +77,7 @@
             btn_close.IconColor = SystemColors.ButtonFace;
             btn_close.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_close.IconSize = 32;
-            btn_close.Location = new Point(393, 393);
+            btn_close.Location = new Point(755, 399);
             btn_close.Name = "btn_close";
             btn_close.Size = new Size(115, 41);
             btn_close.TabIndex = 37;
@@ -104,7 +90,7 @@
             // dateTimePicker
             // 
             dateTimePicker.Enabled = false;
-            dateTimePicker.Location = new Point(512, 112);
+            dateTimePicker.Location = new Point(135, 360);
             dateTimePicker.Name = "dateTimePicker";
             dateTimePicker.Size = new Size(358, 27);
             dateTimePicker.TabIndex = 34;
@@ -112,9 +98,9 @@
             // tb_CustomerID
             // 
             tb_CustomerID.Enabled = false;
-            tb_CustomerID.Location = new Point(54, 242);
+            tb_CustomerID.Location = new Point(135, 205);
             tb_CustomerID.Name = "tb_CustomerID";
-            tb_CustomerID.Size = new Size(358, 27);
+            tb_CustomerID.Size = new Size(246, 27);
             tb_CustomerID.TabIndex = 33;
             // 
             // label1
@@ -131,10 +117,10 @@
             // 
             // tb_tourID
             // 
-            tb_tourID.Enabled = false;
-            tb_tourID.Location = new Point(54, 114);
+            tb_tourID.Location = new Point(135, 110);
             tb_tourID.Name = "tb_tourID";
-            tb_tourID.Size = new Size(358, 27);
+            tb_tourID.ReadOnly = true;
+            tb_tourID.Size = new Size(246, 27);
             tb_tourID.TabIndex = 49;
             // 
             // label3
@@ -143,7 +129,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Navy;
-            label3.Location = new Point(54, 88);
+            label3.Location = new Point(135, 84);
             label3.Name = "label3";
             label3.Size = new Size(82, 23);
             label3.TabIndex = 50;
@@ -155,7 +141,7 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Navy;
-            label6.Location = new Point(512, 271);
+            label6.Location = new Point(493, 255);
             label6.Name = "label6";
             label6.Size = new Size(84, 23);
             label6.TabIndex = 51;
@@ -167,7 +153,7 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Navy;
-            label7.Location = new Point(512, 86);
+            label7.Location = new Point(135, 334);
             label7.Name = "label7";
             label7.Size = new Size(84, 23);
             label7.TabIndex = 52;
@@ -176,25 +162,19 @@
             // tb_prepay
             // 
             tb_prepay.Enabled = false;
-            tb_prepay.Location = new Point(512, 307);
+            tb_prepay.Location = new Point(493, 281);
             tb_prepay.Name = "tb_prepay";
-            tb_prepay.Size = new Size(325, 27);
+            tb_prepay.ReadOnly = true;
+            tb_prepay.Size = new Size(214, 27);
             tb_prepay.TabIndex = 54;
-            // 
-            // tb_status
-            // 
-            tb_status.Enabled = false;
-            tb_status.Location = new Point(512, 182);
-            tb_status.Name = "tb_status";
-            tb_status.Size = new Size(358, 27);
-            tb_status.TabIndex = 55;
             // 
             // tb_tourName
             // 
-            tb_tourName.Enabled = false;
-            tb_tourName.Location = new Point(54, 182);
+            tb_tourName.Location = new Point(493, 110);
+            tb_tourName.Multiline = true;
             tb_tourName.Name = "tb_tourName";
-            tb_tourName.Size = new Size(358, 27);
+            tb_tourName.ReadOnly = true;
+            tb_tourName.Size = new Size(358, 57);
             tb_tourName.TabIndex = 56;
             // 
             // label9
@@ -203,7 +183,7 @@
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.Navy;
-            label9.Location = new Point(54, 156);
+            label9.Location = new Point(493, 84);
             label9.Name = "label9";
             label9.Size = new Size(76, 23);
             label9.TabIndex = 57;
@@ -215,7 +195,7 @@
             label10.BackColor = Color.Transparent;
             label10.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.Navy;
-            label10.Location = new Point(54, 212);
+            label10.Location = new Point(135, 179);
             label10.Name = "label10";
             label10.Size = new Size(132, 23);
             label10.TabIndex = 58;
@@ -227,7 +207,7 @@
             label11.BackColor = Color.Transparent;
             label11.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label11.ForeColor = Color.Navy;
-            label11.Location = new Point(54, 281);
+            label11.Location = new Point(493, 179);
             label11.Name = "label11";
             label11.Size = new Size(134, 23);
             label11.TabIndex = 59;
@@ -236,7 +216,7 @@
             // tb_CustomerName
             // 
             tb_CustomerName.Enabled = false;
-            tb_CustomerName.Location = new Point(54, 307);
+            tb_CustomerName.Location = new Point(493, 205);
             tb_CustomerName.Name = "tb_CustomerName";
             tb_CustomerName.Size = new Size(358, 27);
             tb_CustomerName.TabIndex = 60;
@@ -247,19 +227,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.halong_bay_4646615_640;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(903, 477);
+            ClientSize = new Size(903, 489);
             Controls.Add(tb_CustomerName);
             Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(tb_tourName);
-            Controls.Add(tb_status);
             Controls.Add(tb_prepay);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label3);
             Controls.Add(tb_tourID);
-            Controls.Add(label5);
             Controls.Add(label2);
             Controls.Add(tb_total);
             Controls.Add(btn_close);
@@ -275,8 +253,6 @@
         }
 
         #endregion
-
-        private Label label5;
         private Label label2;
         private TextBox tb_total;
         private FontAwesome.Sharp.IconButton btn_close;
@@ -288,7 +264,6 @@
         private Label label6;
         private Label label7;
         private TextBox tb_prepay;
-        private TextBox tb_status;
         private TextBox tb_tourName;
         private Label label9;
         private Label label10;

@@ -34,6 +34,7 @@
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             panel3 = new Panel();
+            label3 = new Label();
             panel5 = new Panel();
             iconButton3 = new FontAwesome.Sharp.IconButton();
             panel4 = new Panel();
@@ -44,7 +45,6 @@
             label8 = new Label();
             label2 = new Label();
             label9 = new Label();
-            label3 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
@@ -129,6 +129,17 @@
             panel3.TabIndex = 1;
             panel3.Paint += panel3_Paint;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold);
+            label3.ForeColor = Color.FromArgb(255, 128, 0);
+            label3.Location = new Point(836, 21);
+            label3.Name = "label3";
+            label3.Size = new Size(303, 34);
+            label3.TabIndex = 0;
+            label3.Text = "Hãy đến với Tripverse";
+            // 
             // panel5
             // 
             panel5.BackgroundImage = Properties.Resources.halong_bay_4646615_640;
@@ -147,11 +158,11 @@
             iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             iconButton3.IconColor = SystemColors.ActiveCaption;
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton3.Location = new Point(836, 44);
+            iconButton3.Location = new Point(836, 76);
             iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(294, 334);
+            iconButton3.Size = new Size(294, 254);
             iconButton3.TabIndex = 3;
-            iconButton3.Text = "Chúng tôi đem đến những giá trị giải pháp ứng dụng Du lịch, Khách sạn, Sự kiện quốc tế. Trải nghiệm tính tương tác, nghiệp vụ, trong ứng dụng công nghệ cho doanh nghiệp của bạn";
+            iconButton3.Text = "Chúng tôi đem đến những giá trị giải pháp ứng dụng Du lịch, Khách sạn, Sự kiện quốc tế.";
             iconButton3.UseVisualStyleBackColor = true;
             // 
             // panel4
@@ -271,17 +282,6 @@
             label9.Name = "label9";
             label9.Size = new Size(0, 31);
             label9.TabIndex = 3;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold);
-            label3.ForeColor = Color.FromArgb(255, 128, 0);
-            label3.Location = new Point(836, 21);
-            label3.Name = "label3";
-            label3.Size = new Size(303, 34);
-            label3.TabIndex = 0;
-            label3.Text = "Hãy đến với Tripverse";
             // 
             // About
             // 

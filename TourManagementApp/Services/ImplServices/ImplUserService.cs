@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using TourManagementApp.Repositories.ImplRepositories;
 using TourManagementApp.Repositories;
 using TourManagementApp.Models;
 using BCrypt.Net;
 using Microsoft.VisualBasic.ApplicationServices;
-
 namespace TourManagementApp.Services.ImplServices
 {
     class ImplUserService : UserService
@@ -55,6 +50,13 @@ namespace TourManagementApp.Services.ImplServices
         public bool DeleteById(string userId)
         {
             return _userRepository.DeleteById(userId);
+        }
+
+        public bool changePassword(Users user)
+        {
+            string pw = BCrypt.Net.BCrypt.HashPassword(user.Password);
+            user.Password = pw;
+            return _userRepository.changePassword(user);
         }
     }   
 }

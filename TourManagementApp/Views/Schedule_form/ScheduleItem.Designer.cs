@@ -30,6 +30,11 @@
         {
             btn_delete = new FontAwesome.Sharp.IconButton();
             panel = new Panel();
+            label5 = new Label();
+            tb_cost = new TextBox();
+            tb_status = new TextBox();
+            label4 = new Label();
+            label3 = new Label();
             tb_description = new TextBox();
             btn_detail = new FontAwesome.Sharp.IconButton();
             label2 = new Label();
@@ -42,18 +47,17 @@
             // 
             // btn_delete
             // 
-            btn_delete.BackColor = Color.Green;
-            btn_delete.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            btn_delete.BackColor = SystemColors.MenuHighlight;
+            btn_delete.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold);
             btn_delete.ForeColor = Color.White;
             btn_delete.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            btn_delete.IconColor = Color.White;
+            btn_delete.IconColor = Color.Lavender;
             btn_delete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_delete.IconSize = 30;
-            btn_delete.Location = new Point(882, 17);
+            btn_delete.Location = new Point(948, 7);
             btn_delete.Name = "btn_delete";
-            btn_delete.Size = new Size(119, 41);
+            btn_delete.Size = new Size(39, 38);
             btn_delete.TabIndex = 0;
-            btn_delete.Text = "Xóa";
             btn_delete.TextAlign = ContentAlignment.MiddleLeft;
             btn_delete.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_delete.UseVisualStyleBackColor = false;
@@ -62,6 +66,11 @@
             // panel
             // 
             panel.BackColor = Color.FromArgb(41, 128, 185);
+            panel.Controls.Add(label5);
+            panel.Controls.Add(tb_cost);
+            panel.Controls.Add(tb_status);
+            panel.Controls.Add(label4);
+            panel.Controls.Add(label3);
             panel.Controls.Add(tb_description);
             panel.Controls.Add(btn_detail);
             panel.Controls.Add(label2);
@@ -71,32 +80,80 @@
             panel.Controls.Add(btn_delete);
             panel.Location = new Point(0, 0);
             panel.Name = "panel";
-            panel.Size = new Size(1013, 150);
+            panel.Size = new Size(1010, 122);
             panel.TabIndex = 3;
             panel.Paint += panel_Paint;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(708, 88);
+            label5.Name = "label5";
+            label5.Size = new Size(31, 20);
+            label5.TabIndex = 16;
+            label5.Text = "Giá";
+            // 
+            // tb_cost
+            // 
+            tb_cost.Font = new Font("Segoe UI", 10.2F);
+            tb_cost.Location = new Point(745, 83);
+            tb_cost.Name = "tb_cost";
+            tb_cost.ReadOnly = true;
+            tb_cost.Size = new Size(176, 30);
+            tb_cost.TabIndex = 15;
+            // 
+            // tb_status
+            // 
+            tb_status.Font = new Font("Segoe UI", 10.2F);
+            tb_status.Location = new Point(463, 83);
+            tb_status.Name = "tb_status";
+            tb_status.ReadOnly = true;
+            tb_status.Size = new Size(197, 30);
+            tb_status.TabIndex = 14;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(377, 77);
+            label4.Name = "label4";
+            label4.Size = new Size(80, 20);
+            label4.TabIndex = 13;
+            label4.Text = "Trình trạng";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(388, 21);
+            label3.Name = "label3";
+            label3.Size = new Size(48, 20);
+            label3.TabIndex = 12;
+            label3.Text = "Mô tả";
+            // 
             // tb_description
             // 
-            tb_description.Location = new Point(388, 26);
+            tb_description.AllowDrop = true;
+            tb_description.BackColor = SystemColors.GradientActiveCaption;
+            tb_description.Font = new Font("Segoe UI", 10.2F);
+            tb_description.Location = new Point(458, 12);
             tb_description.Multiline = true;
             tb_description.Name = "tb_description";
-            tb_description.Size = new Size(438, 84);
+            tb_description.ReadOnly = true;
+            tb_description.Size = new Size(463, 50);
             tb_description.TabIndex = 11;
             // 
             // btn_detail
             // 
-            btn_detail.BackColor = Color.OrangeRed;
-            btn_detail.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            btn_detail.BackColor = Color.DodgerBlue;
+            btn_detail.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold);
             btn_detail.ForeColor = Color.White;
             btn_detail.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
-            btn_detail.IconColor = Color.White;
+            btn_detail.IconColor = Color.Gold;
             btn_detail.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_detail.IconSize = 30;
-            btn_detail.Location = new Point(882, 69);
+            btn_detail.Location = new Point(948, 56);
             btn_detail.Name = "btn_detail";
-            btn_detail.Size = new Size(119, 41);
+            btn_detail.Size = new Size(42, 41);
             btn_detail.TabIndex = 10;
-            btn_detail.Text = "Chi tiết";
             btn_detail.TextAlign = ContentAlignment.MiddleLeft;
             btn_detail.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_detail.UseVisualStyleBackColor = false;
@@ -122,16 +179,20 @@
             // 
             // tb_customerName
             // 
+            tb_customerName.Font = new Font("Segoe UI", 10.2F);
             tb_customerName.Location = new Point(13, 83);
             tb_customerName.Name = "tb_customerName";
-            tb_customerName.Size = new Size(333, 27);
+            tb_customerName.ReadOnly = true;
+            tb_customerName.Size = new Size(333, 30);
             tb_customerName.TabIndex = 3;
             // 
             // tb_tourName
             // 
+            tb_tourName.Font = new Font("Segoe UI", 10.2F);
             tb_tourName.Location = new Point(13, 26);
             tb_tourName.Name = "tb_tourName";
-            tb_tourName.Size = new Size(333, 27);
+            tb_tourName.ReadOnly = true;
+            tb_tourName.Size = new Size(333, 30);
             tb_tourName.TabIndex = 2;
             // 
             // panel2
@@ -139,7 +200,7 @@
             panel2.BackColor = SystemColors.Highlight;
             panel2.Dock = DockStyle.Bottom;
             panel2.ForeColor = Color.FromArgb(0, 0, 192);
-            panel2.Location = new Point(0, 140);
+            panel2.Location = new Point(0, 122);
             panel2.Name = "panel2";
             panel2.Size = new Size(1013, 10);
             panel2.TabIndex = 4;
@@ -148,7 +209,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1013, 150);
+            ClientSize = new Size(1013, 132);
             Controls.Add(panel2);
             Controls.Add(panel);
             FormBorderStyle = FormBorderStyle.None;
@@ -170,5 +231,10 @@
         private FontAwesome.Sharp.IconButton btn_detail;
         private TextBox tb_description;
         private Panel panel2;
+        private Label label3;
+        private TextBox tb_status;
+        private Label label4;
+        private Label label5;
+        private TextBox tb_cost;
     }
 }

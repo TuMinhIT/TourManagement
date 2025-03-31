@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Windows.Forms;
+
 using TourManagementApp.Models;
 using TourManagementApp.Services;
 using TourManagementApp.Services.ImplServices;

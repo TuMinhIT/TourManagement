@@ -27,13 +27,23 @@ namespace TourManagementApp.Utils
                 openFileDialog.Title = "Chọn ảnh đại diện";
                 openFileDialog.Filter = "Hình ảnh|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
 
+                //if (openFileDialog.ShowDialog() == DialogResult.OK)
+                //{
+                //    string fileName = Path.GetFileName(openFileDialog.FileName);
+                //    string savePath = Path.Combine(imageFolderPath, fileName);
+
+                //    File.Copy(openFileDialog.FileName, savePath, true);
+                //    return fileName;
+                //}
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    string fileName = Path.GetFileName(openFileDialog.FileName);
-                    string savePath = Path.Combine(imageFolderPath, fileName);
+                    string extension = Path.GetExtension(openFileDialog.FileName);
+                    string fileName = Path.GetFileNameWithoutExtension(openFileDialog.FileName); 
+                    string uniqueName = $"{fileName}_{Guid.NewGuid().ToString().Substring(0, 8)}{extension}";
+                    string savePath = Path.Combine(imageFolderPath, uniqueName);
 
                     File.Copy(openFileDialog.FileName, savePath, true);
-                    return fileName;
+                    return uniqueName;
                 }
             }
             return null;

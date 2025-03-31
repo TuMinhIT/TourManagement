@@ -11,6 +11,7 @@ using TourManagementApp.Models;
 using TourManagementApp.Services.ImplServices;
 using TourManagementApp.Services;
 using System.Windows.Interop;
+using System.Text.RegularExpressions;
 
 namespace TourManagementApp.Views.Customers
 {
@@ -24,6 +25,17 @@ namespace TourManagementApp.Views.Customers
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+            if (!Regex.IsMatch(tb_email.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                message.MessageOK("Email không hợp lệ!");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(tb_phone.Text) || !tb_phone.Text.All(char.IsDigit))
+            {
+                message.MessageOK("Số điện thoại không hợp lệ!");
+                return;
+            }
+
             CustomerService customerService = new ImplCustomerService();
             if (string.IsNullOrEmpty(tb_name.Text)
                 || string.IsNullOrEmpty(tb_email.Text)
@@ -34,6 +46,11 @@ namespace TourManagementApp.Views.Customers
             }
             else
             {
+                if (tb_phone.Text.Any(char.IsLetter))
+                {
+                    MessageBox.Show("Số điện thoại không được chứa chữ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 Customer newCustomer = 
                     new Customer(tb_name.Text, cbb_gender.SelectedItem.ToString(), tb_phone.Text,
                                   tb_email.Text, tb_address.Text, tb_national.Text, tb_note.Text);

@@ -37,6 +37,7 @@ namespace TourManagementApp.Views.Tour
             cbb_transport.Text = _tour.Transport;
             cbb_type.Text = _tour.TourType;
             _imageService.ShowImage(pictureBox, _tour.LinkImage);
+            lb_tour.Text = _tour.TourID.ToString();
         }
 
         private void enable_control(bool flag)
@@ -130,8 +131,13 @@ namespace TourManagementApp.Views.Tour
 
         private void btn_order_Click(object sender, EventArgs e)
         {
-            AddNewOrder addNewOrder = new AddNewOrder(_tour.TourID, _tour.TourName);
+            AddNewOrder addNewOrder = new AddNewOrder(_tour.TourID, _tour.TourName, _tour.Price);
             addNewOrder.ShowDialog();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

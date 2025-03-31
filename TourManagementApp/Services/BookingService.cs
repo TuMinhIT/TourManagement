@@ -15,6 +15,7 @@ namespace TourManagementApp.Services
         List<Booking> getAll();
         bool Update(Booking booking);
         bool DeleteById(int ID);
-        public List<Booking> GetByAttribute(string attribute, string value); 
+        public List<Booking> GetByAttribute(string attribute, string value);
+        public List<Booking> GetByBookingDate(DateTime bookingDate);
     }
 }

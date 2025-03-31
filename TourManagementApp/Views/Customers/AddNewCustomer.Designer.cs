@@ -95,7 +95,7 @@
             // 
             tb_address.BackColor = SystemColors.ActiveCaption;
             tb_address.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic);
-            tb_address.Location = new Point(542, 177);
+            tb_address.Location = new Point(542, 180);
             tb_address.Multiline = true;
             tb_address.Name = "tb_address";
             tb_address.PlaceholderText = "  Địa chỉ";
@@ -106,7 +106,7 @@
             // 
             tb_note.BackColor = SystemColors.ActiveCaption;
             tb_note.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic);
-            tb_note.Location = new Point(542, 317);
+            tb_note.Location = new Point(542, 320);
             tb_note.Multiline = true;
             tb_note.Name = "tb_note";
             tb_note.PlaceholderText = "  Thông tin khác(optional)";
@@ -145,7 +145,7 @@
             // 
             tb_national.BackColor = SystemColors.ActiveCaption;
             tb_national.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic);
-            tb_national.Location = new Point(99, 408);
+            tb_national.Location = new Point(99, 396);
             tb_national.Name = "tb_national";
             tb_national.PlaceholderText = "  Quốc tịch";
             tb_national.Size = new Size(314, 30);
@@ -163,9 +163,9 @@
             btn_save.IconFont = FontAwesome.Sharp.IconFont.Solid;
             btn_save.IconSize = 30;
             btn_save.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_save.Location = new Point(510, 463);
+            btn_save.Location = new Point(680, 463);
             btn_save.Name = "btn_save";
-            btn_save.Size = new Size(96, 42);
+            btn_save.Size = new Size(119, 42);
             btn_save.TabIndex = 16;
             btn_save.Text = "Lưu";
             btn_save.TextAlign = ContentAlignment.MiddleLeft;
@@ -185,9 +185,9 @@
             btn_cancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_cancel.IconSize = 30;
             btn_cancel.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_cancel.Location = new Point(681, 463);
+            btn_cancel.Location = new Point(829, 463);
             btn_cancel.Name = "btn_cancel";
-            btn_cancel.Size = new Size(92, 42);
+            btn_cancel.Size = new Size(113, 42);
             btn_cancel.TabIndex = 17;
             btn_cancel.Text = "Hủy";
             btn_cancel.TextAlign = ContentAlignment.MiddleLeft;
@@ -261,10 +261,10 @@
             iconButton5.FlatAppearance.BorderSize = 0;
             iconButton5.FlatStyle = FlatStyle.Flat;
             iconButton5.IconChar = FontAwesome.Sharp.IconChar.Location;
-            iconButton5.IconColor = Color.WhiteSmoke;
+            iconButton5.IconColor = Color.Coral;
             iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton5.IconSize = 32;
-            iconButton5.Location = new Point(468, 180);
+            iconButton5.Location = new Point(468, 206);
             iconButton5.Name = "iconButton5";
             iconButton5.Size = new Size(68, 35);
             iconButton5.TabIndex = 68;
@@ -291,10 +291,10 @@
             iconButton7.FlatAppearance.BorderSize = 0;
             iconButton7.FlatStyle = FlatStyle.Flat;
             iconButton7.IconChar = FontAwesome.Sharp.IconChar.PenClip;
-            iconButton7.IconColor = Color.WhiteSmoke;
+            iconButton7.IconColor = Color.Coral;
             iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton7.IconSize = 32;
-            iconButton7.Location = new Point(468, 317);
+            iconButton7.Location = new Point(468, 328);
             iconButton7.Name = "iconButton7";
             iconButton7.Size = new Size(68, 35);
             iconButton7.TabIndex = 69;

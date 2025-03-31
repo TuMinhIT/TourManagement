@@ -15,6 +15,6 @@ namespace TourManagementApp.Repositories
         List<Booking> getAll();
         bool Update(Booking booking);
         public List<Booking> GetByAttribute(string attribute, string value);
-        
+        public List<Booking> GetByBookingDate(DateTime bookingDate);
     }
 }

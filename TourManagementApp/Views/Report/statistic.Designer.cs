@@ -28,229 +28,134 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            columnChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             label1 = new Label();
-            dateTimePicker2 = new DateTimePicker();
-            label6 = new Label();
-            label5 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            comboBox3 = new ComboBox();
-            comboBox2 = new ComboBox();
-            label4 = new Label();
-            label3 = new Label();
+            cbb_year = new ComboBox();
             label2 = new Label();
-            comboBox1 = new ComboBox();
-            label7 = new Label();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
-            radioButton1 = new RadioButton();
-            label8 = new Label();
-            radioButton2 = new RadioButton();
+            panel1 = new Panel();
+            label3 = new Label();
+            chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)columnChart).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)chart).BeginInit();
             SuspendLayout();
+            // 
+            // columnChart
+            // 
+            chartArea1.Name = "ChartArea1";
+            columnChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            columnChart.Legends.Add(legend1);
+            columnChart.Location = new Point(36, 59);
+            columnChart.Name = "columnChart";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            columnChart.Series.Add(series1);
+            columnChart.Size = new Size(390, 290);
+            columnChart.TabIndex = 0;
+            columnChart.Text = "chart1";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(447, 32);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(115, 352);
             label1.Name = "label1";
-            label1.Size = new Size(122, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Biểu đồ thống kê";
+            label1.Size = new Size(173, 28);
+            label1.TabIndex = 1;
+            label1.Text = "Biểu đồ doanh thu";
             // 
-            // dateTimePicker2
+            // cbb_year
             // 
-            dateTimePicker2.Location = new Point(648, 153);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(250, 27);
-            dateTimePicker2.TabIndex = 26;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(523, 155);
-            label6.Name = "label6";
-            label6.Size = new Size(72, 20);
-            label6.TabIndex = 25;
-            label6.Text = "Đến ngày";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(105, 160);
-            label5.Name = "label5";
-            label5.Size = new Size(62, 20);
-            label5.TabIndex = 24;
-            label5.Text = "Từ ngày";
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(227, 155);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
-            dateTimePicker1.TabIndex = 23;
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(773, 82);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(151, 28);
-            comboBox3.TabIndex = 22;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(512, 82);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 28);
-            comboBox2.TabIndex = 21;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(680, 85);
-            label4.Name = "label4";
-            label4.Size = new Size(76, 20);
-            label4.TabIndex = 20;
-            label4.Text = "Chọn năm";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(404, 85);
-            label3.Name = "label3";
-            label3.Size = new Size(85, 20);
-            label3.TabIndex = 19;
-            label3.Text = "Chọn tháng";
+            cbb_year.FormattingEnabled = true;
+            cbb_year.Items.AddRange(new object[] { "2022", "2023", "2024", "2025", "2026", "2027", "2028" });
+            cbb_year.Location = new Point(115, 10);
+            cbb_year.Name = "cbb_year";
+            cbb_year.Size = new Size(151, 28);
+            cbb_year.TabIndex = 2;
+            cbb_year.SelectedIndexChanged += cbb_year_SelectedIndexChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(105, 85);
+            label2.Location = new Point(36, 10);
             label2.Name = "label2";
-            label2.Size = new Size(103, 20);
-            label2.TabIndex = 18;
-            label2.Text = "Chọn loại tour";
+            label2.Size = new Size(41, 20);
+            label2.TabIndex = 3;
+            label2.Text = "Năm";
             // 
-            // comboBox1
+            // panel1
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(227, 82);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 17;
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(chart);
+            panel1.Controls.Add(cbb_year);
+            panel1.Controls.Add(columnChart);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label2);
+            panel1.Location = new Point(1, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(971, 396);
+            panel1.TabIndex = 4;
             // 
-            // label7
+            // label3
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(447, 262);
-            label7.Name = "label7";
-            label7.Size = new Size(144, 20);
-            label7.TabIndex = 27;
-            label7.Text = "Vẽ biểu đồ dưới đây";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(633, 352);
+            label3.Name = "label3";
+            label3.Size = new Size(217, 28);
+            label3.TabIndex = 5;
+            label3.Text = "Thống kê theo loại tour";
             // 
-            // iconButton1
+            // chart
             // 
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.Location = new Point(186, 498);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(163, 29);
-            iconButton1.TabIndex = 28;
-            iconButton1.Text = "Lưu biểu đồ";
-            iconButton1.UseVisualStyleBackColor = true;
-            // 
-            // iconButton2
-            // 
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconButton2.IconColor = Color.Black;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.Location = new Point(657, 498);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(99, 29);
-            iconButton2.TabIndex = 29;
-            iconButton2.Text = "Thoát";
-            iconButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(429, 212);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(53, 24);
-            radioButton1.TabIndex = 30;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Cột";
-            radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(240, 216);
-            label8.Name = "label8";
-            label8.Size = new Size(129, 20);
-            label8.TabIndex = 31;
-            label8.Text = "Chọn kiểu biểu đồ";
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(583, 212);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(59, 24);
-            radioButton2.TabIndex = 32;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Tròn";
-            radioButton2.UseVisualStyleBackColor = true;
+            chartArea2.Name = "ChartArea1";
+            chart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            chart.Legends.Add(legend2);
+            chart.Location = new Point(538, 59);
+            chart.Name = "chart";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            chart.Series.Add(series2);
+            chart.Size = new Size(355, 290);
+            chart.TabIndex = 4;
+            chart.Text = "chart1";
             // 
             // statistic
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(1062, 581);
-            Controls.Add(radioButton2);
-            Controls.Add(label8);
-            Controls.Add(radioButton1);
-            Controls.Add(iconButton2);
-            Controls.Add(iconButton1);
-            Controls.Add(label7);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(comboBox1);
-            Controls.Add(label1);
+            ClientSize = new Size(987, 432);
+            Controls.Add(panel1);
             Name = "statistic";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "statistic";
             Load += statistic_Load;
+            ((System.ComponentModel.ISupportInitialize)columnChart).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)chart).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
+        private System.Windows.Forms.DataVisualization.Charting.Chart columnChart;
         private Label label1;
-        private DateTimePicker dateTimePicker2;
-        private Label label6;
-        private Label label5;
-        private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox3;
-        private ComboBox comboBox2;
-        private Label label4;
-        private Label label3;
+        private ComboBox cbb_year;
         private Label label2;
-        private ComboBox comboBox1;
-        private Label label7;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private RadioButton radioButton1;
-        private Label label8;
-        private RadioButton radioButton2;
+        private Panel panel1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart;
+        private Label label3;
     }
 }

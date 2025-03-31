@@ -56,6 +56,11 @@ namespace TourManagementApp.Views
             leftBorderBtn.Size = new Size(7, 60);
             panel_left.Controls.Add(leftBorderBtn);
             label_userName.Text = _user.FullName;
+            if (_user.Role != "Admin")
+            {
+                btn_employees.Hide();   
+                btn_report.Hide();  
+            }
         }
 
         //Structs

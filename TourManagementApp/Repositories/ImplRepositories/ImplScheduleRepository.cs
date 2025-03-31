@@ -13,8 +13,8 @@ namespace TourManagementApp.Repositories.ImplRepositories
                 try
                 {
                     string insertQuery = @"
-                        INSERT INTO Schedule (TourID, TourName, CustomerID, CustomerName, Day_Start, Day_End, Status_Pay, Description) 
-                        VALUES (@TourID, @TourName, @CustomerID, @CustomerName, @Day_Start, @Day_End, @Status_Pay, @Description);";
+                        INSERT INTO Schedule (TourID, TourName, CustomerID, CustomerName, Day_Start, Day_End, Status_Pay, TotalAmount, Description) 
+                        VALUES (@TourID, @TourName, @CustomerID, @CustomerName, @Day_Start, @Day_End, @Status_Pay,@TotalAmount ,@Description);";
 
                     using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
                     {
@@ -25,6 +25,7 @@ namespace TourManagementApp.Repositories.ImplRepositories
                         cmd.Parameters.AddWithValue("@Day_Start", schedule.Day_Start);
                         cmd.Parameters.AddWithValue("@Day_End", schedule.Day_End);
                         cmd.Parameters.AddWithValue("@Status_Pay", schedule.Status_pay ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@TotalAmount", schedule.Total);
                         cmd.Parameters.AddWithValue("@Description", schedule.Description ?? "null");
 
                         int rowsAffected = cmd.ExecuteNonQuery();
@@ -89,9 +90,10 @@ namespace TourManagementApp.Repositories.ImplRepositories
                                 DateTime dayStart = reader.GetDateTime(5);
                                 DateTime dayEnd = reader.GetDateTime(6);
                                 string? statusPay = reader.IsDBNull(7) ? null : reader.GetString(7);
-                                string description = reader.GetString(8);
+                                int total = reader.GetInt32(8);
+                                string description = reader.GetString(9);
                            
-                                Schedule schedule = new Schedule( tourID, tourName, customerID, customerName, dayStart, dayEnd, statusPay, description);
+                                Schedule schedule = new Schedule( tourID, tourName, customerID, customerName, dayStart, dayEnd, statusPay,total, description);
                                 schedule.ScheduleID = scheduleID;
                                 list_schedule.Add(schedule);
                             }
@@ -169,10 +171,11 @@ namespace TourManagementApp.Repositories.ImplRepositories
                                 DateTime dayStart = reader.GetDateTime(5);
                                 DateTime dayEnd = reader.GetDateTime(6);
                                 string? statusPay = reader.IsDBNull(7) ? null : reader.GetString(7);
-                                string description = reader.GetString(8);
+                                int total = reader.GetInt32(8);
+                                string description = reader.GetString(9);
 
                             
-                                Schedule schedule = new Schedule(tourID, tourName, customerID, customerName, dayStart, dayEnd, statusPay, description);
+                                Schedule schedule = new Schedule(tourID, tourName, customerID, customerName, dayStart, dayEnd, statusPay, total, description);
                                 schedule.ScheduleID = scheduleID;   
                                 return schedule;
                             }
@@ -218,10 +221,11 @@ namespace TourManagementApp.Repositories.ImplRepositories
                                 DateTime dayStart = reader.GetDateTime(5);
                                 DateTime dayEnd = reader.GetDateTime(6);
                                 string? statusPay = reader.IsDBNull(7) ? null : reader.GetString(7);
-                                string description = reader.GetString(8);
+                                int total = reader.GetInt32(8);
+                                string description = reader.GetString(9);
 
 
-                                Schedule schedule = new Schedule(tourID, tourName, customerID, customerName, dayStart, dayEnd, statusPay, description);
+                                Schedule schedule = new Schedule(tourID, tourName, customerID, customerName, dayStart, dayEnd, statusPay,total, description);
                                 schedule.ScheduleID = scheduleID;
                                 return schedule;
                             }

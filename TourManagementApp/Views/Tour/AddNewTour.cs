@@ -47,9 +47,12 @@ namespace TourManagementApp.Views.Tour
             
             //add in database         
             if (_tourService.AddNew(tour))
-            {            
-                message.MessageOK("Thêm Tour mới thành công!");
-                reset();
+            {
+                if (message.MessageOKCancel("Thêm tour mới thành công bạn có muốn tiếp tục thêm!"))
+                {
+                    reset();
+                } else { return; }
+               
             }
             return;
         }

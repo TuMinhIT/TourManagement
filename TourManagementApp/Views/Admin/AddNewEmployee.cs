@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TourManagementApp.Database;
@@ -18,6 +19,7 @@ namespace TourManagementApp.Views.Admin
 {
     public partial class AddNewEmployee : Form
     {
+        private readonly Message message = new Message();
         public AddNewEmployee()
         {
             InitializeComponent();
@@ -25,6 +27,17 @@ namespace TourManagementApp.Views.Admin
 
         private void btn_add_Click(object sender, EventArgs e)
         {
+            if (!Regex.IsMatch(tb_email.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                message.MessageOK("Email không hợp lệ!");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(tb_phone.Text) || !tb_phone.Text.All(char.IsDigit))
+            {
+                message.MessageOK("Số điện thoại không hợp lệ!");
+                return;
+            }
+
             UserService userService = new ImplUserService();
             if (string.IsNullOrEmpty(tb_name.Text) || string.IsNullOrEmpty(tb_email.Text))
             {
@@ -36,7 +49,7 @@ namespace TourManagementApp.Views.Admin
                 string pw = tb_password.Text;
                 if (string.IsNullOrEmpty(pw))
                 {
-                    pw = tb_password.PlaceholderText;
+                    pw = "1111";
                 }
                 Users user = new Users(pw, "Staff", tb_name.Text,
                    tb_address.Text, tb_phone.Text, tb_email.Text,tb_note.Text );

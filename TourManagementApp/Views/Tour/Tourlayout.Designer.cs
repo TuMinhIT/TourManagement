@@ -53,7 +53,7 @@
             panel1.Controls.Add(btn_list);
             panel1.Location = new Point(3, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(963, 57);
+            panel1.Size = new Size(1009, 57);
             panel1.TabIndex = 0;
             // 
             // btn_import
@@ -63,10 +63,10 @@
             btn_import.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             btn_import.ForeColor = Color.WhiteSmoke;
             btn_import.IconChar = FontAwesome.Sharp.IconChar.FileUpload;
-            btn_import.IconColor = Color.WhiteSmoke;
+            btn_import.IconColor = Color.Lime;
             btn_import.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_import.IconSize = 25;
-            btn_import.Location = new Point(753, 11);
+            btn_import.Location = new Point(785, 8);
             btn_import.Name = "btn_import";
             btn_import.Size = new Size(201, 36);
             btn_import.TabIndex = 0;
@@ -122,9 +122,9 @@
             // 
             cbb_transport.FormattingEnabled = true;
             cbb_transport.Items.AddRange(new object[] { "Car", "Airplane", "Tất cã" });
-            cbb_transport.Location = new Point(528, 73);
+            cbb_transport.Location = new Point(541, 52);
             cbb_transport.Name = "cbb_transport";
-            cbb_transport.Size = new Size(182, 28);
+            cbb_transport.Size = new Size(200, 28);
             cbb_transport.TabIndex = 4;
             cbb_transport.Text = "Tất cã";
             // 
@@ -132,9 +132,9 @@
             // 
             cbb_price.FormattingEnabled = true;
             cbb_price.Items.AddRange(new object[] { "Dưới 200$", "Từ 200$ đến 400$", "Từ 400$ đến 800$", "Trên 800$", "Tất cã" });
-            cbb_price.Location = new Point(279, 73);
+            cbb_price.Location = new Point(279, 52);
             cbb_price.Name = "cbb_price";
-            cbb_price.Size = new Size(184, 28);
+            cbb_price.Size = new Size(208, 28);
             cbb_price.TabIndex = 2;
             cbb_price.Text = "Tất cã";
             // 
@@ -142,9 +142,9 @@
             // 
             cbb_type.FormattingEnabled = true;
             cbb_type.Items.AddRange(new object[] { "Luxury", "Standard", "Budget", "Tất cã" });
-            cbb_type.Location = new Point(31, 73);
+            cbb_type.Location = new Point(31, 52);
             cbb_type.Name = "cbb_type";
-            cbb_type.Size = new Size(192, 28);
+            cbb_type.Size = new Size(199, 28);
             cbb_type.TabIndex = 0;
             cbb_type.Text = "Tất cã";
             // 
@@ -152,9 +152,9 @@
             // 
             panel_main.AutoScroll = true;
             panel_main.BackColor = SystemColors.ActiveCaption;
-            panel_main.Location = new Point(3, 199);
+            panel_main.Location = new Point(3, 159);
             panel_main.Name = "panel_main";
-            panel_main.Size = new Size(963, 377);
+            panel_main.Size = new Size(1009, 468);
             panel_main.TabIndex = 1;
             // 
             // panel8
@@ -169,7 +169,7 @@
             panel8.Controls.Add(cbb_transport);
             panel8.Location = new Point(3, 56);
             panel8.Name = "panel8";
-            panel8.Size = new Size(966, 137);
+            panel8.Size = new Size(1009, 105);
             panel8.TabIndex = 9;
             // 
             // btn_search
@@ -183,9 +183,9 @@
             btn_search.IconColor = SystemColors.ButtonFace;
             btn_search.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_search.IconSize = 32;
-            btn_search.Location = new Point(791, 64);
+            btn_search.Location = new Point(817, 48);
             btn_search.Name = "btn_search";
-            btn_search.Size = new Size(127, 42);
+            btn_search.Size = new Size(127, 32);
             btn_search.TabIndex = 16;
             btn_search.Text = "Tìm kiếm";
             btn_search.TextAlign = ContentAlignment.MiddleLeft;
@@ -203,7 +203,7 @@
             iconButton6.IconColor = SystemColors.ButtonFace;
             iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton6.IconSize = 32;
-            iconButton6.Location = new Point(518, 11);
+            iconButton6.Location = new Point(558, 3);
             iconButton6.Name = "iconButton6";
             iconButton6.Size = new Size(165, 43);
             iconButton6.TabIndex = 15;
@@ -222,7 +222,7 @@
             iconButton3.IconColor = SystemColors.ButtonFace;
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton3.IconSize = 32;
-            iconButton3.Location = new Point(279, 11);
+            iconButton3.Location = new Point(279, 3);
             iconButton3.Name = "iconButton3";
             iconButton3.Size = new Size(134, 43);
             iconButton3.TabIndex = 14;
@@ -241,7 +241,7 @@
             iconButton5.IconColor = SystemColors.ButtonFace;
             iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton5.IconSize = 32;
-            iconButton5.Location = new Point(31, 11);
+            iconButton5.Location = new Point(31, 3);
             iconButton5.Name = "iconButton5";
             iconButton5.Size = new Size(136, 43);
             iconButton5.TabIndex = 13;
@@ -255,7 +255,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(967, 602);
+            ClientSize = new Size(1012, 602);
             Controls.Add(panel8);
             Controls.Add(panel_main);
             Controls.Add(panel1);

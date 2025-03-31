@@ -47,14 +47,14 @@
             // 
             // btn_add
             // 
-            btn_add.BackColor = Color.Green;
+            btn_add.BackColor = Color.Blue;
             btn_add.FlatAppearance.BorderSize = 0;
             btn_add.FlatStyle = FlatStyle.Flat;
             btn_add.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             btn_add.ForeColor = SystemColors.ButtonHighlight;
             btn_add.Location = new Point(214, 516);
             btn_add.Name = "btn_add";
-            btn_add.Size = new Size(113, 50);
+            btn_add.Size = new Size(103, 35);
             btn_add.TabIndex = 16;
             btn_add.Text = "Thêm";
             btn_add.UseVisualStyleBackColor = false;
@@ -62,13 +62,13 @@
             // 
             // btn_cancel
             // 
-            btn_cancel.BackColor = Color.Crimson;
+            btn_cancel.BackColor = Color.Silver;
             btn_cancel.FlatAppearance.BorderSize = 0;
             btn_cancel.FlatStyle = FlatStyle.Flat;
             btn_cancel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            btn_cancel.Location = new Point(361, 516);
+            btn_cancel.Location = new Point(338, 516);
             btn_cancel.Name = "btn_cancel";
-            btn_cancel.Size = new Size(119, 50);
+            btn_cancel.Size = new Size(106, 35);
             btn_cancel.TabIndex = 15;
             btn_cancel.Text = "Hủy";
             btn_cancel.UseVisualStyleBackColor = false;
@@ -78,7 +78,7 @@
             // 
             tb_email.BackColor = SystemColors.InactiveCaption;
             tb_email.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            tb_email.ForeColor = SystemColors.ButtonFace;
+            tb_email.ForeColor = SystemColors.ActiveCaptionText;
             tb_email.Location = new Point(125, 127);
             tb_email.Name = "tb_email";
             tb_email.PlaceholderText = "  Email(*)";
@@ -89,7 +89,7 @@
             // 
             tb_name.BackColor = SystemColors.InactiveCaption;
             tb_name.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            tb_name.ForeColor = SystemColors.ButtonFace;
+            tb_name.ForeColor = SystemColors.ActiveCaptionText;
             tb_name.Location = new Point(125, 68);
             tb_name.Name = "tb_name";
             tb_name.PlaceholderText = "  Họ và tên";
@@ -111,7 +111,7 @@
             // 
             tb_address.BackColor = SystemColors.InactiveCaption;
             tb_address.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            tb_address.ForeColor = SystemColors.ButtonFace;
+            tb_address.ForeColor = SystemColors.ActiveCaptionText;
             tb_address.Location = new Point(125, 258);
             tb_address.Multiline = true;
             tb_address.Name = "tb_address";
@@ -123,7 +123,7 @@
             // 
             tb_phone.BackColor = SystemColors.InactiveCaption;
             tb_phone.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            tb_phone.ForeColor = SystemColors.ButtonFace;
+            tb_phone.ForeColor = SystemColors.ActiveCaptionText;
             tb_phone.Location = new Point(123, 186);
             tb_phone.Name = "tb_phone";
             tb_phone.PlaceholderText = "  Số điện thoại";
@@ -134,7 +134,7 @@
             // 
             tb_password.BackColor = SystemColors.InactiveCaption;
             tb_password.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            tb_password.ForeColor = SystemColors.ButtonFace;
+            tb_password.ForeColor = SystemColors.ActiveCaptionText;
             tb_password.Location = new Point(125, 463);
             tb_password.Name = "tb_password";
             tb_password.PlaceholderText = "  Cấp mật khẩu mặc định: 1111";
@@ -145,7 +145,7 @@
             // 
             tb_note.BackColor = SystemColors.InactiveCaption;
             tb_note.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            tb_note.ForeColor = SystemColors.ButtonFace;
+            tb_note.ForeColor = SystemColors.ActiveCaptionText;
             tb_note.Location = new Point(125, 358);
             tb_note.Multiline = true;
             tb_note.Name = "tb_note";
@@ -253,7 +253,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(41, 128, 185);
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(679, 594);
             Controls.Add(iconButton6);
             Controls.Add(iconButton5);
