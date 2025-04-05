@@ -32,5 +32,20 @@ namespace TourManagementApp.Models
             Total = total;
             Description = description;
         }
+
+        public Schedule(int id,int tourID, string tourName, string? customerID, string? customerName,
+                        DateTime dayStart, DateTime dayEnd, string? statusPay, int total, string description)
+        {
+            ScheduleID = id;
+            TourID = tourID;
+            TourName = tourName;
+            CustomerID = customerID;
+            CustomerName = customerName;
+            Day_Start = dayStart;
+            Day_End = dayEnd;
+            Status_pay = statusPay;
+            Total = total;
+            Description = description;
+        }
     }
 }

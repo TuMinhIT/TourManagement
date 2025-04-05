@@ -38,6 +38,12 @@ namespace TourManagementApp.Views.Admin
                 return;
             }
 
+            if (tb_phone.Text.Any(char.IsLetter))
+            {
+                MessageBox.Show("Số điện thoại không được chứa chữ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             UserService userService = new ImplUserService();
             if (string.IsNullOrEmpty(tb_name.Text) || string.IsNullOrEmpty(tb_email.Text))
             {

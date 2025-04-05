@@ -5,6 +5,7 @@ using TourManagementApp.Views.Customers;
 using TourManagementApp.Models;
 using TourManagementApp.Services;
 using TourManagementApp.Services.ImplServices;
+using System.Drawing.Text;
 namespace TourManagementApp.Views.Tour
 {
     public partial class AddNewOrder : Form
@@ -46,14 +47,14 @@ namespace TourManagementApp.Views.Tour
 
         private void AddNewOrder_Load(object sender, EventArgs e)
         {
-            tb_tourInf.Text = "Mã tour: " + tourID.ToString() + "----" + tourName;
+            tb_tourInf.Text = "Mã tour: " + tourID.ToString() + "---" + tourName;
             tb_total.Text = total;
         }
         
         private string _cusName;
         private void btn_save_Click(object sender, EventArgs e)
         {   
-            if (string.IsNullOrEmpty(tb_total.Text) || dateTimePicker.Value == null || 
+            if (string.IsNullOrEmpty(tb_total.Text) || 
                 cbb_customer.Text =="<trống>")
             {
                 message.MessageOK("Xin hãy nhập đủ thông tin!");
@@ -62,10 +63,20 @@ namespace TourManagementApp.Views.Tour
 
             int total = int.TryParse(tb_total.Text, out int t) ? t : 0;
             int prePay = int.TryParse(tb_prePay.Text, out int p) ? p : 0;
+            string status = "Booked";
+
+            if (total == prePay)
+            {
+                status = "Completed";
+            }else if (total < prePay)
+            {
+                message.MessageWarning("Số tiền thanh toán không hợp lệ!");
+                return;
+            }
 
             Booking newBooking = new
                 Booking(cbb_customer.Text, _cusName, tourID, tourName, dateTimePicker.Value,
-                "Booked",
+                status,
                 total, prePay);
             if (_bookingService.AddNew(newBooking))
             {

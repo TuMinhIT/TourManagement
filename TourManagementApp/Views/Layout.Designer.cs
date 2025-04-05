@@ -62,7 +62,7 @@
             label_userName.AutoSize = true;
             label_userName.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
             label_userName.ForeColor = SystemColors.ButtonFace;
-            label_userName.Location = new Point(701, 21);
+            label_userName.Location = new Point(732, 21);
             label_userName.Name = "label_userName";
             label_userName.Size = new Size(91, 19);
             label_userName.TabIndex = 11;
@@ -74,7 +74,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
             label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(576, 21);
+            label1.Location = new Point(609, 21);
             label1.Name = "label1";
             label1.Size = new Size(83, 19);
             label1.TabIndex = 10;
@@ -367,7 +367,7 @@
             btn_X.FlatStyle = FlatStyle.Flat;
             btn_X.Font = new Font("Verdana", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_X.ForeColor = Color.White;
-            btn_X.Location = new Point(937, 8);
+            btn_X.Location = new Point(981, 8);
             btn_X.Name = "btn_X";
             btn_X.Size = new Size(40, 40);
             btn_X.TabIndex = 14;

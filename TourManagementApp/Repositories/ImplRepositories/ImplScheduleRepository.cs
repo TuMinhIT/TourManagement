@@ -93,8 +93,7 @@ namespace TourManagementApp.Repositories.ImplRepositories
                                 int total = reader.GetInt32(8);
                                 string description = reader.GetString(9);
                            
-                                Schedule schedule = new Schedule( tourID, tourName, customerID, customerName, dayStart, dayEnd, statusPay,total, description);
-                                schedule.ScheduleID = scheduleID;
+                                Schedule schedule = new Schedule(scheduleID,tourID, tourName, customerID, customerName, dayStart, dayEnd, statusPay,total, description);                                
                                 list_schedule.Add(schedule);
                             }
                         }

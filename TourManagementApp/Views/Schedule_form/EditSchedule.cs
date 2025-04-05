@@ -31,20 +31,25 @@ namespace TourManagementApp.Views.Schedule_form
 
         private void btn_cancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();                         
         }
 
-
+        
         private void btn_update_Click(object sender, EventArgs e)
-        {
-           if (message.MessageOKCancel("Bạn có muốn lưu sự thay đổi? "))
-           {
-                Schedule scheduleNew = new Schedule(_schedule.TourID, _schedule.TourName,
-                _schedule.CustomerID, _schedule.CustomerName, dateTimePicker_start.Value,
-                dateTimePicker_end.Value, cbb_status.Text,int.Parse(tb_total.Text), tb_description.Text);
-                _scheduleService.Update(scheduleNew);
-           }
-
+        {  
+            if (dateTimePicker_end.Value <= dateTimePicker_start.Value)
+            {
+                message.MessageWarning("lỗi cập nhật");
+                return;
+            }
+            Schedule scheduleNew = new Schedule(_schedule.ScheduleID,_schedule.TourID, _schedule.TourName,
+            _schedule.CustomerID, _schedule.CustomerName, dateTimePicker_start.Value,
+            dateTimePicker_end.Value, cbb_status.Text,int.Parse(tb_total.Text), tb_description.Text);
+            if (_scheduleService.Update(scheduleNew))
+            {
+                message.MessageOK("Cập nhật thành công!");
+                return ;
+            };       
         }
 
     }

@@ -44,6 +44,11 @@ namespace TourManagementApp.Views.Schedule_form
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+            if (dateTimePicker_end.Value <= dateTimePicker_start.Value)
+            { 
+                MessageBox.Show("Ngày bắt đầu không được sau ngày kết thúc!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;      
+            }
             Schedule scheduleNew = new Schedule(_booking.TourID, _booking.TourName,
                 _booking.CustomerID, _booking.CustomerName, dateTimePicker_start.Value,
                 dateTimePicker_end.Value,cbb_status.Text ,int.Parse(tb_total.Text), tb_description.Text);

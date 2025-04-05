@@ -64,6 +64,13 @@ namespace TourManagementApp.Views.Tour
 
         private void btn_search_Click(object sender, EventArgs e)
         {
+            if (cbb_price.Text == "Tất cã" && cbb_transport.Text == "Tất cã" && cbb_type.Text == "Tất cã")
+            {
+                list_tour = _tourService.getAll();
+                generate_data(list_tour);
+                return;
+            }
+
             #region search by price
             List<Tours> list_price = new List<Tours>();
             switch (cbb_price.Text)
@@ -81,6 +88,7 @@ namespace TourManagementApp.Views.Tour
                     list_price = _tourService.GetByPrice(800, 10000000);
                     break;
                 default:
+                    list_price = list_tour; 
                     break;
             }
 
@@ -92,21 +100,43 @@ namespace TourManagementApp.Views.Tour
             {
                 list_type = _tourService.GetByAttribute("TourType", cbb_type.SelectedItem.ToString());
             }
+            else
+            {
+                list_type = list_tour;
+            }
 
             #endregion
-
 
             List<Tours> list_transport = new List<Tours>();
             if (cbb_transport.Text != "Tất cã")
             {
                 list_transport = _tourService.GetByAttribute("Transport", cbb_transport.SelectedItem.ToString());
             }
+            else
+            {
+                list_transport = list_tour;
+            }
 
-            List<Tours> list_distinct = list_price.Union(list_type).ToList();
-            list_distinct = list_distinct.Union(list_transport).ToList();
+            var list_distinct = list_price
+                .Select(t => t.TourID)
+                .Intersect(list_type.Select(t => t.TourID))
+                .Intersect(list_transport.Select(t => t.TourID))
+                .ToList();
 
-            generate_data(list_distinct);
+            var result = list_tour
+                .Where(t => list_distinct.Contains(t.TourID))
+                .ToList();
 
+
+            if (result == null ||result.Count == 0)
+            {
+                panel_main.Controls.Clear();
+                message.MessageOKCancel("Không có dữ liệu phù hợp! ");
+            }
+            else
+            {            
+                generate_data(result);
+            }
         }
 
         private void btn_import_Click(object sender, EventArgs e)

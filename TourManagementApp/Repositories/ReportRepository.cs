@@ -47,7 +47,6 @@ namespace TourManagementApp.Repositories
             return null;
         }
 
-
         public Dictionary<int, int> GetTotalAmountByMonth(int year)
         {
             Dictionary<int, int> revenueByMonth = new Dictionary<int, int>();
@@ -60,11 +59,18 @@ namespace TourManagementApp.Repositories
                     return null;
                 }
 
+                //string query = @"
+                //        SELECT MONTH(Day_End) AS Month, SUM(TotalAmount) AS Revenue
+                //        FROM Schedule
+                //        WHERE YEAR(Day_End) = @Year
+                //        GROUP BY MONTH(Day_End)";
                 string query = @"
-                        SELECT MONTH(Day_End) AS Month, SUM(TotalAmount) AS Revenue
-                        FROM Schedule
-                        WHERE YEAR(Day_End) = @Year
-                        GROUP BY MONTH(Day_End)";
+                SELECT MONTH(Day_End) AS Month, SUM(TotalAmount) AS Revenue
+                FROM Schedule
+                WHERE YEAR(Day_End) = @Year
+                  AND Status_Pay = 'Completed'
+                GROUP BY MONTH(Day_End)";
+
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {

@@ -15,7 +15,6 @@ namespace TourManagementApp.Views.Schedule_form
         public ScheduleLayout()
         {
             list_schedule = _scheduleService.getAll();
-
             InitializeComponent();
             generate_data(list_schedule);
         }

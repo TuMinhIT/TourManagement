@@ -41,10 +41,12 @@ namespace TourManagementApp.Views.Report
         }
 
 
-        List<Schedule> bookedItems = new List<Schedule>();
-        List<Schedule> completedItems = new List<Schedule>();
+     
         private void btn_fillter_Click(object sender, EventArgs e)
         {
+            List<Schedule> bookedItems = new List<Schedule>();
+            List<Schedule> completedItems = new List<Schedule>();
+
             DateTime startDate = dateStart.Value;
             DateTime endDate = dateEnd.Value;
 

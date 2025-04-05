@@ -183,7 +183,7 @@
             btn_search.IconColor = SystemColors.ButtonFace;
             btn_search.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_search.IconSize = 32;
-            btn_search.Location = new Point(817, 48);
+            btn_search.Location = new Point(806, 52);
             btn_search.Name = "btn_search";
             btn_search.Size = new Size(127, 32);
             btn_search.TabIndex = 16;

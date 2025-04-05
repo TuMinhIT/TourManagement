@@ -44,6 +44,7 @@
             label10 = new Label();
             label11 = new Label();
             tb_CustomerName = new TextBox();
+            btn_schedule = new Button();
             SuspendLayout();
             // 
             // label2
@@ -60,9 +61,9 @@
             // 
             // tb_total
             // 
-            tb_total.Enabled = false;
             tb_total.Location = new Point(135, 281);
             tb_total.Name = "tb_total";
+            tb_total.ReadOnly = true;
             tb_total.Size = new Size(241, 27);
             tb_total.TabIndex = 40;
             // 
@@ -90,16 +91,16 @@
             // dateTimePicker
             // 
             dateTimePicker.Enabled = false;
-            dateTimePicker.Location = new Point(135, 360);
+            dateTimePicker.Location = new Point(493, 281);
             dateTimePicker.Name = "dateTimePicker";
             dateTimePicker.Size = new Size(358, 27);
             dateTimePicker.TabIndex = 34;
             // 
             // tb_CustomerID
             // 
-            tb_CustomerID.Enabled = false;
             tb_CustomerID.Location = new Point(135, 205);
             tb_CustomerID.Name = "tb_CustomerID";
+            tb_CustomerID.ReadOnly = true;
             tb_CustomerID.Size = new Size(246, 27);
             tb_CustomerID.TabIndex = 33;
             // 
@@ -141,7 +142,7 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Navy;
-            label6.Location = new Point(493, 255);
+            label6.Location = new Point(135, 332);
             label6.Name = "label6";
             label6.Size = new Size(84, 23);
             label6.TabIndex = 51;
@@ -153,7 +154,7 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Navy;
-            label7.Location = new Point(135, 334);
+            label7.Location = new Point(493, 255);
             label7.Name = "label7";
             label7.Size = new Size(84, 23);
             label7.TabIndex = 52;
@@ -161,11 +162,10 @@
             // 
             // tb_prepay
             // 
-            tb_prepay.Enabled = false;
-            tb_prepay.Location = new Point(493, 281);
+            tb_prepay.Location = new Point(135, 358);
             tb_prepay.Name = "tb_prepay";
             tb_prepay.ReadOnly = true;
-            tb_prepay.Size = new Size(214, 27);
+            tb_prepay.Size = new Size(241, 27);
             tb_prepay.TabIndex = 54;
             // 
             // tb_tourName
@@ -215,11 +215,23 @@
             // 
             // tb_CustomerName
             // 
-            tb_CustomerName.Enabled = false;
             tb_CustomerName.Location = new Point(493, 205);
             tb_CustomerName.Name = "tb_CustomerName";
+            tb_CustomerName.ReadOnly = true;
             tb_CustomerName.Size = new Size(358, 27);
             tb_CustomerName.TabIndex = 60;
+            // 
+            // btn_schedule
+            // 
+            btn_schedule.BackColor = SystemColors.MenuHighlight;
+            btn_schedule.ForeColor = SystemColors.ButtonHighlight;
+            btn_schedule.Location = new Point(493, 344);
+            btn_schedule.Name = "btn_schedule";
+            btn_schedule.Size = new Size(132, 29);
+            btn_schedule.TabIndex = 61;
+            btn_schedule.Text = "lịch trình";
+            btn_schedule.UseVisualStyleBackColor = false;
+            btn_schedule.Click += btn_schedule_Click_1;
             // 
             // TourOrderDetail
             // 
@@ -227,7 +239,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.halong_bay_4646615_640;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(903, 489);
+            ClientSize = new Size(903, 527);
+            Controls.Add(btn_schedule);
             Controls.Add(tb_CustomerName);
             Controls.Add(label11);
             Controls.Add(label10);
@@ -269,5 +282,6 @@
         private Label label10;
         private Label label11;
         private TextBox tb_CustomerName;
+        private Button btn_schedule;
     }
 }

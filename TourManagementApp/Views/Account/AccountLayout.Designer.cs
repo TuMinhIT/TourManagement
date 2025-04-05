@@ -134,6 +134,7 @@
             tb_phone.BackColor = SystemColors.ActiveCaption;
             tb_phone.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             tb_phone.Location = new Point(426, 274);
+            tb_phone.MaxLength = 11;
             tb_phone.Name = "tb_phone";
             tb_phone.Size = new Size(363, 30);
             tb_phone.TabIndex = 7;

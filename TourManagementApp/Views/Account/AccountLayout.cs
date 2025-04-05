@@ -18,10 +18,14 @@ namespace TourManagementApp.Views.Account
         private Users _user;
         private ImageService imageService = new ImageService();
         private Message message = new Message();
-        public AccountLayout(Users user)
+
+        private Label lb;
+     
+        public AccountLayout(Users user, Label lb)
         {
             InitializeComponent();
             this._user = user;
+            this.lb = lb;
         }
         public AccountLayout()
         {
@@ -76,6 +80,7 @@ namespace TourManagementApp.Views.Account
                 return;
             }
 
+
             UserService userService = new ImplUserService();
             Users user = _user;
             user.Address = tb_address.Text;
@@ -88,9 +93,10 @@ namespace TourManagementApp.Views.Account
             }
             //update in database         
             if (userService.UpdateUser(user))
-            {
+            {          
                 _user = user;
                 message.MessageOK("Cập nhật thông tin thành công");
+                lb.Text = _user.FullName;
             }
             enable_Pannel(false);
             //reload

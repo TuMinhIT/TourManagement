@@ -36,6 +36,18 @@ namespace TourManagementApp.Views.Customers
                 return;
             }
 
+            if (tb_phone.Text.Any(char.IsLetter))
+            {
+                MessageBox.Show("Số điện thoại không được chứa chữ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (tb_phone.Text.Length > 11)
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             CustomerService customerService = new ImplCustomerService();
             if (string.IsNullOrEmpty(tb_name.Text)
                 || string.IsNullOrEmpty(tb_email.Text)

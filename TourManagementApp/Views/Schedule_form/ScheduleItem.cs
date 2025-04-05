@@ -20,6 +20,7 @@ namespace TourManagementApp.Views.Schedule_form
 
         private void generate_data()
         {
+            _schedule = _scheduleService.GetById(_schedule.ScheduleID);
             tb_customerName.Text = _schedule.CustomerName;
             tb_tourName.Text = _schedule.TourName;
             tb_description.Text = _schedule.Description;
@@ -51,8 +52,7 @@ namespace TourManagementApp.Views.Schedule_form
         private void btn_detail_Click(object sender, EventArgs e)
         {
             EditSchedule editSchedule = new EditSchedule(_schedule);
-            editSchedule.ShowDialog();
-            _scheduleService.GetById(_schedule.ScheduleID);
+            editSchedule.ShowDialog();         
             generate_data();
         }
 

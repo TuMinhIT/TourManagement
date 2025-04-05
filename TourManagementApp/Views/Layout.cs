@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using TourManagementApp.Views.Tour;
+﻿using TourManagementApp.Views.Tour;
 using TourManagementApp.Views.Customers;
 using TourManagementApp.Views.Report;
 using TourManagementApp.Views.Schedule_form;
@@ -115,14 +106,7 @@ namespace TourManagementApp.Views
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void Reset()
-        {
-            DisableButton();
-            leftBorderBtn.Visible = false;
-            iconCurrentChildForm.IconChar = IconChar.Home;
-            iconCurrentChildForm.IconColor = Color.MediumPurple;
-        }
-
+ 
         private void label_userName_Click(object sender, EventArgs e) { }
 
         private void btn_home_Click(object sender, EventArgs e)
@@ -167,7 +151,8 @@ namespace TourManagementApp.Views
         }
         private void btn_account_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new AccountLayout(_user));
+           
+            OpenChildForm(new AccountLayout(_user, label_userName));
             ActivateButton(sender, RGBColors.color1);
         }
         private void btn_X_Click(object sender, EventArgs e)

@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label9 = new Label();
+            label8 = new Label();
             dataGridViewBooked = new DataGridView();
             dataGridViewCompleted = new DataGridView();
             panel2 = new Panel();
             label1 = new Label();
             lb_sum = new Label();
             label2 = new Label();
-            lb_tour = new Label();
             lb_booked = new Label();
+            lb_tour = new Label();
             lb_completed = new Label();
-            label7 = new Label();
             label4 = new Label();
             label3 = new Label();
+            label7 = new Label();
             btn_fillter = new Button();
             dateEnd = new DateTimePicker();
             label6 = new Label();
             label5 = new Label();
             dateStart = new DateTimePicker();
             panel = new Panel();
-            label8 = new Label();
-            label9 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewBooked).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCompleted).BeginInit();
@@ -73,6 +73,28 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(943, 641);
             panel1.TabIndex = 2;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label9.ForeColor = Color.Maroon;
+            label9.Location = new Point(34, 420);
+            label9.Name = "label9";
+            label9.Size = new Size(268, 23);
+            label9.TabIndex = 31;
+            label9.Text = "Danh sách tour chưa hoàn thành";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label8.ForeColor = Color.DarkGreen;
+            label8.Location = new Point(34, 231);
+            label8.Name = "label8";
+            label8.Size = new Size(250, 23);
+            label8.TabIndex = 31;
+            label8.Text = "Danh sách tour đã hoàn thành";
             // 
             // dataGridViewBooked
             // 
@@ -144,17 +166,6 @@
             label2.Text = "Tổng số tour";
             label2.Click += label2_Click;
             // 
-            // lb_tour
-            // 
-            lb_tour.AutoSize = true;
-            lb_tour.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lb_tour.ForeColor = Color.Black;
-            lb_tour.Location = new Point(293, 38);
-            lb_tour.Name = "lb_tour";
-            lb_tour.Size = new Size(24, 28);
-            lb_tour.TabIndex = 28;
-            lb_tour.Text = "0";
-            // 
             // lb_booked
             // 
             lb_booked.AutoSize = true;
@@ -166,6 +177,17 @@
             lb_booked.TabIndex = 30;
             lb_booked.Text = "0";
             // 
+            // lb_tour
+            // 
+            lb_tour.AutoSize = true;
+            lb_tour.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lb_tour.ForeColor = Color.Black;
+            lb_tour.Location = new Point(293, 38);
+            lb_tour.Name = "lb_tour";
+            lb_tour.Size = new Size(24, 28);
+            lb_tour.TabIndex = 28;
+            lb_tour.Text = "0";
+            // 
             // lb_completed
             // 
             lb_completed.AutoSize = true;
@@ -176,16 +198,6 @@
             lb_completed.Size = new Size(24, 28);
             lb_completed.TabIndex = 29;
             lb_completed.Text = "0";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(3, 4);
-            label7.Name = "label7";
-            label7.Size = new Size(116, 28);
-            label7.TabIndex = 26;
-            label7.Text = "Lọc dữ liệu";
             // 
             // label4
             // 
@@ -208,6 +220,16 @@
             label3.Size = new Size(189, 23);
             label3.TabIndex = 24;
             label3.Text = "Số tour đã hoàn thành";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(3, 4);
+            label7.Name = "label7";
+            label7.Size = new Size(116, 28);
+            label7.TabIndex = 26;
+            label7.Text = "Lọc dữ liệu";
             // 
             // btn_fillter
             // 
@@ -261,30 +283,8 @@
             panel.BackColor = SystemColors.ActiveBorder;
             panel.Location = new Point(3, 644);
             panel.Name = "panel";
-            panel.Size = new Size(940, 351);
+            panel.Size = new Size(940, 426);
             panel.TabIndex = 21;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            label8.ForeColor = Color.DarkGreen;
-            label8.Location = new Point(34, 231);
-            label8.Name = "label8";
-            label8.Size = new Size(250, 23);
-            label8.TabIndex = 31;
-            label8.Text = "Danh sách tour đã hoàn thành";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            label9.ForeColor = Color.Maroon;
-            label9.Location = new Point(34, 420);
-            label9.Name = "label9";
-            label9.Size = new Size(268, 23);
-            label9.TabIndex = 31;
-            label9.Text = "Danh sách tour chưa hoàn thành";
             // 
             // ReportLayout
             // 

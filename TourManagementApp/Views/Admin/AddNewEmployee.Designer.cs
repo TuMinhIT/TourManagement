@@ -125,6 +125,7 @@
             tb_phone.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             tb_phone.ForeColor = SystemColors.ActiveCaptionText;
             tb_phone.Location = new Point(123, 186);
+            tb_phone.MaxLength = 11;
             tb_phone.Name = "tb_phone";
             tb_phone.PlaceholderText = "  Số điện thoại";
             tb_phone.Size = new Size(418, 30);

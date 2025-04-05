@@ -54,9 +54,9 @@
             // 
             groupBox1.BackgroundImageLayout = ImageLayout.Stretch;
             groupBox1.Controls.Add(panel);
-            groupBox1.Location = new Point(-6, -2);
+            groupBox1.Location = new Point(-6, -21);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(951, 574);
+            groupBox1.Size = new Size(951, 562);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             // 
@@ -83,7 +83,7 @@
             panel.Font = new Font("Segoe UI", 10.2F);
             panel.Location = new Point(3, 23);
             panel.Name = "panel";
-            panel.Size = new Size(945, 548);
+            panel.Size = new Size(945, 536);
             panel.TabIndex = 29;
             // 
             // tb_total
@@ -130,7 +130,7 @@
             btn_cancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_cancel.IconSize = 30;
             btn_cancel.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_cancel.Location = new Point(713, 429);
+            btn_cancel.Location = new Point(779, 454);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(105, 39);
             btn_cancel.TabIndex = 19;
@@ -161,11 +161,11 @@
             btn_update.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_update.IconSize = 30;
             btn_update.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_update.Location = new Point(552, 429);
+            btn_update.Location = new Point(654, 454);
             btn_update.Name = "btn_update";
-            btn_update.Size = new Size(141, 39);
+            btn_update.Size = new Size(105, 39);
             btn_update.TabIndex = 18;
-            btn_update.Text = "Cập nhật";
+            btn_update.Text = "Save";
             btn_update.TextAlign = ContentAlignment.MiddleLeft;
             btn_update.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_update.UseVisualStyleBackColor = false;
@@ -275,7 +275,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(946, 567);
+            ClientSize = new Size(946, 539);
             Controls.Add(groupBox1);
             Name = "EditSchedule";
             Text = "EditSchedule";
